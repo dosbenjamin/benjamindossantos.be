@@ -1,0 +1,40 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>Astro</h1>
+  </body>
+</html>
+
+<style global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+
+    @font-face {
+      font-family: 'Space Grotesk';
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      src:
+        url(../../public/SpaceGrotesk-Regular.woff2) format('woff2'),
+        url(../../public/SpaceGrotesk-Regular.woff) format('woff');
+    }
+
+    html {
+      @apply text-base;
+    }
+
+    body {
+      @apply min-h-screen p-2;
+      @apply bg-gray-450 text-gray-900;
+      @apply antialiased font-sans uppercase leading-none;
+      text-rendering: optimizeLegibility;
+    }
+  }
+</style>
