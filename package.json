@@ -11,6 +11,8 @@
   "devDependencies": {
     "@types/tailwindcss": "^3.0.9",
     "astro": "^0.23.2",
+    "graphql": "^16.3.0",
+    "graphql-request": "^4.0.0",
     "postcss": "^8.4.7"
   },
   "dependencies": {

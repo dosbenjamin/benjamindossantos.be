@@ -5,7 +5,11 @@
     "paths": {
       "components/*": ["src/components/*"],
       "layouts/*": ["src/layouts/*"],
+      "queries/*": ["src/queries/*"],
+      "graphql-client": ["src/graphql-client"],
       "public/*": ["public/*"]
-    }
+    },
+    "module": "ESNext",
+    "types": ["vite/client"]
   }
 }
