@@ -1,0 +1,18 @@
+---
+export type Props = {
+  href: string
+  class?: string
+}
+
+export const defaultClass = 'decoration-[0.075em] hover:underline focus:underline'
+const { href, class: className = '' } = Astro.props as Props
+const isExternal = href.includes('http')
+---
+<a
+  href={href}
+  target={isExternal && '_blank'}
+  rel={isExternal && 'noopener'}
+  class={`${defaultClass} ${className}`}
+>
+  <slot />
+</a>
