@@ -1,0 +1,22 @@
+---
+import Link, { defaultClass as linkClass } from './Link.astro'
+import type { Shared } from 'types/shared'
+
+type Props = { as?: string } & Shared.Header
+
+const {
+  as: Tag = 'main',
+  title,
+  subtitle,
+  description,
+  link
+} = Astro.props as Props
+---
+<Tag class="flex flex-wrap gap-4">
+  <h1 class="text-lg max-w-[8rem]">{title}</h1>
+  <div class="max-w-[12rem] space-y-2">
+    <h2>{subtitle}</h2>
+    {description.replaceAll('<a', `<a target="_blank" rel="noopener" class="${linkClass}"`)}
+    <Link class="text-sm" href={link.url}>{link.name}</Link>
+  </div>
+</Tag>
