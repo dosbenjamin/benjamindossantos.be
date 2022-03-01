@@ -6,6 +6,7 @@
       "components/*": ["src/components/*"],
       "layouts/*": ["src/layouts/*"],
       "queries/*": ["src/queries/*"],
+      "types/*": ["src/types/*"],
       "graphql-client": ["src/graphql-client"],
       "public/*": ["public/*"]
     },
