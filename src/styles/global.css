@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  @font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(/SpaceGrotesk-Regular.woff2) format('woff2');
+  }
+
+  html {
+    @apply text-base;
+  }
+
+  body {
+    @apply min-h-screen p-2;
+    @apply text-gray-900 bg-gray-450;
+    @apply font-sans antialiased leading-none uppercase;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    @apply inline-block;
+    @apply focus:outline-none;
+  }
+}

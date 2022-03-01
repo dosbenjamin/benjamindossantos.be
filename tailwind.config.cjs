@@ -1,6 +1,20 @@
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
-  content: ['src/**/*.astro'],
+  content: [
+    'src/components/*.astro',
+    'src/layouts/*.astro',
+    'src/pages/*.astro'
+  ],
+  corePlugins: {
+    transform: false,
+    backdropFilter: false,
+    filter: false,
+    scrollSnapType: false,
+    ringWidth: false,
+    boxShadow: false,
+    fontVariantNumeric: false,
+    touchAction: false
+  },
   theme: {
     colors: {
       'gray': {
@@ -13,8 +27,11 @@ module.exports = {
     },
     fontSize: {
       'sm': '0.75rem',
-      'base': '40px',
+      'base': 'clamp(1.333rem, 3vw, 2.369rem)',
       'lg': '1.333rem'
+    },
+    screens: {
+      'sm': '24rem'
     }
   }
 }

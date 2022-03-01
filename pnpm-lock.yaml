@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@types/tailwindcss': ^3.0.9
-  astro: ^0.23.2
+  astro: ^0.23.3
   autoprefixer: ^10.4.2
   graphql: ^16.3.0
   graphql-request: ^4.0.0
@@ -15,7 +15,7 @@ dependencies:
 
 devDependencies:
   '@types/tailwindcss': 3.0.9
-  astro: 0.23.2
+  astro: 0.23.3
   graphql: 16.3.0
   graphql-request: 4.0.0_graphql@16.3.0
   postcss: 8.4.7
@@ -111,7 +111,7 @@ packages:
     resolution: {integrity: sha512-YP6e6qPMEx5Pr6tCiD+GTyT7Bl+aA1biTX9Yg8Sd7bjXHOiqfMH28d8Bo0CXHiqUXli/CTp6pRtR0WN44a4gUg==}
     engines: {node: ^14.15.0 || >=16.0.0}
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.37_svelte@3.46.4+vite@2.8.4
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.38_svelte@3.46.4+vite@2.8.4
       postcss-load-config: 3.1.3
       svelte: 3.46.4
       svelte-preprocess: 4.10.4_057c3ac569ae0c9035216159d34d61cd
@@ -452,8 +452,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.37_svelte@3.46.4+vite@2.8.4:
-    resolution: {integrity: sha512-EdSXw2rXeOahNrQfMJVZxa/NxZxW1a0TiBI3s+pVxnxU14hEQtnkLtdbTFhnceu22gJpNPFSIJRcIwRBBDQIeA==}
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.38_svelte@3.46.4+vite@2.8.4:
+    resolution: {integrity: sha512-epYAVZvfpiDZwB4Whe5AALk3zF5odKFf8Vx4q2tth+QuXmr0GLZ13ri02zINS6pHRCx+GjtOqCEEwMaPAfPcgQ==}
     engines: {node: ^14.13.1 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
@@ -776,8 +776,8 @@ packages:
       util: 0.12.4
     dev: true
 
-  /astro/0.23.2:
-    resolution: {integrity: sha512-NoVZxRXDW/PLSsEQLdsiBub+AeVq8EAzc2Lg+XdHegvoeQnGsYrvrzLIxbztRHZIeOuY+lbgf8MlwgVnOrQY4g==}
+  /astro/0.23.3:
+    resolution: {integrity: sha512-IoeP2jsp/Z52UsgyMh/l/EZD8n1HYA6ZUD+rVnbRnWZfWdrGSU5C4TMhuVwXdEIE7KVysRJSvBcIBrMlU5qbGQ==}
     engines: {node: ^14.15.0 || >=16.0.0, npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -810,7 +810,7 @@ packages:
       htmlparser2: 7.2.0
       kleur: 4.1.4
       magic-string: 0.25.7
-      micromorph: 0.0.2
+      micromorph: 0.1.2
       mime: 3.0.0
       parse5: 6.0.1
       path-to-regexp: 6.2.0
@@ -2758,8 +2758,8 @@ packages:
       braces: 3.0.2
       picomatch: 2.3.1
 
-  /micromorph/0.0.2:
-    resolution: {integrity: sha512-hfy/OA8rtwI/vPRm4L6a3/u6uDvqsPmTok7pPmtfv2a7YfaTVfxd9HX2Kdn/SZ8rGMKkKVJ9A0WcBnzs0bjLXw==}
+  /micromorph/0.1.2:
+    resolution: {integrity: sha512-pDEgWjUoCMBwME8z8UiCOO6FKH0It1LASFh8hFSk8uSyfyw6rqY4PBk2LiIEPaVHwtLDhozp4Pr0I+yAUfCpiA==}
     dev: true
 
   /mime-db/1.51.0:

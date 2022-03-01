@@ -1,69 +1,39 @@
 ---
-export type Props = {
-  title: string
-  description: string
-  image: string
-}
+import { Shared } from 'types/shared'
 
-const { title, description, image } = Astro.props as Props
+export type Props = Shared.SEO
+const { title, description, thumbnail } = Astro.props as Props
+
+const style = Astro.resolve('../styles/global.css')
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
     <title>{title}</title>
-
     <meta name="description" content={description}>
     <meta name="author" content="Benjamin Dos Santos">
-
     <meta property="og:site_name" content="Benjamin Dos Santos">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_GB">
     <meta property="og:title" content={title}>
     <meta property="og:description" content={description}>
     <meta property="og:url" content="">
-    <meta property="og:image" content={image}>
-
+    <meta property="og:image" content={thumbnail}>
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content={title}>
     <meta name="twitter:description" content={description}>
-    <meta name="twitter:image" content={image}>
+    <meta name="twitter:image" content={thumbnail}>
     <meta name="twitter:site" content="@dosbenjamin">
     <meta name="twitter:creator" content="@dosbenjamin">
-
     <link rel="preload" href="/SpaceGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    {import.meta.env.PROD && (<link rel="preload" href={style} as="style">)}
+    <link rel="stylesheet" href={style}>
   </head>
   <body>
     <slot />
   </body>
 </html>
-
-<style global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  @layer base {
-
-    @font-face {
-      font-family: 'Space Grotesk';
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-      src: url(/SpaceGrotesk-Regular.woff2) format('woff2');
-    }
-
-    html {
-      @apply text-base;
-    }
-
-    body {
-      @apply min-h-screen p-2;
-      @apply bg-gray-450 text-gray-900;
-      @apply antialiased font-sans uppercase leading-none;
-      text-rendering: optimizeLegibility;
-    }
-  }
-</style>
