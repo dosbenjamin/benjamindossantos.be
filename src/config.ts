@@ -1,4 +1,4 @@
 // @ts-ignore
-const config = process?.env || import.meta.env
+const config = import.meta.env || process?.env
 
 export const { STRAPI_URL, PROD } = config
