@@ -1,6 +1,43 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from 'layouts/BaseLayout.astro'
+import Header from 'components/Header.astro'
+import Link from 'components/Link.astro'
+import { client } from 'graphql-client'
+import { Home } from 'queries/Home'
+import type { Shared } from 'types/shared'
+import type { Strapi } from 'types/strapi'
+
+type Home = {
+  header: Shared.Header
+  seo: Shared.SEO
+}
+
+type Request = Strapi.Data<{
+  home: Home
+  global: Shared.Global
+}>
+
+const { home, global } = await client.request<Request>(Home)
 ---
-<BaseLayout>
-  Index
+<BaseLayout
+  title={home.seo.title}
+  description={home.seo.description}
+  thumbnail={home.seo.thumbnail}
+>
+  <main class="flex flex-col justify-between gap-4 sm:flex-row">
+    <Header
+      as="section"
+      title={home.header.title}
+      subtitle={home.header.subtitle}
+      description={home.header.description}
+      link={home.header.link}
+    />
+    <ul class="space-y-1 text-sm sm:text-right">
+      {global.socials.map(({ name, url }) => (
+        <li>
+          <Link href={url}>{name}</Link>
+        </li>
+      ))}
+    </ul>
+  </main>
 </BaseLayout>
