@@ -1,3 +1,4 @@
 import { GraphQLClient } from 'graphql-request'
+import { STRAPI_URL } from './config'
 
-export const client = new GraphQLClient(import.meta.env.STRAPI_URL)
+export const client = new GraphQLClient(STRAPI_URL)
