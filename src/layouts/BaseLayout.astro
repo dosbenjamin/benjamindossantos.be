@@ -46,7 +46,7 @@ const style = Astro.resolve('../styles/global.css')
     <meta name="twitter:site" content="@dosbenjamin">
     <meta name="twitter:creator" content="@dosbenjamin">
     <link rel="preload" href="/SpaceGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    {import.meta.env.MODE === 'production' && (<link rel="preload" href={style} as="style">)}
+    {import.meta.env.PROD && (<link rel="preload" href={style} as="style">)}
     <link rel="stylesheet" href={style}>
   </head>
   <body>
