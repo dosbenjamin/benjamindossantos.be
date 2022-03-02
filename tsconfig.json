@@ -11,6 +11,6 @@
       "public/*": ["public/*"]
     },
     "module": "ESNext",
-    "types": ["vite/client"]
+    "types": ["vite/client", "node"]
   }
 }
