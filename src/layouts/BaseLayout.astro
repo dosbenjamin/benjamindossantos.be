@@ -2,25 +2,26 @@
 import { Shared } from 'types/shared'
 import { Strapi } from 'types/strapi'
 import { client } from 'graphql-client'
-import { Global } from 'queries/Global'
+import { getGlobal } from 'queries/getGlobal'
+import Favicon from 'components/Favicon.astro'
+import FontFace from 'components/FontFace.astro'
+import SpaceGrotesk from 'public/SpaceGrotesk-Regular.woff2'
+import '../styles/global.css'
 
-export type Props = Shared.SEO
+export type Props = Shared.SEO.Meta & Shared.SEO.Structured
 
 type Global = {
-  seo: Shared.SEO
+  meta: Shared.SEO.Meta
+  favicon: Shared.SEO.Favicon
 }
 
-type Request = Strapi.Data<{
-  global: Global
-}>
+type Request = {
+  global: Strapi.Data<Strapi.Attributes<Global>>
+}
 
-const { title, description, thumbnail } = Astro.props as Props
-const { global } = await client.request<Request>(Global)
-const pageTitle = `${title && `${title} —`} ${global.seo.title}`
-
-console.log(import.meta.env)
-
-const style = Astro.resolve('../styles/global.css')
+const { title, description, thumbnail, json } = Astro.props as Props
+const { global } = await client.request<Request>(getGlobal)
+const pageTitle = `${title && `${title} —`} ${global.data.attributes.meta.title}`
 ---
 <!doctype html>
 <html lang="en">
@@ -28,26 +29,28 @@ const style = Astro.resolve('../styles/global.css')
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>{pageTitle}</title>
-    <meta name="description" content={description || global.seo.description}>
+    <meta name="description" content={description || global.data.attributes.meta.description}>
     <meta name="author" content="Benjamin Dos Santos">
-    <meta property="og:site_name" content={global.seo.title}>
+    <meta property="og:site_name" content={global.data.attributes.meta.title}>
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_GB">
     <meta property="og:title" content={pageTitle}>
-    <meta property="og:description" content={description || global.seo.description}>
+    <meta property="og:description" content={description || global.data.attributes.meta.description}>
     <meta property="og:url" content={Astro.request.canonicalURL.href}>
-    <meta property="og:image" content={thumbnail?.url || global.seo.thumbnail.url}>
+    <meta property="og:image" content={thumbnail?.url || global.data.attributes.meta.thumbnail.url}>
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content={pageTitle}>
     <meta name="twitter:description" content={description}>
-    <meta name="twitter:image" content={thumbnail?.url || global.seo.thumbnail.url}>
+    <meta name="twitter:image" content={thumbnail?.url || global.data.attributes.meta.thumbnail.url}>
     <meta name="twitter:site" content="@dosbenjamin">
-    <meta name="twitter:creator" content="@dosbenjamin">
-    <link rel="preload" href="/SpaceGrotesk-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    {import.meta.env.PROD && (<link rel="preload" href={style} as="style">)}
-    <link rel="stylesheet" href={style}>
+    {global.data.attributes.favicon.main.data?.attributes && <Favicon icon={global.data.attributes.favicon.main.data.attributes} />}
+    <link rel="preload" href={SpaceGrotesk} as="font" crossorigin>
+    {import.meta.env.PROD && (<link rel="preload" href="/src/styles/global.css" as="style" />)}
+    <FontFace />
+    <!-- <link rel="stylesheet" href={styles}> -->
+    {json && (<script type="application/ld+json" set:html={JSON.stringify(json)} />)}
   </head>
   <body>
     <slot />

@@ -13,13 +13,24 @@ export namespace Shared {
     link: Link
   }
 
-  export type SEO = {
-    title: string
-    description: string
-    thumbnail: Strapi.Image
+  export type Global = {
+    networks: Link[]
   }
 
-  export type Global = {
-    socials: Link[]
+  export namespace SEO {
+    export type Favicon = {
+      main: Strapi.Data<Strapi.Attributes<Strapi.Image>>
+      maskable: Strapi.Data<Strapi.Attributes<Strapi.Image>>
+    }
+
+    export type Meta = {
+      title: string
+      description: string
+      thumbnail: Strapi.Image
+    }
+
+    export type Structured = {
+      json?: string
+    }
   }
 }

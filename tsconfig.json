@@ -8,6 +8,7 @@
       "queries/*": ["src/queries/*"],
       "types/*": ["src/types/*"],
       "graphql-client": ["src/graphql-client"],
+      "cloudinary": ["src/cloudinary"],
       "public/*": ["public/*"]
     },
     "module": "ESNext",
