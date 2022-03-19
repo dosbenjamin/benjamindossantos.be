@@ -1,4 +1,9 @@
 import { GraphQLClient } from 'graphql-request'
 
-console.log(import.meta.env)
-export const client = new GraphQLClient(process.env.STRAPI_URL || import.meta.env.STRAPI_URL)
+export const client = new GraphQLClient(
+  process.env.STRAPI_URL || import.meta.env.STRAPI_URL, {
+    headers: {
+      authorization: `Bearer ${process.env.STRAPI_TOKEN || import.meta.env.STRAPI_TOKEN}`
+    }
+  }
+)
