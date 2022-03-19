@@ -1,0 +1,14 @@
+---
+import SpaceGrotesk from 'public/SpaceGrotesk-Regular.woff2'
+
+const Tag = 'style'
+---
+<Tag set:html={`
+  @font-face {
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url(${SpaceGrotesk}) format('woff2');
+  }
+`} />
