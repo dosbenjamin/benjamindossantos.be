@@ -1,0 +1,28 @@
+---
+import { getNotFound } from 'queries/getNotFound'
+import type { Shared } from 'types/shared'
+import type { Strapi } from 'types/strapi'
+import { client } from 'graphql-client'
+import Header from 'components/Header.astro'
+import BaseLayout from 'layouts/BaseLayout.astro'
+
+type NotFound = {
+  header: Shared.Header
+  meta: Shared.SEO.Meta
+}
+
+type Request = {
+  notFound: Strapi.Data<Strapi.Attributes<NotFound>>
+}
+
+const { notFound } = await client.request<Request>(getNotFound)
+const { header, meta } = notFound.data.attributes
+---
+<BaseLayout title={meta.title}>
+  <Header
+    title={header.title}
+    subtitle={header.subtitle}
+    description={header.description}
+    link={header.link}
+  />
+</BaseLayout>
