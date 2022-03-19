@@ -3,37 +3,39 @@ import BaseLayout from 'layouts/BaseLayout.astro'
 import Header from 'components/Header.astro'
 import Link from 'components/Link.astro'
 import { client } from 'graphql-client'
-import { Home } from 'queries/Home'
+import { getHome } from 'queries/getHome'
 import type { Shared } from 'types/shared'
 import type { Strapi } from 'types/strapi'
 
 type Home = {
   header: Shared.Header
-  seo: Shared.SEO
+  meta: Shared.SEO.Meta
+  structured: Shared.SEO.Structured
 }
 
-type Request = Strapi.Data<{
-  home: Home
-  global: Shared.Global
-}>
+type Request = {
+  home: Strapi.Data<Strapi.Attributes<Home>>
+  global: Strapi.Data<Strapi.Attributes<Shared.Global>>
+}
 
-const { home, global } = await client.request<Request>(Home)
+const { home, global } = await client.request<Request>(getHome)
 ---
 <BaseLayout
-  title={home.seo.title}
-  description={home.seo.description}
-  thumbnail={home.seo.thumbnail}
+  title={home.data.attributes.meta.title}
+  description={home.data.attributes.meta.description}
+  thumbnail={home.data.attributes.meta.thumbnail}
+  json={home.data.attributes.structured?.json}
 >
   <main class="flex flex-col justify-between gap-4 sm:flex-row">
     <Header
       as="section"
-      title={home.header.title}
-      subtitle={home.header.subtitle}
-      description={home.header.description}
-      link={home.header.link}
+      title={home.data.attributes.header.title}
+      subtitle={home.data.attributes.header.subtitle}
+      description={home.data.attributes.header.description}
+      link={home.data.attributes.header.link}
     />
     <ul class="space-y-1 text-sm sm:text-right">
-      {global.socials.map(({ name, url }) => (
+      {global.data.attributes.networks.map(({ name, url }) => (
         <li>
           <Link href={url}>{name}</Link>
         </li>
