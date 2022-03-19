@@ -16,7 +16,7 @@ const {
   <h1 class="text-lg max-w-[8rem]">{title}</h1>
   <div class="max-w-[12rem] space-y-2">
     <h2>{subtitle}</h2>
-    {description.replaceAll('<a', `<a target="_blank" rel="noopener" class="${linkClass}"`)}
+    <p set:html={description.replaceAll('<a', `<a target="_blank" rel="noopener" class="${linkClass}"`)} />
     <Link class="text-sm" href={link.url}>{link.name}</Link>
   </div>
 </Tag>
