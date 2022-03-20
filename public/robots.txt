@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://benjamindossantos.be/sitemap.xml
