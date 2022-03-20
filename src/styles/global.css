@@ -6,14 +6,14 @@
 
   html {
     @apply text-base;
-    height: fill-available;
+    height: stretch;
   }
 
   body {
     @apply min-h-screen p-2;
     @apply text-gray-900 bg-gray-450;
     @apply font-sans antialiased leading-none uppercase;
-    min-height: fill-available;
+    min-height: stretch;
     text-rendering: optimizeLegibility;
   }
 
