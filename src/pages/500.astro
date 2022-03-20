@@ -1,0 +1,27 @@
+---
+import type { Shared } from 'types/shared'
+import type { Strapi } from 'types/strapi'
+import { client } from 'graphql-client'
+import { getInternalError } from 'queries/getInternalError'
+import BaseLayout from 'layouts/BaseLayout.astro'
+import Header from 'components/Header.astro'
+
+type InternalError = {
+  header: Shared.Header
+  meta: Shared.SEO.Meta
+}
+
+type Request = {
+  internalError: Strapi.Data<InternalError>
+}
+
+const { internalError } = await client.request<Request>(getInternalError)
+---
+<BaseLayout title={internalError.data.attributes.meta.title}>
+  <Header
+    title={internalError.data.attributes.header.title}
+    subtitle={internalError.data.attributes.header.subtitle}
+    description={internalError.data.attributes.header.description}
+    link={internalError.data.attributes.header.link}
+  />
+</BaseLayout>
