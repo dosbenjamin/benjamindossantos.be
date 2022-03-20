@@ -12,7 +12,7 @@ type NotFound = {
 }
 
 type Request = {
-  notFound: Strapi.Data<Strapi.Attributes<NotFound>>
+  notFound: Strapi.Data<NotFound>
 }
 
 const { notFound } = await client.request<Request>(getNotFound)

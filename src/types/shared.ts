@@ -19,8 +19,8 @@ export namespace Shared {
 
   export namespace SEO {
     export type Favicon = {
-      main: Strapi.Data<Strapi.Attributes<Strapi.Image>>
-      maskable: Strapi.Data<Strapi.Attributes<Strapi.Image>>
+      main: Strapi.Data<Strapi.Image>
+      maskable: Strapi.Data<Strapi.Image>
     }
 
     export type Meta = {

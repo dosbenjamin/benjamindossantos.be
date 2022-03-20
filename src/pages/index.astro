@@ -14,8 +14,8 @@ type Home = {
 }
 
 type Request = {
-  home: Strapi.Data<Strapi.Attributes<Home>>
-  global: Strapi.Data<Strapi.Attributes<Shared.Global>>
+  home: Strapi.Data<Home>
+  global: Strapi.Data<Shared.Global>
 }
 
 const { home, global } = await client.request<Request>(getHome)

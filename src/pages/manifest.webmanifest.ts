@@ -11,7 +11,7 @@ type Manifest = {
 }
 
 type Request = {
-  global: Strapi.Data<Strapi.Attributes<Manifest>>
+  global: Strapi.Data<Manifest>
 }
 
 export const get = async () => {
