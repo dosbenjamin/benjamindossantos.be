@@ -1,0 +1,30 @@
+/* TEAM */
+Design + Code: Benjamin Dos Santos
+Contact: hello@benjamindossantos.be
+Twitter: @dosbenjamin
+Location: Genval, Belgium
+
+/* SITE */
+Language: English
+Standards:
+  - HTML5
+  - CSS3
+  - JavaScript
+Stack:
+  - DNS & Hosting:
+    - Cloudinary
+    - Railway.app
+    - Vercel
+    - Gandi
+  - Build:
+    - Strapi
+    - PostgreSQL
+    - Astro
+    - Tailwind CSS
+    - GraphQL
+    - TypeScript
+Softwares:
+  - IDE: Visual Studio Code
+  - Design: Figma
+Fonts:
+  - Space Grotesk by Florian Karsten
