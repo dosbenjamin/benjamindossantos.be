@@ -46,6 +46,7 @@ const pageTitle = `${title ? `${title} —` : ''} ${meta.title}`
     <meta name="twitter:image" content={thumbnail?.data.attributes.url || meta.thumbnail.data.attributes.url}>
     <meta name="twitter:site" content="@dosbenjamin">
     <meta name="theme-color" content="#e8e8e8">
+    <link rel="canonical" href={Astro.request.canonicalURL.href} />
     {favicon.main.data?.attributes && <Favicon icon={favicon.main.data.attributes} />}
     <link rel="preload" href="/SpaceGrotesk-Regular.woff2" as="font" crossorigin>
     <FontFace />
