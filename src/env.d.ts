@@ -1,5 +1,6 @@
 type Env = {
   readonly STRAPI_URL: string
+  readonly STRAPI_TOKEN: string
   readonly CLOUDINARY_NAME: string
   readonly CLOUDINARY_KEY: string
   readonly CLOUDINARY_SECRET: string
