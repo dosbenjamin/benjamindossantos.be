@@ -46,10 +46,11 @@ const pageTitle = `${title ? `${title} —` : ''} ${meta.title}`
     <meta name="twitter:image" content={thumbnail?.data.attributes.url || meta.thumbnail.data.attributes.url}>
     <meta name="twitter:site" content="@dosbenjamin">
     <meta name="theme-color" content="#e8e8e8">
+    <link rel="preconnect" href="https://res.cloudinary.com" />
     <link rel="preload" href="/SpaceGrotesk-Regular.woff2" as="font" crossorigin>
     <link rel="canonical" href={Astro.request.canonicalURL.href} />
-    <link type="text/plain" rel="author" href="/humans.txt" />
     {favicon.main.data?.attributes && <Favicon icon={favicon.main.data.attributes} />}
+    <link type="text/plain" rel="author" href="/humans.txt" />
     <FontFace />
     {json && (<script type="application/ld+json" set:html={JSON.stringify(json)} />)}
   </head>
