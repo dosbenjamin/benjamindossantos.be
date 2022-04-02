@@ -12,7 +12,7 @@
       "public/*": ["public/*"]
     },
     "module": "ESNext",
-    "lib": ["WebWorker"],
+    "lib": ["ESNext", "WebWorker"],
     "types": ["vite/client", "node"],
     "allowJs": true
   }

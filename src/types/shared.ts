@@ -1,4 +1,4 @@
-import { Strapi } from './strapi'
+import type { Strapi } from './strapi'
 
 export namespace Shared {
   export type Link = {
@@ -19,8 +19,7 @@ export namespace Shared {
 
   export namespace SEO {
     export type Favicon = {
-      main: Strapi.Data<Strapi.Image>
-      maskable: Strapi.Data<Strapi.Image>
+      main: Strapi.Image
     }
 
     export type Meta = {
