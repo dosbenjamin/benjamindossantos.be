@@ -53,6 +53,11 @@ const pageTitle = `${title ? `${title} —` : ''} ${meta.title}`
     <link type="text/plain" rel="author" href="/humans.txt" />
     <FontFace />
     {json && (<script type="application/ld+json" set:html={JSON.stringify(json)} />)}
+    <script defer>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+      }
+    </script>
   </head>
   <body>
     <slot />

@@ -12,6 +12,8 @@
       "public/*": ["public/*"]
     },
     "module": "ESNext",
-    "types": ["vite/client", "node"]
+    "lib": ["WebWorker"],
+    "types": ["vite/client", "node"],
+    "allowJs": true
   }
 }
