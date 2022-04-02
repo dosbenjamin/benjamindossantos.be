@@ -83,7 +83,7 @@ const onInstall = event => {
   event.waitUntil(
     addToPrecache([
       '/',
-      '/manifest.webmanifest',
+      '/site.webmanifest',
       '/SpaceGrotesk-Regular.woff2'
     ])
   )

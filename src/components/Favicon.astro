@@ -15,4 +15,4 @@ const favicon = cloudinary.image(provider_metadata.public_id)
 <link rel="icon" href={favicon.resize(Resize.thumbnail(32, 32)).format('ico').toURL()} sizes="any">
 {mime === 'image/svg+xml' && <link rel="icon" href={favicon_url} type="image/svg+xml">}
 <link rel="apple-touch-icon" href={favicon.resize(Resize.thumbnail(180, 180)).format('png').toURL()} sizes="180x180">
-<link rel="manifest" href="/manifest.webmanifest">
+<link rel="manifest" href="/site.webmanifest">
