@@ -36,7 +36,7 @@ const pageTitle = `${title ? `${title} —` : ''} ${meta.title}`
     <meta property="og:locale" content="en_GB">
     <meta property="og:title" content={pageTitle}>
     <meta property="og:description" content={description || meta.description}>
-    <meta property="og:url" content={Astro.request.canonicalURL.href}>
+    <meta property="og:url" content={Astro.canonicalURL.href}>
     <meta property="og:image" content={thumbnail?.data.attributes.url || meta.thumbnail.data.attributes.url}>
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -48,7 +48,7 @@ const pageTitle = `${title ? `${title} —` : ''} ${meta.title}`
     <meta name="theme-color" content="#e8e8e8">
     <link rel="preconnect" href="https://res.cloudinary.com" />
     <link rel="preload" href="/SpaceGrotesk-Regular.woff2" as="font" crossorigin>
-    <link rel="canonical" href={Astro.request.canonicalURL.href} />
+    <link rel="canonical" href={Astro.canonicalURL.href} />
     {favicon.main.data?.attributes && <Favicon icon={favicon.main.data.attributes} />}
     <link type="text/plain" rel="author" href="/humans.txt" />
     <FontFace />
