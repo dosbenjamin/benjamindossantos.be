@@ -51,9 +51,9 @@ const sortedProjects = projects.data.sort((a, b) => a.attributes.order - b.attri
         ))}
       </ul>
     </div>
-    <section class="space-y-8">
+    <section class="mt-16 sm:mt-32 space-y-8">
       {sortedProjects.map(project => (
-        <article class="mt-16 sm:mt-32">
+        <article>
           <h3 class="ml-auto text-right text-xl max-w-xl">
             <a
               href={project.attributes.url}
