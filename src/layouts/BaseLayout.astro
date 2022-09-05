@@ -54,11 +54,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
     <link type="text/plain" rel="author" href="/humans.txt" />
     <FontFace />
     {json && (<script type="application/ld+json" set:html={JSON.stringify(json)} />)}
-    <script defer>
+    <!-- <script defer>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/service-worker.js')
       }
-    </script>
+    </script> -->
   </head>
   <body>
     <slot />
