@@ -31,6 +31,17 @@ export const getHome = gql`
         }
       }
     }
+    projects {
+      data {
+        attributes {
+          name
+          role
+          date
+          url
+          order
+        }
+      }
+    }
     global {
       data {
         attributes {

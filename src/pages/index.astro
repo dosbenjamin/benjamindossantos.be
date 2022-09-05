@@ -6,6 +6,7 @@ import { client } from 'graphql-client'
 import { getHome } from 'queries/getHome'
 import type { Shared } from 'types/shared'
 import type { Strapi } from 'types/strapi'
+import { defaultClass as linkClass } from 'components/Link.astro'
 
 type Home = {
   header: Shared.Header
@@ -16,11 +17,16 @@ type Home = {
 type Request = {
   home: Strapi.Data<Home>
   global: Strapi.Data<Shared.Global>
+  projects: {
+    data: Strapi.Attributes<Shared.Project>[]
+  }
 }
 
-const { home, global } = await client.request<Request>(getHome)
+const { home, global, projects } = await client.request<Request>(getHome)
 const { meta, header, structured } = home.data.attributes
 const { networks } = global.data.attributes
+
+const sortedProjects = projects.data.sort((a, b) => a.attributes.order - b.attributes.order)
 ---
 <BaseLayout
   title={meta.title}
@@ -28,20 +34,45 @@ const { networks } = global.data.attributes
   thumbnail={meta.thumbnail}
   json={structured?.json}
 >
-  <main class="flex flex-col justify-between gap-4 sm:flex-row">
-    <Header
-      as="section"
-      title={header.title}
-      subtitle={header.subtitle}
-      description={header.description}
-      link={header.link}
-    />
-    <ul class="space-y-1 text-sm sm:text-right">
-      {networks.map(({ name, url }) => (
-        <li>
-          <Link href={url}>{name}</Link>
-        </li>
+  <main>
+    <div class="flex justify-between gap-4">
+      <Header
+        as="section"
+        title={header.title}
+        subtitle={header.subtitle}
+        description={header.description}
+        link={header.link}
+      />
+      <ul class="space-y-1 text-sm text-right">
+        {networks.map(({ name, url }) => (
+          <li>
+            <Link href={url}>{name}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <section class="space-y-8">
+      {sortedProjects.map(project => (
+        <article class="mt-16 sm:mt-32">
+          <h3 class="ml-auto text-right text-xl max-w-xl">
+            <a
+              href={project.attributes.url}
+              target="_blank"
+              rel="noopener"
+              class="hover:underline"
+            >
+              {project.attributes.name}
+            </a>
+          </h3>
+          <footer class="text-sm mt-1 flex space-x-2 justify-end">
+            <div
+              class="after:content-['—'] after:ml-2"
+              set:html={project.attributes.role.replaceAll('<a', `<a target="_blank" rel="noopener" class="${linkClass}"`)}
+            />
+            <div>{project.attributes.date}</div>
+          </footer>
+        </article>
       ))}
-    </ul>
+    </section>
   </main>
 </BaseLayout>

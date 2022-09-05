@@ -17,6 +17,14 @@ export namespace Shared {
     networks: Link[]
   }
 
+  export type Project = {
+    date: string
+    url: string
+    order: number
+    name: string
+    role: string
+  }
+
   export namespace SEO {
     export type Favicon = {
       main: Strapi.Image
