@@ -22,6 +22,7 @@ const { title, description, thumbnail, json } = Astro.props as Props
 const { global } = await client.request<Request>(getGlobal)
 const { meta, favicon } = global.data.attributes
 const pageTitle = `${title ? `${title} —` : ''} ${meta.title}`
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 <!doctype html>
 <html lang="en">
@@ -36,7 +37,7 @@ const pageTitle = `${title ? `${title} —` : ''} ${meta.title}`
     <meta property="og:locale" content="en_GB">
     <meta property="og:title" content={pageTitle}>
     <meta property="og:description" content={description || meta.description}>
-    <meta property="og:url" content={Astro.canonicalURL.href}>
+    <meta property="og:url" content={canonicalURL}>
     <meta property="og:image" content={thumbnail?.data.attributes.url || meta.thumbnail.data.attributes.url}>
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -48,7 +49,7 @@ const pageTitle = `${title ? `${title} —` : ''} ${meta.title}`
     <meta name="theme-color" content="#e8e8e8">
     <link rel="preconnect" href="https://res.cloudinary.com" />
     <link rel="preload" href="/SpaceGrotesk-Regular.woff2" as="font" crossorigin>
-    <link rel="canonical" href={Astro.canonicalURL.href} />
+    <link rel="canonical" href={canonicalURL} />
     {favicon.main.data?.attributes && <Favicon icon={favicon.main.data.attributes} />}
     <link type="text/plain" rel="author" href="/humans.txt" />
     <FontFace />
