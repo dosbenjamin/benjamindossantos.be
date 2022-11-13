@@ -16,6 +16,8 @@ const addToPrecache = async resources => {
  * @param {Response} response
  */
 const putInCache = async (request, response) => {
+  if (!(request.url.includes('http'))) return
+
   const cache = await caches.open('cache')
   cache.put(request, response)
 }
