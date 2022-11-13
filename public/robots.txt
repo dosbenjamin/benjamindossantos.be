@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://benjamindossantos.be/sitemap.xml
+Sitemap: https://benjamindossantos.be/sitemap-index.xml
