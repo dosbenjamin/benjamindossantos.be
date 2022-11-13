@@ -1,4 +1,6 @@
-/** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
+const plugin = require('tailwindcss/plugin')
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     'src/components/*.astro',
@@ -34,5 +36,15 @@ module.exports = {
     screens: {
       'sm': '24rem'
     }
-  }
+  },
+  plugins: [
+    plugin(({ addBase, theme }) => {
+      addBase({
+        'html': {
+          'font-size': theme('fontSize.base'),
+          'height': 'stretch'
+        }
+      })
+    })
+  ]
 }
