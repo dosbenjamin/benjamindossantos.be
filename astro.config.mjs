@@ -1,11 +1,9 @@
 import sitemap from '@astrojs/sitemap'
+import tailwind from '@astrojs/tailwind'
+import { defineConfig } from 'astro/config'
 
-// Full Astro Configuration API Documentation:
-// https://docs.astro.build/reference/configuration-reference
-
-// @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
-  // Comment out "renderers: []" to enable Astro's default component support.
+// https://astro.build/config
+export default defineConfig({
   site: 'https://benjamindossantos.be',
-  integrations: [sitemap()]
+  integrations: [sitemap(), tailwind()]
 })

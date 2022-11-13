@@ -1,6 +1,6 @@
 {
   "name": "benjamindossantos.be",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -8,17 +8,10 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "devDependencies": {
-    "@cloudinary/url-gen": "^1.8.6",
-    "@types/node": "^18.7.15",
-    "astro": "1.1.5",
-    "graphql": "^16.6.0",
-    "graphql-request": "^5.0.0",
-    "postcss": "^8.4.16"
-  },
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
-    "autoprefixer": "^10.4.8",
-    "tailwindcss": "^3.1.8"
+    "@astrojs/tailwind": "^2.1.2",
+    "astro": "1.6.7",
+    "tailwindcss": "^3.0.24"
   }
 }
