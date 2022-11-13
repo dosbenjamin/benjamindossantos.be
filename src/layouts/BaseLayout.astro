@@ -17,6 +17,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
     <title>{pageTitle}</title>
     {description && <meta name="description" content={description} />}
     <meta name="author" content="Benjamin Dos Santos">
+    <meta name="generator" content={Astro.generator} />
     <meta property="og:site_name" content="Benjamin Dos Santos">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_GB">
