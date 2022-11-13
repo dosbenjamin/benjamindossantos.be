@@ -7,7 +7,6 @@ export namespace Shared {
   export type Header = {
     title: string
     subtitle: string
-    description: string
     link: Link
   }
 
