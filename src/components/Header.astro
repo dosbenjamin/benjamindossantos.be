@@ -1,5 +1,5 @@
 ---
-import Link, { defaultClass as linkClass } from './Link.astro'
+import Link, { defaultClass as linkClass } from 'components/Link.astro'
 import type { Shared } from 'types/shared'
 
 type Props = { as?: string } & Shared.Header
@@ -12,7 +12,8 @@ const {
   link
 } = Astro.props as Props
 ---
-<Tag class="flex flex-wrap gap-4">
+
+<Tag class:list="flex flex-wrap gap-4">
   <h1 class="text-lg max-w-[8rem]">{title}</h1>
   <div class="max-w-[12rem] space-y-2">
     <h2>{subtitle}</h2>

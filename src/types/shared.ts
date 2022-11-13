@@ -1,5 +1,3 @@
-import type { Strapi } from './strapi'
-
 export namespace Shared {
   export type Link = {
     name: string
@@ -17,27 +15,15 @@ export namespace Shared {
     networks: Link[]
   }
 
-  export type Project = {
-    date: string
-    url: string
-    order: number
-    name: string
-    role: string
-  }
-
   export namespace SEO {
-    export type Favicon = {
-      main: Strapi.Image
-    }
-
     export type Meta = {
-      title: string
-      description: string
-      thumbnail: Strapi.Image
+      title?: string
+      description?: string
+      thumbnail?: string
     }
 
     export type Structured = {
-      json?: string
+      json?: {}
     }
   }
 }

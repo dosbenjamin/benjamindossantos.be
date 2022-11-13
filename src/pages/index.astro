@@ -1,47 +1,101 @@
 ---
 import BaseLayout from 'layouts/BaseLayout.astro'
 import Header from 'components/Header.astro'
-import Link from 'components/Link.astro'
-import { client } from 'graphql-client'
-import { getHome } from 'queries/getHome'
+import Link, { defaultClass as linkClass } from 'components/Link.astro'
 import type { Shared } from 'types/shared'
-import type { Strapi } from 'types/strapi'
-import { defaultClass as linkClass } from 'components/Link.astro'
 
-type Home = {
-  header: Shared.Header
-  meta: Shared.SEO.Meta
-  structured: Shared.SEO.Structured
-}
+const networks: Shared.Link[] = [
+  {
+    name: 'Behance',
+    url: 'https://www.behance.net/dosbenjamin'
+  },
+  {
+    name: 'GitHub',
+    url: 'https://github.com/dosbenjamin'
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/dosbenjamin'
+  }
+]
 
-type Request = {
-  home: Strapi.Data<Home>
-  global: Strapi.Data<Shared.Global>
-  projects: {
-    data: Strapi.Attributes<Shared.Project>[]
+const structuredData = {
+  '@context': 'https://schema.org/',
+  '@type': 'Person',
+  'url': 'https://benjamindossantos.be',
+  'name': 'Benjamin Dos Santos',
+  'email': 'hello@benjamindossantos.be',
+  'image': `${Astro.url.origin}/benjamin.jpg`,
+  'vatID': 'BE0775493620',
+  'jobTitle': 'Digital Designer & Front-End Developer',
+  'telephone': '+32478686902',
+  'description': 'Designer and Developer based in Belgium',
+  'sameAs': [
+    'https://www.linkedin.com/in/benjamin-dos-santos',
+    'https://www.instagram.com/dosbenjamin',
+    'https://github.com/dosbenjamin',
+    'https://dribbble.com/dosbenjamin',
+    'https://unsplash.com/@dosbenjamin',
+    'https://www.behance.net/dosbenjamin',
+    'https://www.pinterest.com/dosbenjamin',
+    'https://www.malt.com/profile/benjamindossantos'
+  ],
+  'address': {
+    '@type': 'PostalAddress',
+    'postalCode': '1332',
+    'addressRegion': 'Walloon Region',
+    'streetAddress': 'Avenue Albert 1er 299',
+    'addressCountry': 'BE',
+    'addressLocality': 'Genval'
+  },
+  'alumniOf': [
+    {
+      'name': 'Haute École Albert Jacquard',
+      '@type': 'CollegeOrUniversity',
+      'sameAs': [
+        'https://www.heaj.be',
+        'https://www.facebook.com/HEAJofficiel',
+        'https://twitter.com/heajofficiel',
+        'https://www.instagram.com/heajofficiel'
+      ]
+    },
+    {
+      'name': 'Collège Saint-Étienne',
+      '@type': 'CollegeOrUniversity',
+      'sameAs': [
+        'https://cste.be/cse',
+        'https://www.facebook.com/CollegeSaintEtienneCSE'
+      ]
+    }
+  ],
+  'worksFor': {
+    'name': 'Certinergie',
+    '@type': 'Organization',
+    'sameAs':[
+      'https://www.certinergie.be/fr',
+      'https://www.certi-it.be',
+      'https://www.linkedin.com/company/certinergie',
+      'https://www.facebook.com/certinergie',
+      'https://www.instagram.com/certinergie'
+    ]
   }
 }
-
-const { home, global, projects } = await client.request<Request>(getHome)
-const { meta, header, structured } = home.data.attributes
-const { networks } = global.data.attributes
-
-const sortedProjects = projects.data.sort((a, b) => a.attributes.order - b.attributes.order)
 ---
+
 <BaseLayout
-  title={meta.title}
-  description={meta.description}
-  thumbnail={meta.thumbnail}
-  json={structured?.json}
+  title="Designer & Developer"
+  description="Designer and Developer based in Belgium"
+  thumbnail={`${Astro.url.origin}/thumbnail-home.png`}
+  json={structuredData}
 >
   <main>
     <div class="flex justify-between gap-4">
       <Header
         as="section"
-        title={header.title}
-        subtitle={header.subtitle}
-        description={header.description}
-        link={header.link}
+        title="Benjamin Dos Santos"
+        subtitle="I'm Digital Designer & Front-End Developer"
+        description={`Currently working at <a class="${linkClass}" href="https://certinergie.be">Certinergie</a>`}
+        link={{ name: 'hello＠benjamindossantos.be', url: 'mailto:hello@benjamindossantos.be'}}
       />
       <ul class="space-y-1 text-sm text-right">
         {networks.map(({ name, url }) => (
@@ -51,28 +105,5 @@ const sortedProjects = projects.data.sort((a, b) => a.attributes.order - b.attri
         ))}
       </ul>
     </div>
-    <section class="mt-16 sm:mt-32 space-y-8">
-      {sortedProjects.map(project => (
-        <article>
-          <h3 class="ml-auto text-right text-xl max-w-xl">
-            <a
-              href={project.attributes.url}
-              target="_blank"
-              rel="noopener"
-              class="hover:underline"
-            >
-              {project.attributes.name}
-            </a>
-          </h3>
-          <footer class="text-sm mt-1 flex space-x-2 justify-end">
-            <div
-              class="after:content-['—'] after:ml-2"
-              set:html={project.attributes.role.replaceAll('<a', `<a target="_blank" rel="noopener" class="${linkClass}"`)}
-            />
-            <div>{project.attributes.date}</div>
-          </footer>
-        </article>
-      ))}
-    </section>
   </main>
 </BaseLayout>

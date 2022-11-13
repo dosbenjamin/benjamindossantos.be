@@ -12,16 +12,11 @@ Standards:
   - JavaScript
 Stack:
   - DNS & Hosting:
-    - Cloudinary
-    - Railway.app
     - Vercel
     - Gandi
   - Build:
-    - Strapi
-    - PostgreSQL
     - Astro
     - Tailwind CSS
-    - GraphQL
     - TypeScript
 Softwares:
   - IDE: Visual Studio Code

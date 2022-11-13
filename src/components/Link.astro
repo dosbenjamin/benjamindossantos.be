@@ -9,6 +9,7 @@ type Props = {
 const { href, class: className = '' } = Astro.props as Props
 const isExternal = href.includes('http')
 ---
+
 <a
   href={href}
   target={isExternal && '_blank'}
