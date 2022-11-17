@@ -3,7 +3,7 @@ import type { Shared } from 'types/shared'
 
 export type Props = Shared.SEO.Meta & Shared.SEO.Structured
 
-const { title, description, thumbnail, json } = Astro.props
+const { title, description, thumbnail, json }: Props = Astro.props
 
 const pageTitle = `${title ? `${title} —` : ''} Benjamin Dos Santos`
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
