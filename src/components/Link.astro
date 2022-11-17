@@ -12,7 +12,7 @@ const isExternal = href.includes('http')
   href={href}
   target={isExternal && '_blank'}
   rel={isExternal && 'noopener'}
-  class={`inline-block decoration-[0.075em] hover:underline focus:outline-none focus:underline ${className}`}
+  class:list={['inline-block decoration-[0.075em] hover:underline focus:outline-none focus:underline', className]}
 >
   <slot />
 </a>
