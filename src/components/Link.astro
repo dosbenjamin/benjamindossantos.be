@@ -11,7 +11,7 @@ const isExternal = href.includes('http')
 <a
   href={href}
   target={isExternal && '_blank'}
-  rel={isExternal && 'noopener'}
+  rel={isExternal && 'noopener noreferrer'}
   class:list={['inline-block decoration-[0.075em] hover:underline focus:outline-none focus:underline', className]}
 >
   <slot />
