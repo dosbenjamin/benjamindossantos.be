@@ -32,8 +32,8 @@ module.exports = {
     },
     fontSize: {
       'sm': '0.75rem',
-      'base': 'clamp(1.333rem, 3vw, 2.369rem)',
-      'lg': '1.333rem',
+      'base': 'clamp(1.44rem, 3vw, 2.488rem)',
+      'lg': '1.44rem',
       'xl': 'min(4rem, 10vw)'
     }
   },
