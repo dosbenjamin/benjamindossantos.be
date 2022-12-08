@@ -1,9 +1,11 @@
+// @ts-check
+
+// @ts-ignore
 const worker = /** @type {ServiceWorkerGlobalScope} */ (self)
 
 /**
- * Add resources to the precache.
- *
- * @param {string[]} resources - The resources to precache.
+ * @param {string[]} resources
+ * @return {Promise<void>}
  */
 const addToPrecache = async resources => {
   const cache = await caches.open('precache')
@@ -11,9 +13,9 @@ const addToPrecache = async resources => {
 }
 
 /**
- *
  * @param {Request} request
  * @param {Response} response
+ * @return {Promise<void>}
  */
 const putInCache = async (request, response) => {
   if (!(request.url.includes('http'))) return
@@ -23,11 +25,11 @@ const putInCache = async (request, response) => {
 }
 
 /**
- * Cache first strategy.
- *
- * @param {[Request, Promise<Response>]} request
+ * @param {Request} request
+ * @param {Promise<Response>} preloadResponsePromise
+ * @return {Promise<Response>}
  */
-const cacheFirst = async ([request, preloadResponsePromise]) => {
+const cacheFirst = async (request, preloadResponsePromise) => {
   const cacheResponse = await caches.match(request)
   if (cacheResponse) return cacheResponse
 
@@ -40,6 +42,7 @@ const cacheFirst = async ([request, preloadResponsePromise]) => {
   try {
     const networkResponse = await fetch(request)
     putInCache(request, networkResponse.clone())
+
     return networkResponse
   } catch (error) {
     const fallbackResponse = await caches.match('/')
@@ -53,11 +56,10 @@ const cacheFirst = async ([request, preloadResponsePromise]) => {
 }
 
 /**
- * Network first strategy.
- *
- * @param {[Request, Promise<Response>]} request
+ * @param {Request} request
+ * @return {Promise<Response>}
  */
-const networkFirst = async ([request]) => {
+const networkFirst = async (request) => {
   try {
     const networkResponse = await fetch(request)
     putInCache(request, networkResponse.clone())
@@ -77,9 +79,8 @@ const networkFirst = async ([request]) => {
 }
 
 /**
- * Install the Service Worker and precache some resources.
- *
- * @param {ExtendableEvent} event - The installation event.
+ * @param {ExtendableEvent} event
+ * @return {void}
  */
 const onInstall = event => {
   event.waitUntil(
@@ -92,20 +93,14 @@ const onInstall = event => {
 }
 
 /**
- * Cache resources on runtime.
- *
- * @param {FetchEvent} event - The event when a resource is fetched.
+ * @param {FetchEvent} event
+ * @return {Promise<void>}
  */
 const onFetch = async event => {
-  const request = [
-    event.request,
-    event.preloadResponse
-  ]
-
   event.respondWith(
     event.request.mode === 'navigate'
-      ? networkFirst(request)
-      : cacheFirst(request)
+      ? networkFirst(event.request)
+      : cacheFirst(event.request, event.preloadResponse)
   )
 }
 

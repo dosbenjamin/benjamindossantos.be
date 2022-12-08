@@ -15,5 +15,6 @@
     "lib": ["ESNext", "WebWorker"],
     "types": ["vite/client", "node"],
     "allowJs": true
-  }
+  },
+  "exclude": ["dist"]
 }
