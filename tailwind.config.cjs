@@ -17,6 +17,9 @@ module.exports = {
     fontVariantNumeric: false,
     touchAction: false
   },
+  future: {
+    hoverOnlyWhenSupported: true
+  },
   theme: {
     colors: {
       'gray': {
