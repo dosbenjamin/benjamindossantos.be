@@ -96,25 +96,23 @@ const structuredData = {
   thumbnail={`${Astro.url.origin}/thumbnail-home.png`}
   json={structuredData}
 >
-  <main>
-    <div class="flex justify-between gap-4">
-      <Header
-        as="section"
-        title="Benjamin Dos Santos"
-        subtitle="I'm Digital Designer & Front-End Developer"
-        link={{ name: 'hello＠benjamindossantos.be', url: 'mailto:hello@benjamindossantos.be'}}
-      >
-        <p>
-          Currently working at <Link href="https://certinergie.be">Certinergie</Link>
-        </p>
-      </Header>
-      <ul class="space-y-1 text-sm text-right">
-        {networks.map(({ name, url }) => (
-          <li>
-            <Link href={url}>{name}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+  <main class="flex flex-col gap-4 sm:justify-between sm:flex-row">
+    <Header
+      as="section"
+      title="Benjamin Dos Santos"
+      subtitle="I'm Digital Designer & Front-End Developer"
+      link={{ name: 'hello＠benjamindossantos.be', url: 'mailto:hello@benjamindossantos.be'}}
+    >
+      <p>
+        Currently working at <Link href="https://certinergie.be">Certinergie</Link>
+      </p>
+    </Header>
+    <ul class="space-y-1 text-sm sm:text-right">
+      {networks.map(({ name, url }) => (
+        <li>
+          <Link href={url}>{name}</Link>
+        </li>
+      ))}
+    </ul>
   </main>
 </BaseLayout>

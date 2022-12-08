@@ -35,9 +35,6 @@ module.exports = {
       'base': 'clamp(1.333rem, 3vw, 2.369rem)',
       'lg': '1.333rem',
       'xl': 'min(4rem, 10vw)'
-    },
-    screens: {
-      'sm': '24rem'
     }
   },
   plugins: [
