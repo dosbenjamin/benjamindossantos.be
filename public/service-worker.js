@@ -59,7 +59,7 @@ const cacheFirst = async (request, preloadResponsePromise) => {
  * @param {Request} request
  * @return {Promise<Response>}
  */
-const networkFirst = async (request) => {
+const networkFirst = async request => {
   try {
     const networkResponse = await fetch(request)
     putInCache(request, networkResponse.clone())
