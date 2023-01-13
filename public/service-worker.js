@@ -1,6 +1,6 @@
 // @ts-check
 
-// @ts-ignore
+// @ts-expect-error
 const worker = /** @type {ServiceWorkerGlobalScope} */ (self)
 
 /**
