@@ -6,7 +6,7 @@ type Props = {
   class?: string
 }
 
-const { href, class: className = '' }: Props = Astro.props
+const { href, class: className }: Props = Astro.props
 const isExternal = href.includes('http')
 
 const externalAttributes: HTMLAttributes<'a'> = {
