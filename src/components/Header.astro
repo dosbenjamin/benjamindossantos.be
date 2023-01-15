@@ -5,14 +5,14 @@ import type * as Shared from 'types/shared'
 type Props = { as?: string } & Shared.Header
 
 const {
-  as: Tag = 'main',
+  as: Component = 'main',
   title,
   subtitle,
   link
 }: Props = Astro.props
 ---
 
-<Tag class:list="flex flex-col gap-4 sm:flex-row">
+<Component class:list="flex flex-col gap-4 sm:flex-row">
   <h1 class="text-lg w-36">{title}</h1>
   <div class="max-w-[12rem] space-y-2">
     <h2>{subtitle}</h2>
@@ -20,4 +20,4 @@ const {
     <Link class="text-sm" href={link.url}>{link.name}</Link>
   </div>
   <slot name="aside" />
-</Tag>
+</Component>
