@@ -1,7 +1,6 @@
 // @ts-check
 
-// @ts-expect-error
-const worker = /** @type {ServiceWorkerGlobalScope} */ (self)
+const worker = /** @type {ServiceWorkerGlobalScope} */ (/** @type {unknown} */ (self))
 
 /**
  * @param {string[]} resources
