@@ -4,8 +4,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@latest
-      - uses: pnpm/action-setup@latest
+      - uses: actions/checkout@3.3.0
+      - uses: pnpm/action-setup@2.2.4
       - run: pnpm env use --global gallium
       - run: pnpm i
       - run: pnpm lint
