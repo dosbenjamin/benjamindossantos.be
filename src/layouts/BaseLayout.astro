@@ -1,7 +1,7 @@
 ---
-import type * as Shared from 'types/shared'
+import type * as SEO from 'types/seo'
 
-export type Props = Shared.SEO.Meta & Shared.SEO.Structured
+type Props = SEO.Meta & SEO.Structured
 
 const { title, description, thumbnail, json }: Props = Astro.props
 

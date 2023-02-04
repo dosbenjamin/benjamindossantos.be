@@ -12,15 +12,3 @@ export type Header = {
 export type Global = {
   networks: Link[]
 }
-
-export namespace SEO {
-  export type Meta = {
-    title?: string
-    description?: string
-    thumbnail?: string
-  }
-
-  export type Structured = {
-    json?: {}
-  }
-}

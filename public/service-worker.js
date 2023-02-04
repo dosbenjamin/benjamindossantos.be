@@ -7,8 +7,8 @@ const worker = /** @type {ServiceWorkerGlobalScope} */ (/** @type {unknown} */ (
  * @return {Promise<void>}
  */
 const addToPrecache = async resources => {
-  const cache = await caches.open('precache')
-  cache.addAll(resources)
+  const cache = await worker.caches.open('precache')
+  await cache.addAll(resources)
 }
 
 /**
@@ -19,37 +19,37 @@ const addToPrecache = async resources => {
 const putInCache = async (request, response) => {
   if (!(request.url.includes('http'))) return
 
-  const cache = await caches.open('cache')
-  cache.put(request, response)
+  const cache = await worker.caches.open('cache')
+  await cache.put(request, response)
 }
 
 /**
  * @param {Request} request
- * @param {Promise<Response>} preloadResponsePromise
+ * @param {Promise<Response> | undefined} preloadResponsePromise
  * @return {Promise<Response>}
  */
 const cacheFirst = async (request, preloadResponsePromise) => {
-  const cacheResponse = await caches.match(request)
+  const cacheResponse = await worker.caches.match(request)
   if (cacheResponse) return cacheResponse
 
   const preloadResponse = await preloadResponsePromise
   if (preloadResponse) {
-    putInCache(request, preloadResponse.clone())
+    await putInCache(request, preloadResponse.clone())
     return preloadResponse
   }
 
   try {
-    const networkResponse = await fetch(request)
-    putInCache(request, networkResponse.clone())
+    const networkResponse = await worker.fetch(request)
+    await putInCache(request, networkResponse.clone())
 
     return networkResponse
   } catch (error) {
-    const fallbackResponse = await caches.match('/')
+    const fallbackResponse = await worker.caches.match('/')
     if (fallbackResponse) return fallbackResponse
 
     return new Response('Network error happened', {
+      headers: { 'Content-Type': 'text/plain' },
       status: 408,
-      headers: { 'Content-Type': 'text/plain' }
     })
   }
 }
@@ -60,19 +60,19 @@ const cacheFirst = async (request, preloadResponsePromise) => {
  */
 const networkFirst = async request => {
   try {
-    const networkResponse = await fetch(request)
-    putInCache(request, networkResponse.clone())
+    const networkResponse = await worker.fetch(request)
+    await putInCache(request, networkResponse.clone())
     return networkResponse
   } catch (error) {
-    const cacheResponse = await caches.match(request)
+    const cacheResponse = await worker.caches.match(request)
     if (cacheResponse) return cacheResponse
 
-    const fallbackResponse = await caches.match('/')
+    const fallbackResponse = await worker.caches.match('/')
     if (fallbackResponse) return fallbackResponse
 
     return new Response('Network error happened', {
+      headers: { 'Content-Type': 'text/plain' },
       status: 408,
-      headers: { 'Content-Type': 'text/plain' }
     })
   }
 }
@@ -93,9 +93,9 @@ const onInstall = event => {
 
 /**
  * @param {FetchEvent} event
- * @return {Promise<void>}
+ * @return {void}
  */
-const onFetch = async event => {
+const onFetch = event => {
   event.respondWith(
     event.request.mode === 'navigate'
       ? networkFirst(event.request)

@@ -1,12 +1,11 @@
+/* eslint-disable sort-keys */
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    'src/components/*.astro',
-    'src/layouts/*.astro',
-    'src/pages/*.astro'
-  ],
+  content: ['src/**/*.astro',],
   corePlugins: {
     transform: false,
     backdropFilter: false,
