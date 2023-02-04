@@ -1,0 +1,10 @@
+name: Deployment
+on: [push]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: pnpm/action-setup@v2
+      - run: pnpm env use --global gallium
+      - run: pnpm i
+      - run: pnpm lint
