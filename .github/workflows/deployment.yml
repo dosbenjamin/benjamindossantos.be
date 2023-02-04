@@ -6,6 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
+        with: 
+          version: 7
       - run: pnpm env use --global gallium
-      - run: pnpm i
+      - run: pnpm install
       - run: pnpm lint
