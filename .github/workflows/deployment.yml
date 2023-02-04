@@ -8,7 +8,10 @@ jobs:
       - uses: pnpm/action-setup@master
         with: 
           version: latest
-      - run: pnpm env use --global gallium
+      - uses: actions/setup-node@master
+        with:
+          node-version: '16'
+          cache: 'pnpm'
       - run: pnpm install
       - run: pnpm lint
   deploy:
@@ -22,7 +25,10 @@ jobs:
       - uses: pnpm/action-setup@master
         with: 
           version: latest
-      - run: pnpm env use --global gallium
+      - uses: actions/setup-node@master
+        with:
+          node-version: '16'
+          cache: 'pnpm'
       - run: pnpm install --global vercel@latest
       - run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
       - run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
