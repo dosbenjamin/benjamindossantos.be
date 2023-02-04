@@ -6,7 +6,7 @@ const worker = /** @type {ServiceWorkerGlobalScope} */ (/** @type {unknown} */ (
  * @param {string[]} resources
  * @return {Promise<void>}
  */
-const addToPrecache = async resources => {
+const addToPrecache = async (resources) => {
   const cache = await worker.caches.open('precache')
   await cache.addAll(resources)
 }
@@ -17,7 +17,7 @@ const addToPrecache = async resources => {
  * @return {Promise<void>}
  */
 const putInCache = async (request, response) => {
-  if (!(request.url.includes('http'))) return
+  if (!request.url.includes('http')) return
 
   const cache = await worker.caches.open('cache')
   await cache.put(request, response)
@@ -58,7 +58,7 @@ const cacheFirst = async (request, preloadResponsePromise) => {
  * @param {Request} request
  * @return {Promise<Response>}
  */
-const networkFirst = async request => {
+const networkFirst = async (request) => {
   try {
     const networkResponse = await worker.fetch(request)
     await putInCache(request, networkResponse.clone())
@@ -81,25 +81,19 @@ const networkFirst = async request => {
  * @param {ExtendableEvent} event
  * @return {void}
  */
-const onInstall = event => {
-  event.waitUntil(
-    addToPrecache([
-      '/',
-      '/site.webmanifest',
-      '/SpaceGrotesk-Regular.woff2'
-    ])
-  )
+const onInstall = (event) => {
+  event.waitUntil(addToPrecache(['/', '/site.webmanifest', '/SpaceGrotesk-Regular.woff2']))
 }
 
 /**
  * @param {FetchEvent} event
  * @return {void}
  */
-const onFetch = event => {
+const onFetch = (event) => {
   event.respondWith(
     event.request.mode === 'navigate'
       ? networkFirst(event.request)
-      : cacheFirst(event.request, event.preloadResponse)
+      : cacheFirst(event.request, event.preloadResponse),
   )
 }
 

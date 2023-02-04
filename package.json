@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prettify": "prettier . -w"
   },
   "dependencies": {
     "@astrojs/sitemap": "^1.0.0",
@@ -19,6 +20,8 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",
-    "eslint": "^8.33.0"
+    "eslint": "^8.33.0",
+    "prettier": "^2.8.3",
+    "prettier-plugin-tailwindcss": "^0.2.2"
   }
 }

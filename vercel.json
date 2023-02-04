@@ -2,10 +2,10 @@
   "headers": [
     {
       "source": "/(.*)",
-      "headers" : [
+      "headers": [
         {
-          "key" : "Connection",
-          "value" : "keep-alive"
+          "key": "Connection",
+          "value": "keep-alive"
         }
       ]
     }

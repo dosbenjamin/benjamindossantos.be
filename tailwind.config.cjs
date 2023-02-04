@@ -5,7 +5,7 @@ const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['src/**/*.astro',],
+  content: ['src/**/*.astro'],
   corePlugins: {
     transform: false,
     backdropFilter: false,
@@ -14,36 +14,36 @@ module.exports = {
     ringWidth: false,
     boxShadow: false,
     fontVariantNumeric: false,
-    touchAction: false
+    touchAction: false,
   },
   future: {
-    hoverOnlyWhenSupported: true
+    hoverOnlyWhenSupported: true,
   },
   theme: {
     colors: {
-      'gray': {
+      gray: {
         450: '#e8e8e8',
-        900: '#2c2c2c'
-      }
+        900: '#2c2c2c',
+      },
     },
     fontFamily: {
-      'sans': ['Space Grotesk', 'sans-serif']
+      sans: ['Space Grotesk', 'sans-serif'],
     },
     fontSize: {
-      'sm': '0.75rem',
-      'base': 'clamp(1.44rem, 3vw, 2.488rem)',
-      'lg': '1.44rem',
-      'xl': 'min(4rem, 10vw)'
-    }
+      sm: '0.75rem',
+      base: 'clamp(1.44rem, 3vw, 2.488rem)',
+      lg: '1.44rem',
+      xl: 'min(4rem, 10vw)',
+    },
   },
   plugins: [
     plugin(({ addBase, theme }) => {
       addBase({
-        'html': {
+        html: {
           'font-size': theme('fontSize.base'),
-          'height': 'stretch'
-        }
+          height: 'stretch',
+        },
       })
-    })
-  ]
+    }),
+  ],
 }
