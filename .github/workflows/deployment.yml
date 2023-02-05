@@ -1,5 +1,5 @@
 name: Deployment
-on: [push]
+on: push
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -15,6 +15,7 @@ jobs:
       - run: pnpm install
       - run: pnpm lint
   prettify:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
