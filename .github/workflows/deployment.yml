@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: pnpm/action-setup@master
-        with: 
+        with:
           version: latest
       - uses: actions/setup-node@master
         with:
@@ -14,20 +14,6 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm lint
-  prettify:
-    needs: lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: pnpm/action-setup@master
-        with:
-          version: latest
-      - uses: actions/setup-node@master
-        with:
-          node-version: '16'
-          cache: 'pnpm'
-      - run: pnpm install
-      - run: pnpm prettify
   deploy:
     needs: lint
     runs-on: ubuntu-latest
@@ -37,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: pnpm/action-setup@master
-        with: 
+        with:
           version: latest
       - uses: actions/setup-node@master
         with:
