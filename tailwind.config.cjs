@@ -35,15 +35,34 @@ module.exports = {
       lg: '1.44rem',
       xl: 'min(4rem, 10vw)',
     },
+    textRendering: {
+      'legibility': 'optimizeLegibility'
+    },
+    extend: {
+      maxWidth: {
+        '48': '12rem'
+      }
+    }
   },
   plugins: [
-    plugin(({ addBase, theme }) => {
+    plugin(({ addBase, matchUtilities, theme }) => {
       addBase({
         html: {
           'font-size': theme('fontSize.base'),
           height: 'stretch',
         },
       })
+
+      matchUtilities(
+        {
+          'rendering': (/** @type {string} */ value) => ({
+            'text-rendering': value,
+          }),
+        },
+        {
+          values: theme('textRendering'),
+        },
+      )
     }),
   ],
 }

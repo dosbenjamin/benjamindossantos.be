@@ -14,7 +14,7 @@ const {
 
 <Component class:list="flex flex-col gap-4 sm:flex-row">
   <h1 class="text-lg w-36">{title}</h1>
-  <div class="max-w-[12rem] space-y-2">
+  <div class="max-w-48 space-y-2">
     <h2>{subtitle}</h2>
     <slot />
     <Link class="text-sm" href={link.url}>{link.name}</Link>
