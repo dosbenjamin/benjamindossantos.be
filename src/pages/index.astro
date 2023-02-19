@@ -1,5 +1,5 @@
 ---
-import BaseLayout from 'layouts/BaseLayout.astro'
+import Page from 'layouts/Page.astro'
 import Header from 'components/Header.astro'
 import Link from 'components/Link.astro'
 import type * as Shared from 'types/shared'
@@ -90,7 +90,7 @@ const structuredData = {
 }
 ---
 
-<BaseLayout
+<Page
   title="Designer & Developer"
   description="Designer and Developer based in Belgium"
   thumbnail={`${Astro.url.origin}/thumbnail-home.png`}
@@ -112,4 +112,4 @@ const structuredData = {
       ))}
     </ul>
   </Header>
-</BaseLayout>
+</Page>
