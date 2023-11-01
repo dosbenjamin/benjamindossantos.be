@@ -1,10 +1,8 @@
-/* eslint-disable sort-keys */
-/* eslint-disable @typescript-eslint/no-var-requires */
+import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
+import { KeyValuePair } from 'tailwindcss/types/config'
 
-const plugin = require('tailwindcss/plugin')
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ['src/**/*.astro'],
   corePlugins: {
     transform: false,
@@ -55,14 +53,14 @@ module.exports = {
 
       matchUtilities(
         {
-          rendering: (/** @type {string} */ value) => ({
+          rendering: (value: string) => ({
             'text-rendering': value,
           }),
         },
         {
-          values: theme('textRendering'),
+          values: theme<KeyValuePair<string, string>>('textRendering'),
         },
       )
     }),
   ],
-}
+} satisfies Config
