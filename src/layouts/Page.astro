@@ -1,39 +1,39 @@
 ---
-import type * as SEO from 'types/seo'
+import type * as SEO from 'types/seo';
 
-type Props = SEO.Meta & SEO.Structured
+type Props = SEO.Meta & SEO.Structured;
 
-const { title, description, thumbnail, json }: Props = Astro.props
+const { title, description, thumbnail, json }: Props = Astro.props;
 
-const pageTitle = `${title ? `${title} —` : ''} Benjamin Dos Santos`
-const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+const pageTitle = `${title ? `${title} —` : ''} Benjamin Dos Santos`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{pageTitle}</title>
     {description && <meta name="description" content={description} />}
-    <meta name="author" content="Benjamin Dos Santos">
+    <meta name="author" content="Benjamin Dos Santos" />
     <meta name="generator" content={Astro.generator} />
-    <meta property="og:site_name" content="Benjamin Dos Santos">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_GB">
-    <meta property="og:title" content={pageTitle}>
+    <meta property="og:site_name" content="Benjamin Dos Santos" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content={pageTitle} />
     {description && <meta property="og:description" content={description} />}
-    <meta property="og:url" content={canonicalURL}>
+    <meta property="og:url" content={canonicalURL} />
     {thumbnail && <meta property="og:image" content={thumbnail} />}
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content={pageTitle}>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
     {description && <meta name="twitter:description" content={description} />}
     {thumbnail && <meta name="twitter:image" content={thumbnail} />}
-    <meta name="twitter:site" content="@dosbenjamin">
-    <meta name="theme-color" content="#e8e8e8">
-    <link rel="preload" href="/SpaceGrotesk-Regular.woff2" as="font" crossorigin>
+    <meta name="twitter:site" content="@dosbenjamin" />
+    <meta name="theme-color" content="#e8e8e8" />
+    <link rel="preload" href="/SpaceGrotesk-Regular.woff2" as="font" crossorigin />
     <style is:inline>
       @font-face {
         font-family: 'Space Grotesk';
@@ -45,20 +45,25 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
     </style>
     <link rel="canonical" href={canonicalURL} />
     <link type="text/plain" rel="author" href="/humans.txt" />
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
     {json && <script type="application/ld+json" set:html={JSON.stringify(json)} />}
     <script defer>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('/service-worker.js');
       }
     </script>
-    <link rel="preconnect" href="https://plausible.benjamindossantos.be">
-    <script defer data-domain="benjamindossantos.be" src="https://plausible.benjamindossantos.be/js/script.js" />
+    <link rel="preconnect" href="https://plausible.benjamindossantos.be" />
+    <script
+      defer
+      data-domain="benjamindossantos.be"
+      src="https://plausible.benjamindossantos.be/js/script.js"></script>
   </head>
-  <body class="min-h-screen p-2 text-gray-900 bg-gray-450 font-sans antialiased leading-none uppercase rendering-legibility selection:bg-gray-900 selection:text-gray-450">
+  <body
+    class="min-h-screen p-2 text-gray-900 bg-gray-450 font-sans antialiased leading-none uppercase rendering-legibility selection:bg-gray-900 selection:text-gray-450"
+  >
     <slot />
   </body>
 </html>

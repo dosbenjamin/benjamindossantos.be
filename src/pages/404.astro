@@ -1,14 +1,10 @@
 ---
-import Header from 'components/Header.astro'
-import Page from 'layouts/Page.astro'
+import Header from 'components/Header.astro';
+import Page from 'layouts/Page.astro';
 ---
 
 <Page title="Not found">
-  <Header
-    title="404"
-    subtitle="Not found"
-    link={{ name: 'Back to home', url: '/' }}
-  >
+  <Header title="404" subtitle="Not found" link={{ name: 'Back to home', url: '/' }}>
     <p>The page you are trying to visit doesn't seem to exist.</p>
   </Header>
 </Page>

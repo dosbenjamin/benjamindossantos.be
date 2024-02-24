@@ -1,6 +1,6 @@
-import type { Config } from 'tailwindcss'
-import plugin from 'tailwindcss/plugin'
-import { KeyValuePair } from 'tailwindcss/types/config'
+import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
+import { KeyValuePair } from 'tailwindcss/types/config';
 
 export default {
   content: ['src/**/*.astro'],
@@ -49,7 +49,7 @@ export default {
           'font-size': theme('fontSize.base'),
           height: 'stretch',
         },
-      })
+      });
 
       matchUtilities(
         {
@@ -60,7 +60,7 @@ export default {
         {
           values: theme<KeyValuePair<string, string>>('textRendering'),
         },
-      )
+      );
     }),
   ],
-} satisfies Config
+} satisfies Config;

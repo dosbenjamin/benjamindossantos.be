@@ -1,24 +1,24 @@
 ---
-import type { HTMLAttributes } from 'astro/types'
+import type { HTMLAttributes } from 'astro/types';
 
 type Props = {
-  href: string
-  class?: string
-}
+  href: string;
+  class?: string;
+};
 
-const { href, class: className }: Props = Astro.props
-const isExternal = href.includes('http')
+const { href, class: className }: Props = Astro.props;
+const isExternal = href.includes('http');
 
 const externalAttributes: HTMLAttributes<'a'> = {
   target: '_blank',
   rel: 'noopener noreferrer',
-}
+};
 ---
 
 <a
   href={href}
   class:list={['inline-block hover:underline focus:outline-none focus:underline', className]}
-  {...(isExternal ? externalAttributes : {})}
+  {...isExternal ? externalAttributes : {}}
 >
   <slot />
 </a>

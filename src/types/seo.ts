@@ -1,9 +1,9 @@
 export type Meta = {
-  title?: string
-  description?: string
-  thumbnail?: string
-}
+  title?: string;
+  description?: string;
+  thumbnail?: string;
+};
 
 export type Structured = {
-  json?: Record<string, unknown>
-}
+  json?: Record<string, unknown>;
+};

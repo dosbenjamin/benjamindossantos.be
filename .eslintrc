@@ -3,20 +3,20 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:@typescript-eslint/strict"
+    "plugin:@typescript-eslint/strict",
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["tsconfig.eslint.json"]
+    "project": ["tsconfig.eslint.json"],
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
     "@typescript-eslint/consistent-type-definitions": ["warn", "type"],
-    "sort-keys": "warn"
+    "sort-keys": "warn",
   },
   "globals": {
     "self": "readonly",
     "module": "readonly",
-    "require": "readonly"
-  }
+    "require": "readonly",
+  },
 }

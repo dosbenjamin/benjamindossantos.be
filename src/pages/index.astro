@@ -1,35 +1,35 @@
 ---
-import Page from 'layouts/Page.astro'
-import Header from 'components/Header.astro'
-import Link from 'components/Link.astro'
-import type * as Shared from 'types/shared'
+import Page from 'layouts/Page.astro';
+import Header from 'components/Header.astro';
+import Link from 'components/Link.astro';
+import type * as Shared from 'types/shared';
 
 const networks: Shared.Link[] = [
   {
     name: 'Behance',
-    url: 'https://www.behance.net/dosbenjamin'
+    url: 'https://www.behance.net/dosbenjamin',
   },
   {
     name: 'GitHub',
-    url: 'https://github.com/dosbenjamin'
+    url: 'https://github.com/dosbenjamin',
   },
   {
     name: 'Instagram',
-    url: 'https://www.instagram.com/dosbenjamin'
-  }
-]
+    url: 'https://www.instagram.com/dosbenjamin',
+  },
+];
 
 const structuredData = {
   '@context': 'https://schema.org/',
   '@type': 'Person',
-  'url': 'https://benjamindossantos.be',
-  'name': 'Benjamin Dos Santos',
-  'email': 'hello@benjamindossantos.be',
-  'image': `${Astro.url.origin}/me.jpg`,
-  'jobTitle': 'Digital Designer & Front-End Developer',
-  'telephone': '+32478686902',
-  'description': 'Designer and Developer based in Belgium',
-  'sameAs': [
+  url: 'https://benjamindossantos.be',
+  name: 'Benjamin Dos Santos',
+  email: 'hello@benjamindossantos.be',
+  image: `${Astro.url.origin}/me.jpg`,
+  jobTitle: 'Digital Designer & Front-End Developer',
+  telephone: '+32478686902',
+  description: 'Designer and Developer based in Belgium',
+  sameAs: [
     'https://www.linkedin.com/in/benjamin-dos-santos',
     'https://www.instagram.com/dosbenjamin',
     'https://github.com/dosbenjamin',
@@ -38,55 +38,52 @@ const structuredData = {
     'https://www.behance.net/dosbenjamin',
     'https://www.pinterest.com/dosbenjamin',
   ],
-  'address': {
+  address: {
     '@type': 'PostalAddress',
-    'postalCode': '1332',
-    'addressRegion': 'Walloon Region',
-    'streetAddress': 'Avenue Albert 1er 299',
-    'addressCountry': 'BE',
-    'addressLocality': 'Genval'
+    postalCode: '1332',
+    addressRegion: 'Walloon Region',
+    streetAddress: 'Avenue Albert 1er 299',
+    addressCountry: 'BE',
+    addressLocality: 'Genval',
   },
-  'alumniOf': [
+  alumniOf: [
     {
-      'name': 'Haute École Albert Jacquard',
+      name: 'Haute École Albert Jacquard',
       '@type': 'CollegeOrUniversity',
-      'sameAs': [
+      sameAs: [
         'https://www.heaj.be',
         'https://www.facebook.com/HEAJofficiel',
         'https://twitter.com/heajofficiel',
-        'https://www.instagram.com/heajofficiel'
-      ]
+        'https://www.instagram.com/heajofficiel',
+      ],
     },
     {
-      'name': 'Collège Saint-Étienne',
+      name: 'Collège Saint-Étienne',
       '@type': 'CollegeOrUniversity',
-      'sameAs': [
-        'https://cste.be/cse',
-        'https://www.facebook.com/CollegeSaintEtienneCSE'
-      ]
-    }
+      sameAs: ['https://cste.be/cse', 'https://www.facebook.com/CollegeSaintEtienneCSE'],
+    },
   ],
-  'worksFor': {
-    'name': 'Certinergie',
+  worksFor: {
+    name: 'Certinergie',
     '@type': 'Organization',
-    'sameAs':[
+    sameAs: [
       'https://www.certinergie.be/fr',
       'https://www.certi-it.be',
       'https://www.linkedin.com/company/certinergie',
       'https://www.facebook.com/certinergie',
-      'https://www.instagram.com/certinergie'
-    ]
+      'https://www.instagram.com/certinergie',
+    ],
   },
-  'memberOf': {
-    'name': 'Sanserif',
+  memberOf: {
+    name: 'Sanserif',
     '@type': 'Organization',
-    'sameAs': [
+    sameAs: [
       'https://www.sanserif.be',
       'https://www.instagram.com/sanserif.collectif',
-      'https://www.linkedin.com/company/sanserif-collectif'
-    ]
-  }
-}
+      'https://www.linkedin.com/company/sanserif-collectif',
+    ],
+  },
+};
 ---
 
 <Page
@@ -101,14 +98,20 @@ const structuredData = {
     link={{ name: 'hello＠benjamindossantos.be', url: 'mailto:hello@benjamindossantos.be' }}
   >
     <p>
-      Currently working at <Link href="https://certinergie.be">Certinergie</Link> &  member of <Link href="https://sanserif.be">Sanserif</Link>
+      Currently working at <Link href="https://certinergie.be">Certinergie</Link> & member of <Link
+        href="https://sanserif.be"
+      >
+        Sanserif
+      </Link>
     </p>
     <ul class="space-y-2 text-sm sm:ml-auto sm:space-y-1 sm:text-right" slot="aside">
-      {networks.map(({ name, url }) => (
-        <li>
-          <Link href={url}>{name}</Link>
-        </li>
-      ))}
+      {
+        networks.map(({ name, url }) => (
+          <li>
+            <Link href={url}>{name}</Link>
+          </li>
+        ))
+      }
     </ul>
   </Header>
 </Page>

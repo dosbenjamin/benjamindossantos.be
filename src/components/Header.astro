@@ -1,15 +1,10 @@
 ---
-import Link from 'components/Link.astro'
-import type * as Shared from 'types/shared'
+import Link from 'components/Link.astro';
+import type * as Shared from 'types/shared';
 
-type Props = { as?: string } & Shared.Header
+type Props = { as?: string } & Shared.Header;
 
-const {
-  as: Component = 'main',
-  title,
-  subtitle,
-  link
-}: Props = Astro.props
+const { as: Component = 'main', title, subtitle, link }: Props = Astro.props;
 ---
 
 <Component class:list="flex flex-col gap-4 sm:flex-row">
