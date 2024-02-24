@@ -12,7 +12,7 @@ Standards:
   - JavaScript
 Stack:
   - DNS & Hosting:
-    - Vercel
+    - Cloudflare
     - OVH
   - Build:
     - Astro
