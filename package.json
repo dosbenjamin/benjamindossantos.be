@@ -1,7 +1,6 @@
 {
   "name": "benjamindossantos.be",
   "version": "1.0.0",
-  "private": true,
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -12,16 +11,16 @@
     "prettify": "prettier . -w"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.0.2",
-    "@astrojs/tailwind": "5.0.2",
-    "astro": "3.4.0",
-    "tailwindcss": "^3.3.5"
+    "@astrojs/sitemap": "^3.1.1",
+    "@astrojs/tailwind": "5.1.0",
+    "astro": "4.4.4",
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
-    "eslint": "^8.52.0",
-    "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6"
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.11"
   }
 }
