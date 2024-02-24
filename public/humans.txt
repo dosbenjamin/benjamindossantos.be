@@ -13,7 +13,7 @@ Standards:
 Stack:
   - DNS & Hosting:
     - Vercel
-    - Gandi
+    - OVH
   - Build:
     - Astro
     - Tailwind CSS
