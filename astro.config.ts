@@ -1,8 +1,8 @@
+import { join } from 'node:path';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
 import { buildSync } from 'esbuild';
-import { join } from 'path';
 
 export default defineConfig({
   compressHTML: true,

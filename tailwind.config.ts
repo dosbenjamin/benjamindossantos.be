@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
-import { KeyValuePair } from 'tailwindcss/types/config';
+import type { KeyValuePair } from 'tailwindcss/types/config';
 
 export default {
   content: ['src/**/*.astro'],
