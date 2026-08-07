@@ -13,9 +13,9 @@
       "layout": "vertical",
       "gap": 32,
       "padding": [
-        32,
-        32,
         48,
+        32,
+        64,
         32
       ],
       "alignItems": "center",
@@ -1933,9 +1933,9 @@
       "layout": "vertical",
       "gap": 32,
       "padding": [
-        32,
-        32,
         48,
+        32,
+        64,
         32
       ],
       "alignItems": "center",

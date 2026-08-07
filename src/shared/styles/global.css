@@ -77,8 +77,8 @@
     --space-48: 3rem;
     --space-64: 4rem;
     --space-page-inline: var(--space-32);
-    --space-page-block-start: var(--space-32);
-    --space-page-block-end: var(--space-48);
+    --space-page-block-start: var(--space-48);
+    --space-page-block-end: var(--space-64);
     --space-section: var(--space-32);
 
     --border-width-thin: 0.0625rem;
