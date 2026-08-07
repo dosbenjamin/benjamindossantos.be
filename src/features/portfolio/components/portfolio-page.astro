@@ -25,11 +25,15 @@ import ExternalLinkIcon from './external-link-icon.astro';
       <nav aria-label="Social profiles" class="portfolio-social-links">
         <a
           aria-label={`View ${contact.name} on GitHub`}
-          href={contact.githubUrl}>GitHub</a
+          href={contact.githubUrl}
+          rel="noopener noreferrer"
+          target="_blank">GitHub</a
         >
         <a
           aria-label={`View ${contact.name} on LinkedIn`}
-          href={contact.linkedInUrl}>LinkedIn</a
+          href={contact.linkedInUrl}
+          rel="noopener noreferrer"
+          target="_blank">LinkedIn</a
         >
       </nav>
       <p class="portfolio-availability">{contact.availability}</p>
@@ -61,6 +65,8 @@ import ExternalLinkIcon from './external-link-icon.astro';
                             aria-label={`Visit the ${entry.title} website`}
                             class="portfolio-entry-link"
                             href={entry.href}
+                            rel="noopener noreferrer"
+                            target="_blank"
                           >
                             <span>{entry.title}</span>
                             <ExternalLinkIcon />
@@ -76,6 +82,8 @@ import ExternalLinkIcon from './external-link-icon.astro';
                               aria-label={`Visit the ${entry.organization.name} website`}
                               class="portfolio-organization-link"
                               href={entry.organization.href}
+                              rel="noopener noreferrer"
+                              target="_blank"
                             >
                               <span>{entry.organization.name}</span>
                               <ExternalLinkIcon />
