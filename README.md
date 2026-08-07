@@ -7,6 +7,8 @@ The site is built as a static Astro project and deployed to Cloudflare Workers u
 ## Tech stack
 
 - [Astro](https://astro.build/) with strict TypeScript
+- Native CSS with Astro-scoped component styles and CSS custom property tokens
+- [Astro Fonts](https://docs.astro.build/en/guides/fonts/) with the built-in Fontsource provider
 - [Bun](https://bun.sh/) as the package manager
 - [Nix](https://nixos.org/) and [devenv](https://devenv.sh/) for the development environment
 - [Cloudflare Workers](https://workers.cloudflare.com/) and [Wrangler](https://developers.cloudflare.com/workers/wrangler/) for hosting and deployment
@@ -88,11 +90,29 @@ bun run check
 
 Editor settings for the Oxc extension are included in `.vscode/settings.json`. Project-specific coding instructions for Codex are provided in `AGENTS.md`.
 
+Modern JavaScript, TypeScript, and Web APIs are preferred when their runtime behavior is [Baseline Widely Available](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility) across the major browsers. Recent capabilities must be introduced as progressive enhancements with feature detection and a usable fallback. TypeScript support alone is not treated as evidence of browser compatibility.
+
+JavaScript and TypeScript must not contain unexplained magic values. Domain-significant numbers, strings, statuses, keys, limits, and durations belong in purpose-named constants.
+
 ## Design
 
 The visual design is created with [pen.dev](https://www.pen.dev/) and stored in the version-controlled `design.pen` document. Open this file with Pencil when reviewing or updating the interface, and keep the Astro implementation aligned with it.
 
 The `.pen` document is the editable design source. Exported previews or assets should only be committed when they are required by the website.
+
+## Styling and fonts
+
+The project uses native CSS rather than a styling framework. Shared reset, base styles, utilities, and primitive and semantic design tokens live in `src/shared/styles/global.css`. Component-specific styles belong in Astro's scoped `<style>` blocks.
+
+Components consume semantic CSS variables instead of hard-coded design values. Visual variants use `data-*` attributes, while genuine interactive or accessibility states use their native HTML or ARIA attributes. ARIA attributes are never added solely as styling hooks.
+
+Layout and spacing follow a closed binary scale of `2, 4, 8, 12, 16, 24, 32, 48, 64px`. Typography uses even font sizes and line heights aligned to a 4px vertical grid. Primitive tokens encode this scale, while semantic tokens describe how each value is used by the interface.
+
+Modern native CSS is preferred when it is [Baseline Widely Available](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility) across the major browsers. Newer features may be used as progressive enhancements with a usable fallback; limited-availability features must not carry essential layout, interaction, content, or accessibility behavior.
+
+Fonts are configured in `astro.config.ts` with the [Astro Fonts API](https://docs.astro.build/en/reference/font-provider-reference/) and the built-in Fontsource provider. The shared layout loads the configured families with Astro's `<Font />` component, and the generated family variables are mapped to semantic typography tokens. Fonts are self-hosted by Astro; avoid manual `@font-face` declarations and browser-facing third-party font CDNs.
+
+`design.pen` remains the source of visual direction, content, and responsive intent. CSS values are normalized to the binary token grid when small optical differences do not materially change the design.
 
 ## Deployment
 
@@ -117,6 +137,7 @@ The deployment script always builds the site before uploading it. Cloudflare acc
 ```text
 .
 ├── src/pages/           # Astro pages
+├── src/shared/styles/   # Global CSS foundations and design tokens
 ├── astro.config.ts      # Astro configuration
 ├── design.pen           # Pencil design source
 ├── devenv.nix           # Reproducible development environment

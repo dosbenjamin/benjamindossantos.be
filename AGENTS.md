@@ -44,6 +44,18 @@ Examples:
 - Run relevant tests and type checks after making changes.
 - Do not disable lint rules without explaining the underlying conflict.
 
+## JavaScript and TypeScript Compatibility
+
+- Do not leave magic values in JavaScript or TypeScript. Extract domain-significant numbers, strings, status values, keys, limits, durations, and other configuration literals into clearly named constants.
+- Name constants after their purpose rather than their literal value, and group related immutable values with `as const` when that improves their relationship and inferred types.
+- Keep literals inline only when their meaning is intrinsic and unambiguous in the immediate language construct; do not use comments as a substitute for naming a reusable or domain-significant value.
+- Prefer modern JavaScript and TypeScript syntax, built-in objects, and Web APIs when the corresponding runtime behavior is Baseline Widely Available across Safari, Chrome, Edge, and Firefox.
+- Use newly available JavaScript features and Web APIs only as progressive enhancements when the page remains readable and functional without them.
+- Provide a defensive fallback or feature detection for recent runtime capabilities. Test capabilities directly instead of inferring support from a user-agent string.
+- Avoid features with limited availability when they are required for content access, navigation, interaction, data integrity, or accessibility.
+- Verify runtime support with MDN browser compatibility data instead of relying on memory. TypeScript compilation and type availability do not prove browser support.
+- Do not add a polyfill, transpilation target change, or compatibility dependency unless the feature is necessary and a lightweight native fallback is insufficient.
+
 ## Architecture
 
 Use a lightweight feature-based architecture while keeping Astro pages as thin composition and routing entry points. A feature represents a stable user-facing capability or content domain, such as `projects`, `about`, or `contact`; do not create a feature for every visual page section.
@@ -81,6 +93,30 @@ src/
 - After implementation, compare the rendered UI with the relevant Pencil frames at the designed viewport sizes and interaction states.
 - Do not silently diverge from the design. If technical, semantic, responsive, or accessibility constraints require a change, document the reason and update the Pencil design when the task includes design changes.
 - Accessibility and semantic HTML requirements remain mandatory when translating the design into code.
+
+## CSS and Typography
+
+- Use native CSS and Astro's scoped `<style>` blocks. Do not add Panda CSS, Tailwind CSS, or another styling framework.
+- Keep shared foundations in `src/shared/styles/global.css` and component-specific styles in the component that owns them.
+- Define reusable design values as CSS custom properties using a primitive token layer and a semantic token layer.
+- Components must consume semantic tokens such as `--color-text` or `--font-family-body`, not primitive tokens such as `--color-neutral-100`.
+- Create tokens for intentionally shared colors, font families, font weights, font sizes, line heights, letter spacing, spacing, dimensions, borders, radii, shadows, opacity, stacking, and motion values when relevant. Do not tokenize isolated values without a reusable design role.
+- Do not leave magic values in component or global CSS declarations. Promote intentional design values to named primitive or semantic tokens; document unavoidable CSS syntax constants and media-query thresholds where custom properties cannot be used.
+- Use the closed binary spacing scale `2, 4, 8, 12, 16, 24, 32, 48, 64px`. Reserve 2px for optical details, use 4px multiples for regular spacing, and use 8px multiples for structural spacing.
+- Use the primitive font-size scale `12, 14, 16, 20, 24, 32, 40, 48, 64px` and the line-height scale `16, 20, 24, 28, 32, 40, 48, 56, 72px`. Every line height must align to the 4px vertical grid.
+- Keep structural dimensions on the 4px grid and visual details on the 2px grid. A 1px border is the only default exception; any other exception requires an explicit functional or optical reason.
+- Use `kebab-case` component-prefixed class names, such as `.project-card` and `.project-card-title`. Avoid full BEM naming because Astro already scopes component styles.
+- Express visual variants with explicit `data-*` attributes such as `data-variant`, `data-size`, or `data-state`.
+- Style accessible states using the native HTML or ARIA attribute that represents the real state, such as `disabled`, `open`, `aria-current`, `aria-expanded`, or `aria-pressed`.
+- Never add an ARIA attribute only as a CSS hook. Prefer native pseudo-classes such as `:hover`, `:focus-visible`, `:checked`, and `:disabled` when they express the state.
+- Add global utility classes only for stable patterns reused across components, such as `.visually-hidden`.
+- Apply `-webkit-font-smoothing: antialiased` and `-moz-osx-font-smoothing: grayscale` to the document body. Keep both declarations together because they are non-standard, platform-specific enhancements.
+- Prefer modern native CSS when it simplifies the implementation. Use features marked Baseline Widely Available across Safari, Chrome, Edge, and Firefox without compatibility fallbacks.
+- Use newly available CSS features only as progressive enhancements when the page remains readable and functional without them. Provide a defensive fallback, using `@supports` when conditional behavior is necessary.
+- Avoid CSS features with limited availability when they are required for layout, content access, interaction, or accessibility. Verify support with MDN browser compatibility data instead of relying on memory.
+- Configure fonts with Astro's Fonts API and the built-in Fontsource provider. Expose each loaded family through Astro's generated CSS variable, then map it to semantic font tokens.
+- Load fonts with Astro's `<Font />` component in the shared layout and preload only fonts required for above-the-fold content.
+- Prefer variable fonts when the selected family supports the required weights. Do not write manual `@font-face` rules or load browser-facing font files from a third-party CDN.
 
 ## Semantic HTML and SEO
 
