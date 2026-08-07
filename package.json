@@ -1,0 +1,25 @@
+{
+  "name": "benjamindossantos-be",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "check": "astro check && ultracite check",
+    "fix": "ultracite fix",
+    "preview": "bun run build && wrangler dev",
+    "deploy": "bun run build && wrangler deploy"
+  },
+  "dependencies": {
+    "astro": "^7.2.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "oxfmt": "^0.62.0",
+    "oxlint": "^1.77.0",
+    "typescript": "^6.0.0",
+    "ultracite": "7.10.1",
+    "wrangler": "^4.119.0"
+  }
+}

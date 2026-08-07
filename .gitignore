@@ -1,0 +1,25 @@
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Dependencies and build output
+node_modules/
+dist/
+
+# Astro
+.astro/
+
+# Cloudflare
+.wrangler/
+
+# Local environment files
+.env
+.env.*
+!.env.example
