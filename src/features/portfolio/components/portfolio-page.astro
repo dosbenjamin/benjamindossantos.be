@@ -32,10 +32,7 @@ import ExternalLinkIcon from './external-link-icon.astro';
           href={contact.linkedInUrl}>LinkedIn</a
         >
       </nav>
-      <p class="portfolio-availability">
-        <span aria-hidden="true" class="portfolio-availability-dot"></span>
-        <span>{contact.availability}</span>
-      </p>
+      <p class="portfolio-availability">{contact.availability}</p>
     </address>
   </header>
 
@@ -160,16 +157,22 @@ import ExternalLinkIcon from './external-link-icon.astro';
   }
 
   .portfolio-availability {
-    gap: var(--space-8);
+    position: relative;
     color: var(--color-text-strong);
   }
 
-  .portfolio-availability-dot {
-    flex: none;
+  .portfolio-availability::before {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: calc(
+      -1 * (var(--size-status-dot) + var(--space-8))
+    );
     width: var(--size-status-dot);
     height: var(--size-status-dot);
     background: var(--color-status-available);
     border-radius: 50%;
+    content: '';
+    transform: translateY(-50%);
   }
 
   .portfolio-main,
