@@ -48,6 +48,7 @@ Examples:
 
 - Do not leave magic values in JavaScript or TypeScript. Extract domain-significant numbers, strings, status values, keys, limits, durations, and other configuration literals into clearly named constants.
 - Name constants after their purpose rather than their literal value, and group related immutable values with `as const` when that improves their relationship and inferred types.
+- Use `camelCase` for JavaScript and TypeScript constants, including module-level values, configuration values, and objects declared with `as const`. Preserve uppercase or framework-defined names only when an external interface requires them, such as environment variables (`SITE_URL`) or Astro endpoint exports (`GET`).
 - Keep literals inline only when their meaning is intrinsic and unambiguous in the immediate language construct; do not use comments as a substitute for naming a reusable or domain-significant value.
 - Prefer modern JavaScript and TypeScript syntax, built-in objects, and Web APIs when the corresponding runtime behavior is Baseline Widely Available across Safari, Chrome, Edge, and Firefox.
 - Use newly available JavaScript features and Web APIs only as progressive enhancements when the page remains readable and functional without them.

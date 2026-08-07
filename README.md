@@ -36,6 +36,14 @@ devenv shell
 
 devenv provides Bun and automatically installs the dependencies declared in `bun.lock`.
 
+Create the local environment file from the versioned example:
+
+```sh
+cp .env.example .env
+```
+
+`SITE_URL` is required, validated by Astro, and used for canonical URLs, `robots.txt`, and the sitemap.
+
 > [!IMPORTANT] Run every Bun command and JavaScript tool from inside `devenv shell`. Do not invoke `bun`, `bunx`, `astro`, `wrangler`, or `ultracite` directly from the system shell.
 
 ## Development
