@@ -18,6 +18,19 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin)
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link
+      rel="icon"
+      href="/favicon-light.svg"
+      media="(prefers-color-scheme: light)"
+      type="image/svg+xml"
+    />
+    <link
+      rel="icon"
+      href="/favicon-dark.svg"
+      media="(prefers-color-scheme: dark)"
+      type="image/svg+xml"
+    />
     <link rel="canonical" href={canonicalURL} />
     <link rel="sitemap" href={seoPaths.sitemap} />
     <meta property="og:type" content="website" />

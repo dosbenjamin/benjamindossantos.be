@@ -136,7 +136,7 @@
               "id": "msGl0",
               "name": "Header pair row Links",
               "width": "fill_container",
-              "gap": 32,
+              "gap": 16,
               "alignItems": "center",
               "children": [
                 {
@@ -181,7 +181,7 @@
                   "children": [
                     {
                       "type": "ellipse",
-                      "id": "r7Gq2",
+                      "id": "Sy7pJ",
                       "name": "Header pair availability dot",
                       "fill": "#A8D56A",
                       "width": 8,
@@ -887,7 +887,868 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "fSarN",
+      "x": 2141,
+      "y": 152,
+      "name": "Favicon proposal - Black dot",
+      "width": 920,
+      "height": 784,
+      "fill": "$favicon-surface",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 32,
+      "children": [
+        {
+          "type": "frame",
+          "id": "PyRXP",
+          "name": "Proposal header",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 8,
+          "children": [
+            {
+              "type": "text",
+              "id": "sSlr4",
+              "name": "Proposal label",
+              "fill": "$favicon-muted",
+              "content": "FAVICON / 01",
+              "fontFamily": "Geist Mono",
+              "fontSize": 12,
+              "fontWeight": "500",
+              "letterSpacing": 1
+            },
+            {
+              "type": "text",
+              "id": "lUgBH",
+              "name": "Proposal title",
+              "fill": "$favicon-ink",
+              "content": "The dot, in both modes",
+              "lineHeight": 1.25,
+              "fontFamily": "Geist",
+              "fontSize": 32,
+              "fontWeight": "600"
+            },
+            {
+              "type": "text",
+              "id": "d5HdX",
+              "name": "Proposal rationale",
+              "fill": "$favicon-muted",
+              "content": "One centered mark with explicit light and dark variants, selected from the user’s color preference.",
+              "lineHeight": 1.43,
+              "fontFamily": "Geist",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uaji4",
+          "name": "Favicon previews",
+          "width": "fill_container",
+          "height": 264,
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "HquO8",
+              "name": "Light mode favicon variant",
+              "width": 412,
+              "fill": "$favicon-surface",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "a3hEIz",
+                  "name": "Light mode label",
+                  "fill": "$favicon-muted",
+                  "content": "LIGHT MODE",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "Q24UQI",
+                  "name": "Light mode preview row",
+                  "width": "fill_container",
+                  "height": 216,
+                  "gap": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "TYlRI",
+                      "name": "Master preview group",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "I5I4Ea",
+                          "name": "Master favicon 128 px",
+                          "width": 128,
+                          "height": 128,
+                          "fill": "$favicon-surface",
+                          "stroke": "$favicon-border",
+                          "strokeWidth": 1,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "uLUKl",
+                              "name": "Black dot master",
+                              "fill": "$favicon-ink",
+                              "width": 64,
+                              "height": 64
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "hnm9a",
+                          "name": "Master size label",
+                          "fill": "$favicon-muted",
+                          "content": "128 px master",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TSkGB",
+                      "name": "Actual size previews",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "K0IMG",
+                          "name": "64 px preview row",
+                          "width": "fill_container",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "HXSoQ",
+                              "name": "64 px favicon",
+                              "width": 64,
+                              "height": 64,
+                              "fill": "$favicon-surface",
+                              "stroke": "$favicon-border",
+                              "strokeWidth": 1,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "FVi2b",
+                                  "name": "Black dot 64 px",
+                                  "fill": "$favicon-ink",
+                                  "width": 32,
+                                  "height": 32
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "W5SuJb",
+                              "name": "64 px label",
+                              "fill": "$favicon-muted",
+                              "content": "64 px",
+                              "fontFamily": "Geist Mono",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "i4ZAC",
+                          "name": "32 px preview row",
+                          "width": "fill_container",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Xri4i",
+                              "name": "32 px favicon",
+                              "width": 32,
+                              "height": 32,
+                              "fill": "$favicon-surface",
+                              "stroke": "$favicon-border",
+                              "strokeWidth": 1,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "IkuBF",
+                                  "name": "Black dot 32 px",
+                                  "fill": "$favicon-ink",
+                                  "width": 16,
+                                  "height": 16
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "QLevW",
+                              "name": "32 px label",
+                              "fill": "$favicon-muted",
+                              "content": "32 px",
+                              "fontFamily": "Geist Mono",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "CxpYm",
+                          "name": "16 px preview row",
+                          "width": "fill_container",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "C0A2x",
+                              "name": "16 px favicon",
+                              "width": 16,
+                              "height": 16,
+                              "fill": "$favicon-surface",
+                              "stroke": "$favicon-border",
+                              "strokeWidth": 1,
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "h5lSK4",
+                                  "name": "Black dot 16 px",
+                                  "fill": "$favicon-ink",
+                                  "width": 8,
+                                  "height": 8
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "MgLtK",
+                              "name": "16 px label",
+                              "fill": "$favicon-muted",
+                              "content": "16 px",
+                              "fontFamily": "Geist Mono",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "JL7uK",
+              "name": "Dark mode favicon variant",
+              "width": 412,
+              "fill": "$favicon-surface",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "NoDnS",
+                  "name": "Dark mode label",
+                  "fill": "$favicon-muted",
+                  "content": "DARK MODE",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "plGN3",
+                  "name": "Dark mode preview row",
+                  "width": "fill_container",
+                  "height": 216,
+                  "gap": 24,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "K7OFDx",
+                      "name": "Dark master preview group",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "y3eB8",
+                          "name": "Dark master favicon 128 px",
+                          "width": 128,
+                          "height": 128,
+                          "fill": "$favicon-ink",
+                          "stroke": "$favicon-ink",
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "C39jmd",
+                              "name": "White dot master",
+                              "fill": "$favicon-surface",
+                              "width": 64,
+                              "height": 64
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "KlT5p",
+                          "name": "Dark master size label",
+                          "fill": "$favicon-muted",
+                          "content": "128 px master",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "xWKyL",
+                      "name": "Dark actual size previews",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "cIH7I",
+                          "name": "Dark 64 px preview row",
+                          "width": "fill_container",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "svTby",
+                              "name": "Dark 64 px favicon",
+                              "width": 64,
+                              "height": 64,
+                              "fill": "$favicon-ink",
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "LFRzC",
+                                  "name": "White dot 64 px",
+                                  "fill": "$favicon-surface",
+                                  "width": 32,
+                                  "height": 32
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "Q8IAAf",
+                              "name": "Dark 64 px label",
+                              "fill": "$favicon-muted",
+                              "content": "64 px",
+                              "fontFamily": "Geist Mono",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "l96dy",
+                          "name": "Dark 32 px preview row",
+                          "width": "fill_container",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "x0jlH",
+                              "name": "Dark 32 px favicon",
+                              "width": 32,
+                              "height": 32,
+                              "fill": "$favicon-ink",
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "DejH1",
+                                  "name": "White dot 32 px",
+                                  "fill": "$favicon-surface",
+                                  "width": 16,
+                                  "height": 16
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "OU2MC",
+                              "name": "Dark 32 px label",
+                              "fill": "$favicon-muted",
+                              "content": "32 px",
+                              "fontFamily": "Geist Mono",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UGsQd",
+                          "name": "Dark 16 px preview row",
+                          "width": "fill_container",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "g11dde",
+                              "name": "Dark 16 px favicon",
+                              "width": 16,
+                              "height": 16,
+                              "fill": "$favicon-ink",
+                              "justifyContent": "center",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "ellipse",
+                                  "id": "o7Xu2",
+                                  "name": "White dot 16 px",
+                                  "fill": "$favicon-surface",
+                                  "width": 8,
+                                  "height": 8
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "YSZX0",
+                              "name": "Dark 16 px label",
+                              "fill": "$favicon-muted",
+                              "content": "16 px",
+                              "fontFamily": "Geist Mono",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PtdM5",
+          "name": "Legacy favicon ICO fallback",
+          "width": "fill_container",
+          "height": 228,
+          "fill": "$favicon-surface",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "frame",
+              "id": "hmhzF",
+              "name": "ICO fallback header",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "SUDya",
+                  "name": "ICO fallback label",
+                  "fill": "$favicon-muted",
+                  "content": "LEGACY FALLBACK / FAVICON.ICO",
+                  "fontFamily": "Geist Mono",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "iWrPA",
+                  "name": "ICO fallback rationale",
+                  "fill": "$favicon-muted",
+                  "content": "One static transparent asset with a white keyline, designed to remain legible on light and dark browser chrome.",
+                  "lineHeight": 1.43,
+                  "fontFamily": "Geist",
+                  "fontSize": 14
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UVLwk",
+              "name": "ICO fallback previews",
+              "width": "fill_container",
+              "height": 160,
+              "gap": 32,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Tntm4",
+                  "name": "ICO background comparison",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Y3HPR9",
+                      "name": "Light chrome ICO group",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "BKVEU",
+                          "name": "Light chrome ICO preview",
+                          "width": 128,
+                          "height": 128,
+                          "fill": "$favicon-surface",
+                          "stroke": "$favicon-border",
+                          "strokeWidth": 1,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "IurMc",
+                              "x": 24,
+                              "y": 24,
+                              "name": "Light chrome white keyline",
+                              "fill": "$favicon-surface",
+                              "width": 80,
+                              "height": 80
+                            },
+                            {
+                              "type": "ellipse",
+                              "id": "Fk3lk",
+                              "x": 32,
+                              "y": 32,
+                              "name": "Light chrome black dot",
+                              "fill": "$favicon-ink",
+                              "width": 64,
+                              "height": 64
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "fkKu2",
+                          "name": "Light chrome label",
+                          "fill": "$favicon-muted",
+                          "content": "Light chrome",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "DRMQ3",
+                      "name": "Dark chrome ICO group",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "R2tvc",
+                          "name": "Dark chrome ICO preview",
+                          "width": 128,
+                          "height": 128,
+                          "fill": "$favicon-ink",
+                          "stroke": "$favicon-border",
+                          "strokeWidth": 1,
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "TYIa4",
+                              "x": 24,
+                              "y": 24,
+                              "name": "Dark chrome white keyline",
+                              "fill": "$favicon-surface",
+                              "width": 80,
+                              "height": 80
+                            },
+                            {
+                              "type": "ellipse",
+                              "id": "srurf",
+                              "x": 32,
+                              "y": 32,
+                              "name": "Dark chrome black dot",
+                              "fill": "$favicon-ink",
+                              "width": 64,
+                              "height": 64
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "QokUm",
+                          "name": "Dark chrome label",
+                          "fill": "$favicon-muted",
+                          "content": "Dark chrome",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Vk5uE",
+                  "name": "ICO embedded sizes",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YBFnl",
+                      "name": "ICO sizes label",
+                      "fill": "$favicon-muted",
+                      "content": "EMBEDDED SIZES",
+                      "fontFamily": "Geist Mono",
+                      "fontSize": 12,
+                      "fontWeight": "500",
+                      "letterSpacing": 1
+                    },
+                    {
+                      "type": "frame",
+                      "id": "O4SxB",
+                      "name": "ICO 48 px row",
+                      "width": "fill_container",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "l0hnum",
+                          "name": "ICO 48 px preview",
+                          "width": 48,
+                          "height": 48,
+                          "fill": "$favicon-ink",
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "Qegub",
+                              "x": 9,
+                              "y": 9,
+                              "name": "ICO 48 px white keyline",
+                              "fill": "$favicon-surface",
+                              "width": 30,
+                              "height": 30
+                            },
+                            {
+                              "type": "ellipse",
+                              "id": "fJtLo",
+                              "x": 12,
+                              "y": 12,
+                              "name": "ICO 48 px black dot",
+                              "fill": "$favicon-ink",
+                              "width": 24,
+                              "height": 24
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "WyImC",
+                          "name": "ICO 48 px label",
+                          "fill": "$favicon-muted",
+                          "content": "48 px · 3 px keyline",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XIGD7",
+                      "name": "ICO 32 px row",
+                      "width": "fill_container",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "PeA6s",
+                          "name": "ICO 32 px preview",
+                          "width": 32,
+                          "height": 32,
+                          "fill": "$favicon-ink",
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "p20cqc",
+                              "x": 6,
+                              "y": 6,
+                              "name": "ICO 32 px white keyline",
+                              "fill": "$favicon-surface",
+                              "width": 20,
+                              "height": 20
+                            },
+                            {
+                              "type": "ellipse",
+                              "id": "VZhXV",
+                              "x": 8,
+                              "y": 8,
+                              "name": "ICO 32 px black dot",
+                              "fill": "$favicon-ink",
+                              "width": 16,
+                              "height": 16
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "lxyXq",
+                          "name": "ICO 32 px label",
+                          "fill": "$favicon-muted",
+                          "content": "32 px · 2 px keyline",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VXTtV",
+                      "name": "ICO 16 px row",
+                      "width": "fill_container",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "wgaag",
+                          "name": "ICO 16 px preview",
+                          "width": 16,
+                          "height": 16,
+                          "fill": "$favicon-ink",
+                          "layout": "none",
+                          "children": [
+                            {
+                              "type": "ellipse",
+                              "id": "hors9",
+                              "x": 3,
+                              "y": 3,
+                              "name": "ICO 16 px white keyline",
+                              "fill": "$favicon-surface",
+                              "width": 10,
+                              "height": 10
+                            },
+                            {
+                              "type": "ellipse",
+                              "id": "AE97k",
+                              "x": 4,
+                              "y": 4,
+                              "name": "ICO 16 px black dot",
+                              "fill": "$favicon-ink",
+                              "width": 8,
+                              "height": 8
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "GjiCH",
+                          "name": "ICO 16 px label",
+                          "fill": "$favicon-muted",
+                          "content": "16 px · 1 px keyline",
+                          "fontFamily": "Geist Mono",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "OC49E",
+          "name": "Footer divider",
+          "fill": "$favicon-border",
+          "width": "fill_container",
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "ibreZ",
+          "name": "Usage note",
+          "fill": "$favicon-muted",
+          "content": "Modern: two SVG assets selected with media · Legacy: one transparent favicon.ico with a white keyline",
+          "fontFamily": "Geist Mono",
+          "fontSize": 12,
+          "fontWeight": "normal"
+        }
+      ]
     }
   ],
+  "variables": {
+    "favicon-surface": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "favicon-ink": {
+      "type": "color",
+      "value": "#1A1A1A"
+    },
+    "favicon-muted": {
+      "type": "color",
+      "value": "#666666"
+    },
+    "favicon-border": {
+      "type": "color",
+      "value": "#E5E5E5"
+    }
+  },
   "fileToken": "f13aca05-8080-4e10-a3ee-f4a6d0cf11af"
 }
