@@ -1,0 +1,12 @@
+---
+import NotFoundPage from '../features/errors/components/not-found-page.astro';
+import BaseLayout from '../layouts/base-layout.astro';
+
+const title = 'Page not found — Benjamin Dos Santos';
+const description =
+  'The requested page could not be found. Return to the Benjamin Dos Santos portfolio.';
+---
+
+<BaseLayout {description} {title}>
+  <NotFoundPage />
+</BaseLayout>

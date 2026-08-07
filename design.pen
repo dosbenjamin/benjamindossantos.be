@@ -1919,6 +1919,116 @@
           "fontSize": 20
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "P3nhWx",
+      "x": 4501,
+      "y": 152,
+      "name": "404 page - Benjamin Dos Santos",
+      "clip": true,
+      "width": 1440,
+      "height": 1006,
+      "fill": "#141412",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        32,
+        32,
+        48,
+        32
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "hRuZ4",
+          "name": "404 main content",
+          "width": 768,
+          "height": "fill_container",
+          "layout": "vertical",
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "yiNR4",
+              "name": "404 message row",
+              "width": "fill_container",
+              "gap": 32,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "rtFzb",
+                  "name": "404 error code",
+                  "fill": "#F2F0EA",
+                  "textGrowth": "fixed-width",
+                  "width": 264,
+                  "content": "404",
+                  "lineHeight": 1.125,
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 64,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "frame",
+                  "id": "U01qqb",
+                  "name": "404 message",
+                  "width": 472,
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "TOAQk",
+                      "name": "404 title",
+                      "fill": "#F2F0EA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Page not found.",
+                      "lineHeight": 1.25,
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 32,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "jn9O5",
+                      "name": "404 description",
+                      "fill": "#D8D5CC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "The page you’re looking for doesn’t exist or may have moved. Let’s get you back to familiar ground.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wz1In",
+                      "name": "404 home link",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "QyM3o",
+                          "name": "404 home link label",
+                          "fill": "#F2F0EA",
+                          "content": "Back to home →",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "variables": {

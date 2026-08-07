@@ -1,0 +1,102 @@
+<main class="not-found-page">
+  <div class="not-found-content">
+    <p aria-hidden="true" class="not-found-code">404</p>
+
+    <div class="not-found-message">
+      <h1>Page not found.</h1>
+      <p>
+        The page you’re looking for doesn’t exist or may have moved. Let’s get
+        you back to familiar ground.
+      </p>
+      <a href="/">
+        <span>Back to home</span>
+        <svg aria-hidden="true" viewBox="0 0 12 12">
+          <path d="M1 6h10M7 2l4 4-4 4"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</main>
+
+<style>
+  .not-found-page {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: var(--size-content);
+    min-height: 100vh;
+    padding-block: var(--space-page-block-start) var(--space-page-block-end);
+    margin-inline: auto;
+  }
+
+  .not-found-content {
+    display: grid;
+    grid-template-columns: var(--size-label-column) minmax(0, 1fr);
+    gap: var(--space-32);
+    width: 100%;
+  }
+
+  .not-found-code,
+  .not-found-message h1,
+  .not-found-message p {
+    margin: 0;
+  }
+
+  .not-found-code {
+    color: var(--color-text-strong);
+    font-size: var(--font-size-64);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-72);
+  }
+
+  .not-found-message {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+  }
+
+  .not-found-message h1 {
+    color: var(--color-text-strong);
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-40);
+  }
+
+  .not-found-message p {
+    text-wrap: pretty;
+  }
+
+  .not-found-message a {
+    display: inline-flex;
+    gap: var(--space-4);
+    align-items: center;
+    width: fit-content;
+    color: var(--color-text-strong);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+  }
+
+  .not-found-message a:hover {
+    color: var(--color-text);
+  }
+
+  .not-found-message svg {
+    width: var(--size-icon-small);
+    height: var(--size-icon-small);
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+    stroke-width: var(--border-width-thin);
+    vector-effect: non-scaling-stroke;
+  }
+
+  /* Compact breakpoint: 700px. Custom properties cannot resolve in media conditions. */
+  @media (max-width: 43.75rem) {
+    .not-found-content {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-24);
+    }
+  }
+</style>
