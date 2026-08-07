@@ -1,0 +1,879 @@
+{
+  "version": "2.15",
+  "children": [
+    {
+      "type": "frame",
+      "id": "OeYRI",
+      "x": 621,
+      "y": 152,
+      "name": "Portfolio top-left compact - Benjamin Dos Santos",
+      "clip": true,
+      "width": 1440,
+      "fill": "#141412",
+      "layout": "vertical",
+      "gap": 32,
+      "padding": [
+        32,
+        32,
+        40,
+        32
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "o8OCBx",
+          "name": "Compact header",
+          "width": 600,
+          "layout": "vertical",
+          "gap": 5,
+          "children": [
+            {
+              "type": "frame",
+              "id": "trVqE",
+              "name": "Header pair row Identity",
+              "width": "fill_container",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lSz6G",
+                  "name": "Header pair name",
+                  "fill": "#F2F0EA",
+                  "textGrowth": "fixed-width",
+                  "width": 220,
+                  "content": "Benjamin Dos Santos",
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "SapSd",
+                  "name": "Header pair role",
+                  "fill": "#F2F0EA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Full-Stack Engineer",
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 14,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "E2yOPt",
+              "name": "Header pair row Contact",
+              "width": "fill_container",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "PPVsw",
+                  "name": "Header pair email",
+                  "fill": "#D8D5CC",
+                  "textGrowth": "fixed-width",
+                  "width": 220,
+                  "content": "hello@benjamindossantos.be",
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "vdkG5",
+                  "name": "Header pair location",
+                  "fill": "#D8D5CC",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Belgium / Remote",
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "a8W5S",
+              "name": "Header pair row Phone",
+              "width": "fill_container",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Ifimm",
+                  "name": "Header pair phone",
+                  "fill": "#D8D5CC",
+                  "textGrowth": "fixed-width",
+                  "width": 220,
+                  "content": "+32 478 68 69 02",
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "rHEWI",
+                  "name": "Header pair blank",
+                  "width": "fill_container",
+                  "height": 16,
+                  "layout": "none"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "msGl0",
+              "name": "Header pair row Links",
+              "width": "fill_container",
+              "gap": 24,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rFUVJ",
+                  "name": "Header pair links",
+                  "width": 220,
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yn2vt",
+                      "name": "Header pair GitHub",
+                      "fill": "#D8D5CC",
+                      "content": "GitHub",
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "y6zkrf",
+                      "name": "Header pair LinkedIn",
+                      "fill": "#D8D5CC",
+                      "content": "LinkedIn",
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "S666uL",
+                  "name": "Header pair availability",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "r7Gq2",
+                      "name": "Header pair availability dot",
+                      "fill": "#A8D56A",
+                      "width": 7,
+                      "height": 7
+                    },
+                    {
+                      "type": "text",
+                      "id": "sFJjb",
+                      "name": "Header pair availability text",
+                      "fill": "#F2F0EA",
+                      "content": "Available for selected freelance projects",
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "eEcFB",
+          "name": "Compact intro",
+          "width": 600,
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "ClC5H",
+              "name": "Compact intro title",
+              "fill": "#F2F0EA",
+              "textGrowth": "fixed-width",
+              "width": 600,
+              "content": "Building modern web applications, SaaS products and e-commerce solutions.",
+              "lineHeight": 1.35,
+              "fontFamily": "Schibsted Grotesk",
+              "fontSize": 14,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "ONu5b",
+              "name": "Compact intro text",
+              "fill": "#D8D5CC",
+              "textGrowth": "fixed-width",
+              "width": 600,
+              "content": "I design, build and deploy modern web applications with a focus on performance, maintainability and scalability. Throughout my career in both full-time and freelance roles, I've contributed to SaaS platforms, business applications, e-commerce solutions, headless CMS architectures and cloud infrastructure.",
+              "lineHeight": 1.45,
+              "fontFamily": "Schibsted Grotesk",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SFgtk",
+          "name": "Compact work index",
+          "width": 600,
+          "layout": "vertical",
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "v5Ryvy",
+              "name": "Compact section Experience",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jpOmb",
+                  "name": "Compact section title Experience",
+                  "fill": "#F2F0EA",
+                  "textGrowth": "fixed-width",
+                  "width": 600,
+                  "content": "Experience",
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "mdJJx",
+                  "name": "Compact list Experience",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Pml9p",
+                      "name": "Compact row Company role",
+                      "width": "fill_container",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "wCaA6",
+                          "name": "Project stack Company role",
+                          "width": 220,
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ZRxZ2",
+                              "name": "Project name Company role",
+                              "fill": "#F2F0EA",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Full-Stack Engineer",
+                              "lineHeight": 1.3,
+                              "fontFamily": "Schibsted Grotesk",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "TVnLh",
+                              "name": "Project meta Company role",
+                              "fill": "#9F9B91",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Independent freelance · 2024–Now",
+                              "lineHeight": 1.35,
+                              "fontFamily": "Schibsted Grotesk",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ge1PT",
+                          "name": "Compact desc Company role",
+                          "fill": "#D8D5CC",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Delivering end-to-end web applications, from discovery to production, with a focus on performance, maintainability, scalability, integrations and automation.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JWoY4",
+                      "name": "Compact row Internal product",
+                      "width": "fill_container",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "l0YTy",
+                          "name": "Project stack Internal product",
+                          "width": 220,
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "MioH8",
+                              "name": "Project name Internal product",
+                              "fill": "#F2F0EA",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Full Stack Developer",
+                              "lineHeight": 1.3,
+                              "fontFamily": "Schibsted Grotesk",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "cpBCu",
+                              "name": "Company link meta Sanserif",
+                              "width": 220,
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "jUIuQ",
+                                  "name": "Company link text Sanserif",
+                                  "fill": "#9F9B91",
+                                  "content": "Sanserif",
+                                  "lineHeight": 1.35,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "rlHcN",
+                                  "name": "Company external icon Sanserif",
+                                  "width": 10,
+                                  "height": 10,
+                                  "icon": "arrow-up-right",
+                                  "library": "lucide",
+                                  "fill": "#9F9B91"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "WdwwK",
+                                  "name": "Company date Sanserif",
+                                  "fill": "#9F9B91",
+                                  "content": "· Freelance · 2021–Now",
+                                  "lineHeight": 1.35,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "KDkjr",
+                          "name": "Compact desc Internal product",
+                          "fill": "#D8D5CC",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Freelance work with Sanserif: custom websites and e-commerce solutions, from headless CMS integration to front-end development. Contributed to infrastructure, deployment and technical improvements across multiple client projects.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jJVZw",
+                      "name": "Compact row Website design & build",
+                      "width": "fill_container",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "r4VOm",
+                          "name": "Project stack Website design & build",
+                          "width": 220,
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "W1OT6B",
+                              "name": "Project name Website design & build",
+                              "fill": "#F2F0EA",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Frontend Developer",
+                              "lineHeight": 1.3,
+                              "fontFamily": "Schibsted Grotesk",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "PHDFA",
+                              "name": "Company link meta Certinergie",
+                              "width": 220,
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "wljat",
+                                  "name": "Company link text Certinergie",
+                                  "fill": "#9F9B91",
+                                  "content": "Certinergie",
+                                  "lineHeight": 1.35,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "YiU1q",
+                                  "name": "Company external icon Certinergie",
+                                  "width": 10,
+                                  "height": 10,
+                                  "icon": "arrow-up-right",
+                                  "library": "lucide",
+                                  "fill": "#9F9B91"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "z7XFkg",
+                                  "name": "Company date Certinergie",
+                                  "fill": "#9F9B91",
+                                  "content": "· Full-time · 2022–2024",
+                                  "lineHeight": 1.35,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "q86jj",
+                          "name": "Compact desc Website design & build",
+                          "fill": "#D8D5CC",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Contributed to the development of a PropTech SaaS platform, collaborating with backend developers to build user interfaces, integrate APIs, and deliver new features in an agile environment.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "JEpj0",
+                      "name": "Compact row UI systems",
+                      "width": "fill_container",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "NK8x2",
+                          "name": "Project stack UI systems",
+                          "width": 220,
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "PsKuc",
+                              "name": "Project name UI systems",
+                              "fill": "#F2F0EA",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Frontend Developer",
+                              "lineHeight": 1.3,
+                              "fontFamily": "Schibsted Grotesk",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "xQPx1",
+                              "name": "Company link meta McArnolds",
+                              "width": 220,
+                              "gap": 4,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "JFdO6",
+                                  "name": "Company link text McArnolds",
+                                  "fill": "#9F9B91",
+                                  "content": "McArnolds",
+                                  "lineHeight": 1.35,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "I6I0SG",
+                                  "name": "Company external icon McArnolds",
+                                  "width": 10,
+                                  "height": 10,
+                                  "icon": "arrow-up-right",
+                                  "library": "lucide",
+                                  "fill": "#9F9B91"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "OiehF",
+                                  "name": "Company date McArnolds",
+                                  "fill": "#9F9B91",
+                                  "content": "· Full-time · 2020–2022",
+                                  "lineHeight": 1.35,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 12,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "h7EraG",
+                          "name": "Compact desc UI systems",
+                          "fill": "#D8D5CC",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Contributed to the development of creative websites and e-commerce solutions, including personalized email campaigns and long-term website maintenance focused on performance and reliability.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NZGAv",
+              "name": "Compact section Live client sites",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jAiBr",
+                  "name": "Compact section title Live client sites",
+                  "fill": "#F2F0EA",
+                  "textGrowth": "fixed-width",
+                  "width": 600,
+                  "content": "Selected Projects",
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "JNkyD",
+                  "name": "Compact list Live client sites",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "R3Pth",
+                      "name": "Compact row Product name",
+                      "width": "fill_container",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "wgrVZ",
+                          "name": "Project stack Wealthflow",
+                          "width": 220,
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "aJ1au",
+                              "name": "Project link line Wealthflow",
+                              "gap": 5,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "vX5kJ",
+                                  "name": "Project name Wealthflow",
+                                  "fill": "#F2F0EA",
+                                  "content": "Wealthflow",
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 13,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "IBNTq",
+                                  "name": "External icon Wealthflow",
+                                  "width": 12,
+                                  "height": 12,
+                                  "icon": "arrow-up-right",
+                                  "library": "lucide",
+                                  "fill": "#D8D5CC"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "EWTB3",
+                              "name": "Project meta Wealthflow",
+                              "fill": "#9F9B91",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "SaaS",
+                              "lineHeight": 1.35,
+                              "fontFamily": "Schibsted Grotesk",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "bauhw",
+                          "name": "Compact desc Product name",
+                          "fill": "#D8D5CC",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Privacy-first wealth tracking platform for managing investments, assets and net worth.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "m9DwQ",
+                      "name": "Compact row Client site name",
+                      "width": "fill_container",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "l3lMFP",
+                          "name": "Project stack Amamolto",
+                          "width": 220,
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "J21I6j",
+                              "name": "Project link line Amamolto",
+                              "gap": 5,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "x7iKu",
+                                  "name": "Project name Amamolto",
+                                  "fill": "#F2F0EA",
+                                  "content": "Ama Molto",
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 13,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "lRoUv",
+                                  "name": "External icon Amamolto",
+                                  "width": 12,
+                                  "height": 12,
+                                  "icon": "arrow-up-right",
+                                  "library": "lucide",
+                                  "fill": "#D8D5CC"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "u5vicW",
+                              "name": "Project meta Amamolto",
+                              "fill": "#9F9B91",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Client site",
+                              "lineHeight": 1.35,
+                              "fontFamily": "Schibsted Grotesk",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "C7YqJp",
+                          "name": "Compact desc Client site name",
+                          "fill": "#D8D5CC",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "International wedding and event planning agency.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "l96P3",
+                      "name": "Compact row Client site name",
+                      "width": "fill_container",
+                      "gap": 24,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "CBYZe",
+                          "name": "Project stack ADLC",
+                          "width": 220,
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "TzPJH",
+                              "name": "Project link line ADLC",
+                              "gap": 5,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "oHtPa",
+                                  "name": "Project name ADLC",
+                                  "fill": "#F2F0EA",
+                                  "content": "ADLC",
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 13,
+                                  "fontWeight": "500"
+                                },
+                                {
+                                  "type": "icon",
+                                  "id": "F7Tdr",
+                                  "name": "External icon ADLC",
+                                  "width": 12,
+                                  "height": 12,
+                                  "icon": "arrow-up-right",
+                                  "library": "lucide",
+                                  "fill": "#D8D5CC"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "id": "A8Zgk",
+                              "name": "Project meta ADLC",
+                              "fill": "#9F9B91",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Client site",
+                              "lineHeight": 1.35,
+                              "fontFamily": "Schibsted Grotesk",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "r4gez",
+                          "name": "Compact desc Client site name",
+                          "fill": "#D8D5CC",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Corporate website for a company specializing in drone logistics.",
+                          "lineHeight": 1.42,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "a98iY",
+          "name": "Compact footer",
+          "width": 600,
+          "gap": 18,
+          "padding": [
+            4,
+            0,
+            0,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "zlYYw",
+              "name": "Compact footer note",
+              "fill": "#D8D5CC",
+              "content": "Case details available on request.",
+              "fontFamily": "Schibsted Grotesk",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fileToken": "f13aca05-8080-4e10-a3ee-f4a6d0cf11af"
+}
