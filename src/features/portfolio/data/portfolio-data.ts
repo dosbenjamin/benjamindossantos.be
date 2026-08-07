@@ -36,7 +36,7 @@ export const portfolioSections: readonly PortfolioSection[] = [
           href: 'https://sanserif.be/',
           name: 'Sanserif',
         },
-        title: 'Full Stack Developer',
+        title: 'Full-Stack Developer',
       },
       {
         description:
@@ -46,7 +46,7 @@ export const portfolioSections: readonly PortfolioSection[] = [
           href: 'https://certinergie.be/',
           name: 'Certinergie',
         },
-        title: 'Frontend Developer',
+        title: 'Front-End Developer',
       },
       {
         description:
@@ -56,7 +56,7 @@ export const portfolioSections: readonly PortfolioSection[] = [
           href: 'https://mcarnolds.be/',
           name: 'McArnolds',
         },
-        title: 'Frontend Developer',
+        title: 'Front-End Developer',
       },
     ],
     id: 'experience',
