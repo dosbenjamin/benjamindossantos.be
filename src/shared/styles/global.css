@@ -60,12 +60,12 @@
     --line-height-48: 3rem;
     --line-height-56: 3.5rem;
     --line-height-72: 4.5rem;
-    --font-size-caption: var(--font-size-12);
-    --font-size-body: var(--font-size-14);
-    --font-size-heading: var(--font-size-16);
-    --line-height-caption: var(--line-height-16);
-    --line-height-body: var(--line-height-20);
-    --line-height-heading: var(--line-height-24);
+    --font-size-caption: var(--font-size-14);
+    --font-size-body: var(--font-size-16);
+    --font-size-heading: var(--font-size-20);
+    --line-height-caption: var(--line-height-20);
+    --line-height-body: var(--line-height-24);
+    --line-height-heading: var(--line-height-28);
 
     --space-2: 0.125rem;
     --space-4: 0.25rem;
@@ -82,12 +82,13 @@
     --space-section: var(--space-32);
 
     --border-width-thin: 0.0625rem;
-    --size-content: 37.5rem;
-    --size-label-column: 13.75rem;
-    --size-column-gap: var(--space-24);
+    --size-content: 48rem;
+    --size-label-column: 16.5rem;
+    --size-column-gap: var(--space-32);
     --size-focus-offset: var(--space-4);
     --size-focus-radius: var(--space-2);
     --size-focus-ring: var(--space-2);
+    --size-icon-small: var(--space-12);
     --size-status-dot: var(--space-8);
     --size-text-underline-offset: var(--space-4);
     --size-visually-hidden: var(--border-width-thin);
@@ -107,6 +108,7 @@
   body {
     min-width: var(--size-viewport-min);
     min-height: 100vh;
+    padding-inline: var(--space-page-inline);
     background: var(--color-background);
     color: var(--color-text);
     font-size: var(--font-size-body);

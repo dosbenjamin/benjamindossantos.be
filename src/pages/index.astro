@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/base-layout.astro';
+import PortfolioPage from '../features/portfolio/components/portfolio-page.astro';
 
-const title = 'Benjamin Dos Santos';
-const description = 'Personal website of Benjamin Dos Santos';
+const title = 'Benjamin Dos Santos — Full-Stack Engineer';
+const description =
+  'Full-stack engineer building modern web applications, SaaS products and e-commerce solutions.';
 ---
 
 <BaseLayout {description} {title}>
-  <main>
-    <h1>{title}</h1>
-  </main>
+  <PortfolioPage />
 </BaseLayout>

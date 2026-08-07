@@ -1,0 +1,269 @@
+---
+import {
+  contact,
+  footerNote,
+  introduction,
+  portfolioSections,
+} from '../data/portfolio-data';
+import ExternalLinkIcon from './external-link-icon.astro';
+---
+
+<div class="portfolio-page">
+  <header class="portfolio-header">
+    <address class="portfolio-contact">
+      <h1 class="portfolio-name">{contact.name}</h1>
+      <p class="portfolio-role">{contact.role}</p>
+      <a
+        aria-label={`Send an email to ${contact.name}`}
+        href={`mailto:${contact.email}`}>{contact.email}</a
+      >
+      <p>{contact.location}</p>
+      <a aria-label={`Call ${contact.name}`} href={contact.phoneUrl}
+        >{contact.phoneDisplay}</a
+      >
+      <span aria-hidden="true"></span>
+      <nav aria-label="Social profiles" class="portfolio-social-links">
+        <a
+          aria-label={`View ${contact.name} on GitHub`}
+          href={contact.githubUrl}>GitHub</a
+        >
+        <a
+          aria-label={`View ${contact.name} on LinkedIn`}
+          href={contact.linkedInUrl}>LinkedIn</a
+        >
+      </nav>
+      <p class="portfolio-availability">
+        <span aria-hidden="true" class="portfolio-availability-dot"></span>
+        <span>{contact.availability}</span>
+      </p>
+    </address>
+  </header>
+
+  <main class="portfolio-main">
+    <section aria-labelledby="introduction-title" class="portfolio-introduction">
+      <h2 id="introduction-title">{introduction.title}</h2>
+      <p>{introduction.description}</p>
+    </section>
+
+    <div class="portfolio-work-index">
+      {
+        portfolioSections.map((section) => (
+          <section
+            aria-labelledby={`section-${section.id}`}
+            class="portfolio-section"
+          >
+            <h2 id={`section-${section.id}`}>{section.title}</h2>
+            <ul class="portfolio-entry-list">
+              {section.entries.map((entry) => (
+                <li>
+                  <article class="portfolio-entry">
+                    <div class="portfolio-entry-summary">
+                      <h3>
+                        {entry.href ? (
+                          <a
+                            aria-label={`Visit the ${entry.title} website`}
+                            class="portfolio-entry-link"
+                            href={entry.href}
+                          >
+                            <span>{entry.title}</span>
+                            <ExternalLinkIcon />
+                          </a>
+                        ) : (
+                          entry.title
+                        )}
+                      </h3>
+                      <p class="portfolio-entry-meta">
+                        {entry.organization ? (
+                          <>
+                            <a
+                              aria-label={`Visit the ${entry.organization.name} website`}
+                              class="portfolio-organization-link"
+                              href={entry.organization.href}
+                            >
+                              <span>{entry.organization.name}</span>
+                              <ExternalLinkIcon />
+                            </a>
+                            <span> · {entry.meta}</span>
+                          </>
+                        ) : (
+                          entry.meta
+                        )}
+                      </p>
+                    </div>
+                    <p class="portfolio-entry-description">
+                      {entry.description}
+                    </p>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </main>
+
+  <footer class="portfolio-footer">
+    <p>{footerNote}</p>
+  </footer>
+</div>
+
+<style>
+  .portfolio-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-section);
+    width: 100%;
+    max-width: var(--size-content);
+    padding-block: var(--space-page-block-start) var(--space-page-block-end);
+    margin-inline: auto;
+  }
+
+  .portfolio-page a {
+    text-decoration: none;
+    transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+  }
+
+  .portfolio-page a:hover {
+    color: var(--color-text-strong);
+  }
+
+  .portfolio-contact {
+    display: grid;
+    grid-template-columns: var(--size-label-column) minmax(0, 1fr);
+    gap: var(--space-4) var(--size-column-gap);
+    font-size: var(--font-size-body);
+    font-style: normal;
+    line-height: var(--line-height-body);
+  }
+
+  .portfolio-contact p {
+    margin: 0;
+  }
+
+  .portfolio-name,
+  .portfolio-role {
+    color: var(--color-text-strong);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-heading);
+  }
+
+  .portfolio-social-links,
+  .portfolio-availability {
+    display: flex;
+    align-items: center;
+  }
+
+  .portfolio-social-links {
+    gap: var(--space-12);
+  }
+
+  .portfolio-availability {
+    gap: var(--space-8);
+    color: var(--color-text-strong);
+  }
+
+  .portfolio-availability-dot {
+    flex: none;
+    width: var(--size-status-dot);
+    height: var(--size-status-dot);
+    background: var(--color-status-available);
+    border-radius: 50%;
+  }
+
+  .portfolio-main,
+  .portfolio-introduction,
+  .portfolio-work-index,
+  .portfolio-section,
+  .portfolio-entry-list,
+  .portfolio-entry-summary {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-main,
+  .portfolio-work-index {
+    gap: var(--space-section);
+  }
+
+  .portfolio-introduction,
+  .portfolio-entry-list,
+  .portfolio-section {
+    gap: var(--space-12);
+  }
+
+  .portfolio-introduction h2,
+  .portfolio-section h2,
+  .portfolio-entry h3 {
+    margin: 0;
+    color: var(--color-text-strong);
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-heading);
+  }
+
+  .portfolio-introduction p {
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+  }
+
+  .portfolio-entry-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .portfolio-entry {
+    display: grid;
+    grid-template-columns: var(--size-label-column) minmax(0, 1fr);
+    gap: var(--size-column-gap);
+  }
+
+  .portfolio-entry-summary {
+    gap: var(--space-2);
+  }
+
+  .portfolio-entry h3,
+  .portfolio-entry-meta,
+  .portfolio-entry-description,
+  .portfolio-footer {
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-caption);
+  }
+
+  .portfolio-entry-meta {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+
+  .portfolio-entry-description {
+    margin: 0;
+  }
+
+  .portfolio-entry-link,
+  .portfolio-organization-link {
+    display: inline-flex;
+    gap: var(--space-4);
+    align-items: center;
+  }
+
+  .portfolio-organization-link {
+    color: var(--color-text-muted);
+  }
+
+  .portfolio-footer {
+    padding-block-start: var(--space-4);
+  }
+
+  @media (max-width: 43.75rem) {
+    .portfolio-contact,
+    .portfolio-entry {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .portfolio-contact > [aria-hidden='true']:empty {
+      display: none;
+    }
+  }
+</style>
