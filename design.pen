@@ -1406,7 +1406,8 @@
                   "content": "One static transparent asset with a white keyline, designed to remain legible on light and dark browser chrome.",
                   "lineHeight": 1.43,
                   "fontFamily": "Geist",
-                  "fontSize": 14
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
@@ -1728,6 +1729,194 @@
           "fontFamily": "Geist Mono",
           "fontSize": 12,
           "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "cPGQa",
+      "x": 3181,
+      "y": 152,
+      "name": "Open Graph — Benjamin Dos Santos",
+      "clip": true,
+      "width": 1200,
+      "height": 630,
+      "fill": "#141412",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "CXU3N",
+          "x": 216,
+          "y": 96,
+          "name": "Open Graph compact layout",
+          "width": 768,
+          "height": 330,
+          "layout": "vertical",
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "mxVfs",
+              "name": "Compact identity",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Yg9bW",
+                  "name": "Identity row",
+                  "width": "fill_container",
+                  "height": 40,
+                  "gap": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "o1ixJj",
+                      "name": "Benjamin Dos Santos",
+                      "fill": "#F2F0EA",
+                      "textGrowth": "fixed-width",
+                      "width": 336,
+                      "content": "Benjamin Dos Santos",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 32,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "I44op",
+                      "name": "Header pair role",
+                      "fill": "#F2F0EA",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Full-Stack Engineer",
+                      "lineHeight": 1.2,
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 32,
+                      "fontWeight": "600"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "c5WQvr",
+                  "name": "Contact row",
+                  "width": "fill_container",
+                  "height": 30,
+                  "gap": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "mUg32",
+                      "name": "Email address",
+                      "fill": "#D8D5CC",
+                      "textGrowth": "fixed-width",
+                      "width": 336,
+                      "content": "hello@benjamindossantos.be",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 22
+                    },
+                    {
+                      "type": "text",
+                      "id": "SlvvP",
+                      "name": "Location",
+                      "fill": "#D8D5CC",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Belgium / Remote",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 22
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pQtuh",
+                  "name": "Phone row",
+                  "width": "fill_container",
+                  "height": 30,
+                  "gap": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "NzkYg",
+                      "name": "Phone number",
+                      "fill": "#D8D5CC",
+                      "textGrowth": "fixed-width",
+                      "width": 336,
+                      "content": "+32 478 68 69 02",
+                      "lineHeight": 1.35,
+                      "fontFamily": "Schibsted Grotesk",
+                      "fontSize": 22
+                    },
+                    {
+                      "type": "frame",
+                      "id": "n4Ldz",
+                      "name": "Phone row blank",
+                      "width": "fill_container",
+                      "height": 30,
+                      "layout": "none"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "GJtos",
+              "name": "Compact introduction",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Q35ga",
+                  "name": "Introduction title",
+                  "fill": "#F2F0EA",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Building modern web applications, SaaS products and e-commerce solutions.",
+                  "lineHeight": 1.2,
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 40,
+                  "fontWeight": "600",
+                  "letterSpacing": -0.5
+                },
+                {
+                  "type": "text",
+                  "id": "m4Hju",
+                  "name": "Introduction copy",
+                  "fill": "#D8D5CC",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "I design, build and deploy performant, maintainable and scalable digital products — from discovery to production.",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "z11WJ",
+          "x": 216,
+          "y": 510,
+          "name": "Open Graph footer note",
+          "fill": "#D8D5CC",
+          "content": "Case details available on request.",
+          "lineHeight": 1.3,
+          "fontFamily": "Schibsted Grotesk",
+          "fontSize": 20
         }
       ]
     }
