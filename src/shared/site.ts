@@ -1,4 +1,11 @@
 export const siteUrl = 'https://benjamindossantos.be/';
+const plausibleOrigin = 'https://plausible.benjamindossantos.be';
+
+export const plausibleAnalytics = {
+  domain: new URL(siteUrl).hostname,
+  origin: plausibleOrigin,
+  scriptURL: new URL('/js/script.outbound-links.js', plausibleOrigin).href,
+} as const;
 
 export const siteIdentity = {
   country: 'Belgium',

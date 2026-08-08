@@ -3,6 +3,7 @@ import { Font } from 'astro:assets';
 import '../shared/styles/global.css';
 import { seoPaths, siteMetadata } from '../shared/seo';
 import type { PersonStructuredData, RobotsDirective } from '../shared/seo';
+import { plausibleAnalytics } from '../shared/site';
 
 interface Props {
   canonical?: boolean;
@@ -36,6 +37,7 @@ const openGraphImageURL = new URL(
     <meta name="description" content={description} />
     <meta name="author" content={siteMetadata.author} />
     <meta name="robots" content={robots} />
+    <link rel="preconnect" href={plausibleAnalytics.origin} />
     <link rel="icon" href="/favicon.ico" sizes="16x16 32x32" />
     <link
       rel="icon"
@@ -77,6 +79,18 @@ const openGraphImageURL = new URL(
         />
       )
     }
+    <script
+      is:inline
+      defer
+      data-domain={plausibleAnalytics.domain}
+      src={plausibleAnalytics.scriptURL}
+    ></script>
+    <script is:inline>
+      window.plausible ||= function plausible(...args) {
+        window.plausible.q ||= [];
+        window.plausible.q.push(args);
+      };
+    </script>
     <Font cssVariable="--font-schibsted-grotesk-source" preload />
     <title>{title}</title>
   </head>
