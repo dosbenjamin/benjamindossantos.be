@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
-import { SITE_URL } from 'astro:env/server';
 
 import { seoPaths } from '../shared/seo';
+import { siteUrl } from '../shared/site';
 
 const getRobotsTxt = (sitemapUrl: URL) => `\
 User-agent: *
@@ -11,7 +11,7 @@ Sitemap: ${sitemapUrl.href}
 `;
 
 export const GET: APIRoute = () => {
-  const sitemapUrl = new URL(seoPaths.sitemap, SITE_URL);
+  const sitemapUrl = new URL(seoPaths.sitemap, siteUrl);
 
   return new Response(getRobotsTxt(sitemapUrl), {
     headers: {

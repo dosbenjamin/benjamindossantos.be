@@ -1,15 +1,16 @@
+import { siteIdentity } from '../../../shared/site';
 import type { PortfolioSection } from '../types';
 
 export const contact = {
   availability: 'Available for selected freelance projects',
-  email: 'hello@benjamindossantos.be',
-  githubUrl: 'https://github.com/dosbenjamin',
-  linkedInUrl: 'https://www.linkedin.com/in/benjamin-dos-santos/',
+  email: siteIdentity.email,
+  githubUrl: siteIdentity.socialProfiles.github,
+  linkedInUrl: siteIdentity.socialProfiles.linkedIn,
   location: 'Belgium / Remote',
-  name: 'Benjamin Dos Santos',
+  name: siteIdentity.name,
   phoneDisplay: '+32 478 68 69 02',
   phoneUrl: 'tel:+32478686902',
-  role: 'Full-Stack Engineer',
+  role: siteIdentity.role,
 } as const;
 
 export const introduction = {

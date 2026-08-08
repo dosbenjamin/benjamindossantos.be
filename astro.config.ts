@@ -1,24 +1,10 @@
 import sitemap from '@astrojs/sitemap';
-import { defineConfig, envField, fontProviders } from 'astro/config';
-import { loadEnv } from 'vite';
+import { defineConfig, fontProviders } from 'astro/config';
 
 import { seoPaths } from './src/shared/seo';
-
-const defaultEnvironmentMode = 'development';
-const environmentMode = process.env.NODE_ENV ?? defaultEnvironmentMode;
-const { SITE_URL } = loadEnv(environmentMode, process.cwd(), '');
+import { siteUrl } from './src/shared/site';
 
 export default defineConfig({
-  env: {
-    schema: {
-      SITE_URL: envField.string({
-        access: 'public',
-        context: 'server',
-        startsWith: 'https://',
-        url: true,
-      }),
-    },
-  },
   fonts: [
     {
       cssVariable: '--font-schibsted-grotesk-source',
@@ -34,5 +20,5 @@ export default defineConfig({
       filter: (page) => new URL(page).pathname !== seoPaths.robots,
     }),
   ],
-  site: SITE_URL,
+  site: siteUrl,
 });

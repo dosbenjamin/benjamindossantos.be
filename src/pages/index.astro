@@ -1,12 +1,14 @@
 ---
 import BaseLayout from '../layouts/base-layout.astro';
 import PortfolioPage from '../features/portfolio/components/portfolio-page.astro';
-
-const title = 'Benjamin Dos Santos — Full-Stack Engineer';
-const description =
-  'Full-stack engineer building modern web applications, SaaS products and e-commerce solutions.';
+import { homeSeo, personStructuredData } from '../shared/seo';
 ---
 
-<BaseLayout {description} {title}>
+<BaseLayout
+  description={homeSeo.description}
+  socialDescription={homeSeo.socialDescription}
+  structuredData={personStructuredData}
+  title={homeSeo.title}
+>
   <PortfolioPage />
 </BaseLayout>

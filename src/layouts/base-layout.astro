@@ -1,14 +1,26 @@
 ---
 import { Font } from 'astro:assets';
 import '../shared/styles/global.css';
-import { seoPaths } from '../shared/seo';
+import { seoPaths, siteMetadata } from '../shared/seo';
+import type { PersonStructuredData, RobotsDirective } from '../shared/seo';
 
 interface Props {
+  canonical?: boolean;
   description: string;
+  robots?: RobotsDirective;
+  socialDescription?: string;
+  structuredData?: PersonStructuredData;
   title: string;
 }
 
-const { description, title } = Astro.props;
+const {
+  canonical = true,
+  description,
+  robots = 'index,follow',
+  socialDescription = description,
+  structuredData,
+  title,
+} = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
 const openGraphImageURL = new URL(
   seoPaths.openGraphImage,
@@ -17,12 +29,14 @@ const openGraphImageURL = new URL(
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={siteMetadata.language}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <meta name="author" content={siteMetadata.author} />
+    <meta name="robots" content={robots} />
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32" />
     <link
       rel="icon"
       href="/favicon-light.svg"
@@ -35,21 +49,34 @@ const openGraphImageURL = new URL(
       media="(prefers-color-scheme: dark)"
       type="image/svg+xml"
     />
-    <link rel="canonical" href={canonicalURL} />
+    <link rel="apple-touch-icon" href={seoPaths.appleTouchIcon} sizes="180x180" />
+    {canonical && <link rel="canonical" href={canonicalURL} />}
     <link rel="sitemap" href={seoPaths.sitemap} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={socialDescription} />
     <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={siteMetadata.siteName} />
+    <meta property="og:locale" content={siteMetadata.locale} />
     <meta property="og:image" content={openGraphImageURL} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Benjamin Dos Santos, Full-Stack Engineer" />
+    <meta property="og:image:type" content={siteMetadata.openGraphImageType} />
+    <meta property="og:image:width" content={siteMetadata.openGraphImageWidth} />
+    <meta property="og:image:height" content={siteMetadata.openGraphImageHeight} />
+    <meta property="og:image:alt" content={siteMetadata.openGraphImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={socialDescription} />
     <meta name="twitter:image" content={openGraphImageURL} />
-    <meta name="twitter:image:alt" content="Benjamin Dos Santos, Full-Stack Engineer" />
+    <meta name="twitter:image:alt" content={siteMetadata.openGraphImageAlt} />
+    {
+      structuredData && (
+        <script
+          is:inline
+          type="application/ld+json"
+          set:html={JSON.stringify(structuredData)}
+        />
+      )
+    }
     <Font cssVariable="--font-schibsted-grotesk-source" preload />
     <title>{title}</title>
   </head>
