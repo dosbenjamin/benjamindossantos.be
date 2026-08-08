@@ -2,7 +2,8 @@ import { siteIdentity } from '../../../shared/site';
 import type { PortfolioSection } from '../types';
 
 export const contact = {
-  availability: 'Available for selected freelance projects',
+  availability:
+    'Open to full-time opportunities and selected freelance projects.',
   email: siteIdentity.email,
   githubUrl: siteIdentity.socialProfiles.github,
   linkedInUrl: siteIdentity.socialProfiles.linkedIn,
