@@ -25,6 +25,7 @@
 
     --color-neutral-950: #141412;
     --color-neutral-100: #f2f0ea;
+    --color-neutral-100-alpha-25: rgb(242 240 234 / 25%);
     --color-neutral-300: #d8d5cc;
     --color-neutral-500: #9f9b91;
     --color-green-400: #a8d56a;
@@ -35,6 +36,8 @@
     --color-text-muted: var(--color-neutral-500);
     --color-status-available: var(--color-green-400);
     --color-focus: var(--color-neutral-100);
+    --color-link-underline: var(--color-neutral-100);
+    --color-link-underline-muted: var(--color-neutral-100-alpha-25);
 
     --font-family-sans: var(--font-schibsted-grotesk-source);
     --font-family-body: var(--font-family-sans);
@@ -82,6 +85,7 @@
     --space-section: var(--space-32);
 
     --border-width-thin: 0.0625rem;
+    --border-width-icon: var(--space-2);
     --size-content: 48rem;
     --size-label-column: 16.5rem;
     --size-column-gap: var(--space-32);
@@ -93,6 +97,8 @@
     --size-text-underline-offset: var(--space-4);
     --size-visually-hidden: var(--border-width-thin);
     --size-viewport-min: 20rem;
+    --opacity-link-decoration-active: 100%;
+    --opacity-link-icon-muted: 25%;
     --motion-duration-none: 0ms;
     --motion-duration-fast: 150ms;
     --motion-easing-standard: ease-out;

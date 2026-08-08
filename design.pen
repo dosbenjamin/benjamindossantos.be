@@ -1,5 +1,5 @@
 {
-  "version": "2.15",
+  "version": "2.17",
   "children": [
     {
       "type": "frame",
@@ -97,6 +97,17 @@
                   "fontFamily": "Schibsted Grotesk",
                   "fontSize": 16,
                   "fontWeight": "normal"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "p3oJG",
+                  "layoutPosition": "absolute",
+                  "x": 0,
+                  "y": 23,
+                  "name": "Email link underline — inactive",
+                  "fill": "$link-decoration-muted",
+                  "width": 219,
+                  "height": 1
                 }
               ]
             },
@@ -128,6 +139,17 @@
                   "width": "fill_container",
                   "height": 24,
                   "layout": "none"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "i8os5j",
+                  "layoutPosition": "absolute",
+                  "x": 0,
+                  "y": 23,
+                  "name": "Phone link underline — inactive",
+                  "fill": "$link-decoration-muted",
+                  "width": 128,
+                  "height": 1
                 }
               ]
             },
@@ -141,33 +163,97 @@
               "children": [
                 {
                   "type": "frame",
-                  "id": "rFUVJ",
+                  "id": "fqBf9",
                   "name": "Header pair links",
                   "width": 264,
                   "gap": 12,
                   "alignItems": "center",
                   "children": [
                     {
-                      "type": "text",
-                      "id": "yn2vt",
-                      "name": "Header pair GitHub",
-                      "fill": "#D8D5CC",
-                      "content": "GitHub",
-                      "lineHeight": 1.5,
-                      "fontFamily": "Schibsted Grotesk",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
+                      "type": "frame",
+                      "id": "l7Oy9",
+                      "name": "GitHub external link — inactive",
+                      "gap": 4,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "wxBFX",
+                          "name": "Header pair GitHub",
+                          "fill": "#D8D5CC",
+                          "content": "GitHub",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "OWGe1",
+                          "name": "GitHub external arrow — inactive",
+                          "opacity": "$link-icon-opacity-muted",
+                          "fill": "$link-decoration-active",
+                          "content": "↗",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "R7YjzY",
+                          "layoutPosition": "absolute",
+                          "x": 0,
+                          "y": 23,
+                          "name": "GitHub link underline — inactive",
+                          "fill": "$link-decoration-muted",
+                          "width": 52,
+                          "height": 1
+                        }
+                      ]
                     },
                     {
-                      "type": "text",
-                      "id": "y6zkrf",
-                      "name": "Header pair LinkedIn",
-                      "fill": "#D8D5CC",
-                      "content": "LinkedIn",
-                      "lineHeight": 1.5,
-                      "fontFamily": "Schibsted Grotesk",
-                      "fontSize": 16,
-                      "fontWeight": "normal"
+                      "type": "frame",
+                      "id": "PZD3f",
+                      "name": "LinkedIn external link — inactive",
+                      "gap": 4,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "SUwn6",
+                          "name": "Header pair LinkedIn",
+                          "fill": "#D8D5CC",
+                          "content": "LinkedIn",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "IhjFU",
+                          "name": "LinkedIn external arrow — inactive",
+                          "opacity": "$link-icon-opacity-muted",
+                          "fill": "$link-decoration-active",
+                          "content": "↗",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "w2BAil",
+                          "layoutPosition": "absolute",
+                          "x": 0,
+                          "y": 23,
+                          "name": "LinkedIn link underline — inactive",
+                          "fill": "$link-decoration-muted",
+                          "width": 64,
+                          "height": 1
+                        }
+                      ]
                     }
                   ]
                 },
@@ -383,14 +469,16 @@
                                   "fontWeight": "normal"
                                 },
                                 {
-                                  "type": "icon",
-                                  "id": "rlHcN",
-                                  "name": "Company external icon Sanserif",
-                                  "width": 12,
-                                  "height": 12,
-                                  "icon": "arrow-up-right",
-                                  "library": "lucide",
-                                  "fill": "#9F9B91"
+                                  "type": "text",
+                                  "id": "yWWBK",
+                                  "name": "Company external arrow Sanserif — inactive",
+                                  "opacity": "$link-icon-opacity-muted",
+                                  "fill": "$link-decoration-active",
+                                  "content": "↗",
+                                  "lineHeight": 1.4285714286,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
                                 },
                                 {
                                   "type": "text",
@@ -402,6 +490,17 @@
                                   "fontFamily": "Schibsted Grotesk",
                                   "fontSize": 14,
                                   "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "id": "ZbdrB",
+                                  "layoutPosition": "absolute",
+                                  "x": 0,
+                                  "y": 19,
+                                  "name": "Sanserif link underline — inactive",
+                                  "fill": "$link-decoration-muted",
+                                  "width": 54,
+                                  "height": 1
                                 }
                               ]
                             }
@@ -470,14 +569,16 @@
                                   "fontWeight": "normal"
                                 },
                                 {
-                                  "type": "icon",
-                                  "id": "YiU1q",
-                                  "name": "Company external icon Certinergie",
-                                  "width": 12,
-                                  "height": 12,
-                                  "icon": "arrow-up-right",
-                                  "library": "lucide",
-                                  "fill": "#9F9B91"
+                                  "type": "text",
+                                  "id": "LBxis",
+                                  "name": "Company external arrow Certinergie — inactive",
+                                  "opacity": "$link-icon-opacity-muted",
+                                  "fill": "$link-decoration-active",
+                                  "content": "↗",
+                                  "lineHeight": 1.4285714286,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
                                 },
                                 {
                                   "type": "text",
@@ -489,6 +590,17 @@
                                   "fontFamily": "Schibsted Grotesk",
                                   "fontSize": 14,
                                   "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "id": "g4HRzO",
+                                  "layoutPosition": "absolute",
+                                  "x": 0,
+                                  "y": 19,
+                                  "name": "Certinergie link underline — inactive",
+                                  "fill": "$link-decoration-muted",
+                                  "width": 73,
+                                  "height": 1
                                 }
                               ]
                             }
@@ -557,14 +669,16 @@
                                   "fontWeight": "normal"
                                 },
                                 {
-                                  "type": "icon",
-                                  "id": "I6I0SG",
-                                  "name": "Company external icon McArnolds",
-                                  "width": 12,
-                                  "height": 12,
-                                  "icon": "arrow-up-right",
-                                  "library": "lucide",
-                                  "fill": "#9F9B91"
+                                  "type": "text",
+                                  "id": "qsSbf",
+                                  "name": "Company external arrow McArnolds — inactive",
+                                  "opacity": "$link-icon-opacity-muted",
+                                  "fill": "$link-decoration-active",
+                                  "content": "↗",
+                                  "lineHeight": 1.4285714286,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
                                 },
                                 {
                                   "type": "text",
@@ -576,6 +690,17 @@
                                   "fontFamily": "Schibsted Grotesk",
                                   "fontSize": 14,
                                   "fontWeight": "normal"
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "id": "x2U60e",
+                                  "layoutPosition": "absolute",
+                                  "x": 0,
+                                  "y": 19,
+                                  "name": "McArnolds link underline — inactive",
+                                  "fill": "$link-decoration-muted",
+                                  "width": 71,
+                                  "height": 1
                                 }
                               ]
                             }
@@ -663,14 +788,27 @@
                                   "fontWeight": "500"
                                 },
                                 {
-                                  "type": "icon",
-                                  "id": "IBNTq",
-                                  "name": "External icon Wealthflow",
-                                  "width": 12,
-                                  "height": 12,
-                                  "icon": "arrow-up-right",
-                                  "library": "lucide",
-                                  "fill": "#D8D5CC"
+                                  "type": "text",
+                                  "id": "pJwwb",
+                                  "name": "External arrow Wealthflow — inactive",
+                                  "opacity": "$link-icon-opacity-muted",
+                                  "fill": "$link-decoration-active",
+                                  "content": "↗",
+                                  "lineHeight": 1.4285714286,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "id": "hPQCQ",
+                                  "layoutPosition": "absolute",
+                                  "x": 0,
+                                  "y": 19,
+                                  "name": "Wealthflow link underline — inactive",
+                                  "fill": "$link-decoration-muted",
+                                  "width": 74,
+                                  "height": 1
                                 }
                               ]
                             },
@@ -738,14 +876,27 @@
                                   "fontWeight": "500"
                                 },
                                 {
-                                  "type": "icon",
-                                  "id": "lRoUv",
-                                  "name": "External icon Amamolto",
-                                  "width": 12,
-                                  "height": 12,
-                                  "icon": "arrow-up-right",
-                                  "library": "lucide",
-                                  "fill": "#D8D5CC"
+                                  "type": "text",
+                                  "id": "E214ZT",
+                                  "name": "External arrow Ama Molto — inactive",
+                                  "opacity": "$link-icon-opacity-muted",
+                                  "fill": "$link-decoration-active",
+                                  "content": "↗",
+                                  "lineHeight": 1.4285714286,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "id": "SuHGU",
+                                  "layoutPosition": "absolute",
+                                  "x": 0,
+                                  "y": 19,
+                                  "name": "Ama Molto link underline — inactive",
+                                  "fill": "$link-decoration-muted",
+                                  "width": 72,
+                                  "height": 1
                                 }
                               ]
                             },
@@ -813,14 +964,27 @@
                                   "fontWeight": "500"
                                 },
                                 {
-                                  "type": "icon",
-                                  "id": "F7Tdr",
-                                  "name": "External icon ADLC",
-                                  "width": 12,
-                                  "height": 12,
-                                  "icon": "arrow-up-right",
-                                  "library": "lucide",
-                                  "fill": "#D8D5CC"
+                                  "type": "text",
+                                  "id": "z2vni",
+                                  "name": "External arrow ADLC — inactive",
+                                  "opacity": "$link-icon-opacity-muted",
+                                  "fill": "$link-decoration-active",
+                                  "content": "↗",
+                                  "lineHeight": 1.4285714286,
+                                  "fontFamily": "Schibsted Grotesk",
+                                  "fontSize": 14,
+                                  "fontWeight": "600"
+                                },
+                                {
+                                  "type": "rectangle",
+                                  "id": "ltYE5",
+                                  "layoutPosition": "absolute",
+                                  "x": 0,
+                                  "y": 19,
+                                  "name": "ADLC link underline — inactive",
+                                  "fill": "$link-decoration-muted",
+                                  "width": 37,
+                                  "height": 1
                                 }
                               ]
                             },
@@ -1819,7 +1983,8 @@
                       "content": "hello@benjamindossantos.be",
                       "lineHeight": 1.35,
                       "fontFamily": "Schibsted Grotesk",
-                      "fontSize": 22
+                      "fontSize": 22,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "text",
@@ -1831,7 +1996,8 @@
                       "content": "Belgium / Remote",
                       "lineHeight": 1.35,
                       "fontFamily": "Schibsted Grotesk",
-                      "fontSize": 22
+                      "fontSize": 22,
+                      "fontWeight": "normal"
                     }
                   ]
                 },
@@ -1854,7 +2020,8 @@
                       "content": "+32 478 68 69 02",
                       "lineHeight": 1.35,
                       "fontFamily": "Schibsted Grotesk",
-                      "fontSize": 22
+                      "fontSize": 22,
+                      "fontWeight": "normal"
                     },
                     {
                       "type": "frame",
@@ -1900,7 +2067,8 @@
                   "content": "I design, build and deploy performant, maintainable and scalable digital products — from discovery to production.",
                   "lineHeight": 1.4,
                   "fontFamily": "Schibsted Grotesk",
-                  "fontSize": 24
+                  "fontSize": 24,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -1916,7 +2084,8 @@
           "content": "Case details available on request.",
           "lineHeight": 1.3,
           "fontFamily": "Schibsted Grotesk",
-          "fontSize": 20
+          "fontSize": 20,
+          "fontWeight": "normal"
         }
       ]
     },
@@ -2007,6 +2176,7 @@
                       "type": "frame",
                       "id": "wz1In",
                       "name": "404 home link",
+                      "gap": 4,
                       "alignItems": "center",
                       "children": [
                         {
@@ -2014,7 +2184,30 @@
                           "id": "QyM3o",
                           "name": "404 home link label",
                           "fill": "#F2F0EA",
-                          "content": "Back to home →",
+                          "content": "Back to home",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "rectangle",
+                          "id": "bJPIC",
+                          "layoutPosition": "absolute",
+                          "x": 0,
+                          "y": 23,
+                          "name": "Back to home underline — inactive",
+                          "fill": "$link-decoration-muted",
+                          "width": 103,
+                          "height": 1
+                        },
+                        {
+                          "type": "text",
+                          "id": "B8Sel",
+                          "name": "Back to home arrow — inactive",
+                          "opacity": "$link-icon-opacity-muted",
+                          "fill": "$link-decoration-active",
+                          "content": "→",
                           "lineHeight": 1.5,
                           "fontFamily": "Schibsted Grotesk",
                           "fontSize": 16,
@@ -2047,6 +2240,26 @@
     "favicon-border": {
       "type": "color",
       "value": "#E5E5E5"
+    },
+    "link-decoration-active": {
+      "type": "color",
+      "value": "#F2F0EA"
+    },
+    "link-decoration-muted": {
+      "type": "color",
+      "value": "#F2F0EA40"
+    },
+    "link-decoration-opacity-active": {
+      "type": "number",
+      "value": 1
+    },
+    "link-decoration-opacity-muted": {
+      "type": "number",
+      "value": 0.25
+    },
+    "link-icon-opacity-muted": {
+      "type": "number",
+      "value": 0.25
     }
   },
   "fileToken": "f13aca05-8080-4e10-a3ee-f4a6d0cf11af"

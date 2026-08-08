@@ -13,27 +13,30 @@ import ExternalLinkIcon from './external-link-icon.astro';
     <address class="portfolio-contact">
       <h1 class="portfolio-name">{contact.name}</h1>
       <p class="portfolio-role">{contact.role}</p>
-      <a
-        aria-label={`Send an email to ${contact.name}`}
-        href={`mailto:${contact.email}`}>{contact.email}</a
-      >
+      <a href={`mailto:${contact.email}`}><span>{contact.email}</span></a>
       <p>{contact.location}</p>
-      <a aria-label={`Call ${contact.name}`} href={contact.phoneUrl}
-        >{contact.phoneDisplay}</a
-      >
+      <a href={contact.phoneUrl}><span>{contact.phoneDisplay}</span></a>
       <span aria-hidden="true"></span>
       <nav aria-label="Social profiles" class="portfolio-social-links">
         <a
           aria-label={`View ${contact.name} on GitHub`}
           href={contact.githubUrl}
           rel="noopener noreferrer"
-          target="_blank">GitHub</a
+          target="_blank"
+        >
+          <span>GitHub</span>
+          <ExternalLinkIcon />
+        </a
         >
         <a
           aria-label={`View ${contact.name} on LinkedIn`}
           href={contact.linkedInUrl}
           rel="noopener noreferrer"
-          target="_blank">LinkedIn</a
+          target="_blank"
+        >
+          <span>LinkedIn</span>
+          <ExternalLinkIcon />
+        </a
         >
       </nav>
       <p class="portfolio-availability">{contact.availability}</p>
@@ -125,12 +128,46 @@ import ExternalLinkIcon from './external-link-icon.astro';
   }
 
   .portfolio-page a {
+    position: relative;
+    width: fit-content;
     text-decoration: none;
     transition: color var(--motion-duration-fast) var(--motion-easing-standard);
   }
 
+  .portfolio-page a > span {
+    position: relative;
+    display: inline-block;
+  }
+
+  .portfolio-page a > span::after {
+    position: absolute;
+    inset-block-end: calc(-1 * var(--border-width-thin));
+    inset-inline: 0;
+    height: var(--border-width-thin);
+    background-color: var(--color-link-underline-muted);
+    background-image: linear-gradient(
+      to right,
+      var(--color-link-underline),
+      var(--color-link-underline)
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    content: '';
+    transition: background-size var(--motion-duration-fast)
+      var(--motion-easing-standard);
+  }
+
   .portfolio-page a:hover {
     color: var(--color-text-strong);
+  }
+
+  .portfolio-page a:focus-visible {
+    outline: none;
+  }
+
+  .portfolio-page a:hover > span::after,
+  .portfolio-page a:focus-visible > span::after {
+    background-size: 100% 100%;
   }
 
   .portfolio-contact {
@@ -162,6 +199,12 @@ import ExternalLinkIcon from './external-link-icon.astro';
 
   .portfolio-social-links {
     gap: var(--space-12);
+  }
+
+  .portfolio-social-links a {
+    display: inline-flex;
+    gap: var(--space-4);
+    align-items: center;
   }
 
   .portfolio-availability {

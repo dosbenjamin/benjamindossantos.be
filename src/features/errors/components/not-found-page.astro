@@ -67,6 +67,7 @@
   }
 
   .not-found-message a {
+    position: relative;
     display: inline-flex;
     gap: var(--space-4);
     align-items: center;
@@ -77,19 +78,58 @@
     transition: color var(--motion-duration-fast) var(--motion-easing-standard);
   }
 
+  .not-found-message a > span {
+    position: relative;
+    display: inline-block;
+  }
+
+  .not-found-message a > span::after {
+    position: absolute;
+    inset-block-end: calc(-1 * var(--border-width-thin));
+    inset-inline: 0;
+    height: var(--border-width-thin);
+    background-color: var(--color-link-underline-muted);
+    background-image: linear-gradient(
+      to right,
+      var(--color-link-underline),
+      var(--color-link-underline)
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    content: '';
+    transition: background-size var(--motion-duration-fast)
+      var(--motion-easing-standard);
+  }
+
   .not-found-message a:hover {
     color: var(--color-text);
+  }
+
+  .not-found-message a:focus-visible {
+    outline: none;
+  }
+
+  .not-found-message a:hover > span::after,
+  .not-found-message a:focus-visible > span::after {
+    background-size: 100% 100%;
   }
 
   .not-found-message svg {
     width: var(--size-icon-small);
     height: var(--size-icon-small);
     fill: none;
+    opacity: var(--opacity-link-icon-muted);
     stroke: currentColor;
     stroke-linecap: square;
     stroke-linejoin: miter;
-    stroke-width: var(--border-width-thin);
+    stroke-width: var(--border-width-icon);
+    transition: opacity var(--motion-duration-fast) var(--motion-easing-standard);
     vector-effect: non-scaling-stroke;
+  }
+
+  .not-found-message a:hover svg,
+  .not-found-message a:focus-visible svg {
+    opacity: var(--opacity-link-decoration-active);
   }
 
   /* Compact breakpoint: 700px. Custom properties cannot resolve in media conditions. */
