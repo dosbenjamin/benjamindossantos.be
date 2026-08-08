@@ -71,12 +71,14 @@ export const portfolioSections: readonly PortfolioSection[] = [
         href: 'https://getwealthflow.app',
         meta: 'SaaS',
         title: 'Wealthflow',
+        year: 2026,
       },
       {
         description: 'International wedding and event planning agency.',
         href: 'https://amamolto.be/en',
         meta: 'Client site',
         title: 'Ama Molto',
+        year: 2025,
       },
       {
         description:
@@ -84,6 +86,7 @@ export const portfolioSections: readonly PortfolioSection[] = [
         href: 'https://adlc.eu/',
         meta: 'Client site',
         title: 'ADLC',
+        year: 2024,
       },
     ],
     id: 'selected-projects',

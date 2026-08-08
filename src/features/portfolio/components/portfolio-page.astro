@@ -94,7 +94,10 @@ import ExternalLinkIcon from './external-link-icon.astro';
                             <span> · {entry.meta}</span>
                           </>
                         ) : (
-                          entry.meta
+                          <>
+                            {entry.meta}
+                            {entry.year && <span> · {entry.year}</span>}
+                          </>
                         )}
                       </p>
                     </div>

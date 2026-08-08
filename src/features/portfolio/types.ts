@@ -7,6 +7,7 @@ export interface PortfolioEntry {
     name: string;
   };
   title: string;
+  year?: number;
 }
 
 export interface PortfolioSection {
