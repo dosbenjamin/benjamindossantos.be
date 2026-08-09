@@ -4,11 +4,11 @@ This project uses Ultracite. Follow the project-local Ultracite skill when writi
 
 ## Commands
 
-Run Ultracite through the devenv environment:
+Run project commands from inside `devenv shell`. From the system shell, prefix one-off commands with `devenv shell --`.
 
-- Fix and format: `bun x ultracite fix`
-- Check: `bun x ultracite check`
-- Diagnose: `bun x ultracite doctor`
+- Fix and format: `bun run fix`
+- Run Astro and Ultracite checks: `bun run check`
+- Diagnose the Ultracite setup: `bun x ultracite doctor`
 
 ## Package Management
 
@@ -110,6 +110,7 @@ src/
 - Keep shared foundations in `src/shared/styles/global.css` and component-specific styles in the component that owns them.
 - Define reusable design values as CSS custom properties using a primitive token layer and a semantic token layer.
 - Components must consume semantic tokens such as `--color-text` or `--font-family-body`, not primitive tokens such as `--color-neutral-100`.
+- Align layout and typography to a 4px grid, with a 2px half-step for fine details. Use the closed spacing scale `2, 4, 8, 12, 16, 24, 32, 48, 64px`, and keep layout dimensions on the grid even when they are not part of the spacing scale.
 - Create tokens for intentionally shared colors, font families, font weights, font sizes, line heights, letter spacing, spacing, dimensions, borders, radii, shadows, opacity, stacking, and motion values when relevant. Do not tokenize isolated values without a reusable design role.
 - Promote intentionally shared design values to named primitive or semantic tokens. Keep isolated values local when they have no reusable design role.
 - Use `kebab-case` component-prefixed class names, such as `.project-card` and `.project-card-title`. Avoid full BEM naming because Astro already scopes component styles.

@@ -118,13 +118,13 @@ The project uses native CSS rather than a styling framework. Shared reset, base 
 
 Components consume semantic CSS variables instead of hard-coded design values. Visual variants use `data-*` attributes, while genuine interactive or accessibility states use their native HTML or ARIA attributes. ARIA attributes are never added solely as styling hooks.
 
-Layout and spacing follow a closed binary scale of `2, 4, 8, 12, 16, 24, 32, 48, 64px`. Typography uses even font sizes and line heights aligned to a 4px vertical grid. Primitive tokens encode this scale, while semantic tokens describe how each value is used by the interface.
+Layout and typography align to a 4px grid, with a 2px half-step available for fine details. Spacing uses the closed scale `2, 4, 8, 12, 16, 24, 32, 48, 64px`. Layout dimensions remain multiples of the grid even when they are not part of the spacing scale. Primitive tokens encode the scale, while semantic tokens describe how each value is used by the interface.
 
 Modern native CSS is preferred when it is [Baseline Widely Available](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility) across the major browsers. Newer features may be used as progressive enhancements with a usable fallback; limited-availability features must not carry essential layout, interaction, content, or accessibility behavior.
 
 Fonts are configured in `astro.config.ts` with the [Astro Fonts API](https://docs.astro.build/en/reference/font-provider-reference/) and the built-in Fontsource provider. The shared layout loads the configured families with Astro's `<Font />` component, and the generated family variables are mapped to semantic typography tokens. Fonts are self-hosted by Astro; avoid manual `@font-face` declarations and browser-facing third-party font CDNs.
 
-`design.pen` remains the source of visual direction, content, and responsive intent. CSS values are normalized to the binary token grid when small optical differences do not materially change the design.
+`design.pen` remains the source of visual direction and responsive intent. CSS values are normalized to the grid and token scale when small optical differences do not materially change the design.
 
 ## Deployment
 
@@ -148,12 +148,18 @@ The deployment script always builds the site before uploading it. Cloudflare acc
 
 ```text
 .
-├── src/pages/           # Astro pages
-├── src/shared/styles/   # Global CSS foundations and design tokens
+├── src/
+│   ├── features/        # Feature-specific components, data, and types
+│   │   ├── errors/
+│   │   └── portfolio/
+│   ├── layouts/         # Shared Astro page layouts
+│   ├── pages/           # Thin routing and composition entry points
+│   └── shared/          # Cross-feature modules, styles, and utilities
 ├── astro.config.ts      # Astro configuration
 ├── design.pen           # Pencil design source
+├── devenv.lock          # Pinned devenv inputs
 ├── devenv.nix           # Reproducible development environment
-├── devenv.yaml          # Pinned devenv inputs
+├── devenv.yaml          # devenv input declarations
 ├── oxfmt.config.ts      # Ultracite/Oxfmt configuration
 ├── oxlint.config.ts     # Ultracite/Oxlint configuration
 ├── package.json         # Project scripts and dependencies
