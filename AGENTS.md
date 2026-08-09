@@ -102,22 +102,16 @@ src/
 - Define reusable design values as CSS custom properties using a primitive token layer and a semantic token layer.
 - Components must consume semantic tokens such as `--color-text` or `--font-family-body`, not primitive tokens such as `--color-neutral-100`.
 - Create tokens for intentionally shared colors, font families, font weights, font sizes, line heights, letter spacing, spacing, dimensions, borders, radii, shadows, opacity, stacking, and motion values when relevant. Do not tokenize isolated values without a reusable design role.
-- Do not leave magic values in component or global CSS declarations. Promote intentional design values to named primitive or semantic tokens; document unavoidable CSS syntax constants and media-query thresholds where custom properties cannot be used.
-- Use the closed binary spacing scale `2, 4, 8, 12, 16, 24, 32, 48, 64px`. Reserve 2px for optical details, use 4px multiples for regular spacing, and use 8px multiples for structural spacing.
-- Use the primitive font-size scale `12, 14, 16, 20, 24, 32, 40, 48, 64px` and the line-height scale `16, 20, 24, 28, 32, 40, 48, 56, 72px`. Every line height must align to the 4px vertical grid.
-- Keep structural dimensions on the 4px grid and visual details on the 2px grid. A 1px border is the only default exception; any other exception requires an explicit functional or optical reason.
+- Promote intentionally shared design values to named primitive or semantic tokens. Keep isolated values local when they have no reusable design role.
 - Use `kebab-case` component-prefixed class names, such as `.project-card` and `.project-card-title`. Avoid full BEM naming because Astro already scopes component styles.
-- Express visual variants with explicit `data-*` attributes such as `data-variant`, `data-size`, or `data-state`.
+- Represent component variants explicitly and consistently. Prefer `data-*` attributes such as `data-variant`, `data-size`, or `data-state` when no native HTML state expresses the variant.
 - Style accessible states using the native HTML or ARIA attribute that represents the real state, such as `disabled`, `open`, `aria-current`, `aria-expanded`, or `aria-pressed`.
 - Never add an ARIA attribute only as a CSS hook. Prefer native pseudo-classes such as `:hover`, `:focus-visible`, `:checked`, and `:disabled` when they express the state.
 - Add global utility classes only for stable patterns reused across components, such as `.visually-hidden`.
-- Apply `-webkit-font-smoothing: antialiased` and `-moz-osx-font-smoothing: grayscale` to the document body. Keep both declarations together because they are non-standard, platform-specific enhancements.
 - Prefer modern native CSS when it simplifies the implementation. Use features marked Baseline Widely Available across Safari, Chrome, Edge, and Firefox without compatibility fallbacks.
 - Use newly available CSS features only as progressive enhancements when the page remains readable and functional without them. Provide a defensive fallback, using `@supports` when conditional behavior is necessary.
 - Avoid CSS features with limited availability when they are required for layout, content access, interaction, or accessibility. Verify support with MDN browser compatibility data instead of relying on memory.
-- Configure fonts with Astro's Fonts API and the built-in Fontsource provider. Expose each loaded family through Astro's generated CSS variable, then map it to semantic font tokens.
-- Load fonts with Astro's `<Font />` component in the shared layout and preload only fonts required for above-the-fold content.
-- Prefer variable fonts when the selected family supports the required weights. Do not write manual `@font-face` rules or load browser-facing font files from a third-party CDN.
+- Keep font configuration centralized and expose loaded families through semantic font tokens.
 
 ## Semantic HTML and SEO
 
