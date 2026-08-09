@@ -12,8 +12,8 @@ The site is built as a static Astro project and deployed to Cloudflare Workers u
 - [Bun](https://bun.sh/) as the package manager
 - [Nix](https://nixos.org/) and [devenv](https://devenv.sh/) for the development environment
 - [Cloudflare Workers](https://workers.cloudflare.com/) and [Wrangler](https://developers.cloudflare.com/workers/wrangler/) for hosting and deployment
-- [pen.dev](https://www.pen.dev/) (Pencil) for the visual design
-- [Ultracite](https://www.ultracite.ai/) with Oxlint and Oxfmt for code quality
+- [pen.dev](https://www.pen.dev/) for the visual design
+- [Ultracite](https://www.ultracite.ai/) with [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) and [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) for code quality
 
 ## Prerequisites
 
@@ -108,7 +108,7 @@ Add a `#<feature>/*` mapping when introducing a feature. Keep relative imports w
 
 ## Design
 
-The visual design is created with [pen.dev](https://www.pen.dev/) and stored in the version-controlled `design.pen` document. Open this file with Pencil when reviewing or updating the interface, and keep the Astro implementation aligned with it.
+The visual design is created with [pen.dev](https://www.pen.dev/) and stored in the version-controlled `design.pen` document. Open this file with pen.dev when reviewing or updating the interface, and keep the Astro implementation aligned with it.
 
 The `.pen` document is the editable design source. Exported previews or assets should only be committed when they are required by the website.
 
@@ -130,7 +130,9 @@ Fonts are configured in `astro.config.ts` with the [Astro Fonts API](https://doc
 
 The site is deployed as static assets from `dist/`. The Worker name and asset directory are defined in `wrangler.jsonc`.
 
-Authenticate Wrangler once from inside `devenv shell`:
+Cloudflare automatically builds and deploys the site after every push to `main`. This deployment integration is configured outside the repository.
+
+For a manual deployment, authenticate Wrangler once from inside `devenv shell`:
 
 ```sh
 wrangler login
@@ -142,7 +144,7 @@ Then deploy:
 bun run deploy
 ```
 
-The deployment script always builds the site before uploading it. Cloudflare account details and custom-domain routing are managed outside this repository.
+The manual deployment script always builds the site before uploading it. Cloudflare account details, deployment integration, and custom-domain routing are managed outside this repository.
 
 ## Project structure
 
@@ -156,7 +158,7 @@ The deployment script always builds the site before uploading it. Cloudflare acc
 │   ├── pages/           # Thin routing and composition entry points
 │   └── shared/          # Cross-feature modules, styles, and utilities
 ├── astro.config.ts      # Astro configuration
-├── design.pen           # Pencil design source
+├── design.pen           # pen.dev design source
 ├── devenv.lock          # Pinned devenv inputs
 ├── devenv.nix           # Reproducible development environment
 ├── devenv.yaml          # devenv input declarations

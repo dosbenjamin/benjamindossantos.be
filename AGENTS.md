@@ -97,11 +97,11 @@ src/
 ## Design Source of Truth
 
 - Treat `design.pen` as the source of truth for visual design, layout, spacing, typography, colors, and responsive intent.
-- Access `.pen` files only through the Pencil MCP. Do not read, parse, or edit them with regular filesystem tools.
-- Before implementing or reviewing visual UI changes, open `design.pen` in Pencil and inspect the relevant frames, components, variables, and states through the MCP.
-- Reuse design tokens and shared visual patterns from the Pencil design instead of introducing isolated values or near-duplicate components.
-- After implementation, compare the rendered UI with the relevant Pencil frames at the designed viewport sizes and interaction states.
-- Do not silently diverge from the design. If technical, semantic, responsive, or accessibility constraints require a change, document the reason and update the Pencil design when the task includes design changes.
+- Access `.pen` files only through the pen.dev MCP. Do not read, parse, or edit them with regular filesystem tools.
+- Before implementing or reviewing visual UI changes, open `design.pen` in pen.dev and inspect the relevant frames, components, variables, and states through the MCP.
+- Reuse design tokens and shared visual patterns from the pen.dev design instead of introducing isolated values or near-duplicate components.
+- After implementation, compare the rendered UI with the relevant pen.dev frames at the designed viewport sizes and interaction states.
+- Do not silently diverge from the design. If technical, semantic, responsive, or accessibility constraints require a change, document the reason and update the pen.dev design when the task includes design changes.
 - Accessibility and semantic HTML requirements remain mandatory when translating the design into code.
 
 ## CSS and Typography
