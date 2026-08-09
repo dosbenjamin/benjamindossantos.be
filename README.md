@@ -1,4 +1,4 @@
-# benjamindossantos.be
+# benjamindossantos
 
 Source code for [benjamindossantos.be](https://benjamindossantos.be), Benjamin Dos Santos' personal website.
 

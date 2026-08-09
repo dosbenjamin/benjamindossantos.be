@@ -1,6 +1,6 @@
 {
-  "name": "benjamindossantos-be",
-  "version": "0.0.1",
+  "name": "benjamindossantos",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "imports": {
