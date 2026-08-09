@@ -94,6 +94,18 @@ Modern JavaScript, TypeScript, and Web APIs are preferred when their runtime beh
 
 JavaScript and TypeScript must not contain unexplained magic values. Domain-significant numbers, strings, statuses, keys, limits, and durations belong in purpose-named constants.
 
+## Import aliases
+
+Cross-domain imports use the native private aliases declared in `package.json#imports`. Each feature has a dedicated alias, while shared code uses `#shared/*`:
+
+```ts
+import NotFoundPage from '#errors/components/not-found-page.astro';
+import PortfolioPage from '#portfolio/components/portfolio-page.astro';
+import { siteIdentity } from '#shared/site.ts';
+```
+
+Add a `#<feature>/*` mapping when introducing a feature. Keep relative imports within the same feature or domain, and include source extensions in aliased imports.
+
 ## Design
 
 The visual design is created with [pen.dev](https://www.pen.dev/) and stored in the version-controlled `design.pen` document. Open this file with Pencil when reviewing or updating the interface, and keep the Astro implementation aligned with it.

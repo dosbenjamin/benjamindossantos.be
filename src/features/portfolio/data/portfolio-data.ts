@@ -1,4 +1,5 @@
-import { siteIdentity } from '../../../shared/site';
+import { siteIdentity } from '#shared/site.ts';
+
 import type { PortfolioSection } from '../types';
 
 export const contact = {

@@ -1,8 +1,8 @@
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 
-import { seoPaths } from './src/shared/seo';
-import { siteUrl } from './src/shared/site';
+import { seoPaths } from '#shared/seo.ts';
+import { siteUrl } from '#shared/site.ts';
 
 export default defineConfig({
   fonts: [

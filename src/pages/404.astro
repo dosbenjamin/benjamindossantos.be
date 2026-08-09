@@ -1,7 +1,7 @@
 ---
-import NotFoundPage from '../features/errors/components/not-found-page.astro';
+import NotFoundPage from '#errors/components/not-found-page.astro';
+import { siteIdentity } from '#shared/site.ts';
 import BaseLayout from '../layouts/base-layout.astro';
-import { siteIdentity } from '../shared/site';
 
 const title = `Page not found — ${siteIdentity.name}`;
 const description =

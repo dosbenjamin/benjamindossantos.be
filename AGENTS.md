@@ -85,6 +85,15 @@ src/
 - Create only the directories required by the current implementation; the structure above is a guide, not a requirement to add empty folders.
 - Prefer colocating feature tests and supporting files with the code they validate.
 
+### Import Aliases
+
+- Use the native private import aliases declared in `package.json#imports` for imports that cross feature or shared-domain boundaries.
+- Give every feature its own `#<feature>/*` alias mapped to `./src/features/<feature>/*`; do not use a generic `#features/*` alias.
+- Use `#shared/*` for imports from `src/shared`.
+- The current feature aliases are `#portfolio/*` and `#errors/*`. Add the corresponding alias to `package.json` whenever a new feature is introduced.
+- Keep relative imports for files within the same feature or domain, and for areas without a declared alias such as `layouts`.
+- Include the source extension in native aliased imports, such as `.ts`, `.astro`, or `.css`, so package import resolution remains exact.
+
 ## Design Source of Truth
 
 - Treat `design.pen` as the source of truth for visual design, layout, spacing, typography, colors, and responsive intent.

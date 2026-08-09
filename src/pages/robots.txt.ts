@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 
-import { seoPaths } from '../shared/seo';
-import { siteUrl } from '../shared/site';
+import { seoPaths } from '#shared/seo.ts';
+import { siteUrl } from '#shared/site.ts';
 
 const getRobotsTxt = (sitemapUrl: URL) => `\
 User-agent: *

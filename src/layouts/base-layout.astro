@@ -1,9 +1,9 @@
 ---
 import { Font } from 'astro:assets';
-import '../shared/styles/global.css';
-import { seoPaths, siteMetadata } from '../shared/seo';
-import type { PersonStructuredData, RobotsDirective } from '../shared/seo';
-import { plausibleAnalytics } from '../shared/site';
+import '#shared/styles/global.css';
+import { seoPaths, siteMetadata } from '#shared/seo.ts';
+import type { PersonStructuredData, RobotsDirective } from '#shared/seo.ts';
+import { plausibleAnalytics } from '#shared/site.ts';
 
 interface Props {
   canonical?: boolean;
