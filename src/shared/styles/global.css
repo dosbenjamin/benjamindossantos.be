@@ -160,9 +160,10 @@
 @media (max-width: 43.75rem) {
   @layer tokens {
     :root {
-      --space-page-inline: var(--space-16);
-      --space-page-block-start: var(--space-24);
-      --space-page-block-end: var(--space-32);
+      --space-page-inline: var(--space-24);
+      --space-page-block-start: var(--space-32);
+      --space-page-block-end: var(--space-48);
+      --space-section: var(--space-48);
     }
   }
 }

@@ -13,10 +13,14 @@ import ExternalLinkIcon from './external-link-icon.astro';
     <address class="portfolio-contact">
       <h1 class="portfolio-name">{contact.name}</h1>
       <p class="portfolio-role">{contact.role}</p>
-      <a href={`mailto:${contact.email}`}><span>{contact.email}</span></a>
-      <p>{contact.location}</p>
-      <a href={contact.phoneUrl}><span>{contact.phoneDisplay}</span></a>
-      <span aria-hidden="true"></span>
+      <a class="portfolio-email" href={`mailto:${contact.email}`}>
+        <span>{contact.email}</span>
+      </a>
+      <p class="portfolio-location">{contact.location}</p>
+      <a class="portfolio-phone" href={contact.phoneUrl}>
+        <span>{contact.phoneDisplay}</span>
+      </a>
+      <span aria-hidden="true" class="portfolio-contact-spacer"></span>
       <nav aria-label="Social profiles" class="portfolio-social-links">
         <a
           aria-label={`View ${contact.name} on GitHub`}
@@ -319,12 +323,62 @@ import ExternalLinkIcon from './external-link-icon.astro';
   }
 
   @media (max-width: 43.75rem) {
-    .portfolio-contact,
-    .portfolio-entry {
-      grid-template-columns: minmax(0, 1fr);
+    .portfolio-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      font-size: var(--font-size-caption);
+      line-height: var(--line-height-caption);
     }
 
-    .portfolio-contact > [aria-hidden='true']:empty {
+    .portfolio-name {
+      order: 1;
+    }
+
+    .portfolio-contact > .portfolio-role {
+      order: 2;
+      margin-block-start: var(--space-4);
+    }
+
+    .portfolio-contact > .portfolio-availability {
+      order: 3;
+      margin-block-start: var(--space-24);
+    }
+
+    .portfolio-contact > .portfolio-location {
+      order: 4;
+      margin-block-start: var(--space-24);
+    }
+
+    .portfolio-email {
+      order: 5;
+      margin-block-start: var(--space-12);
+    }
+
+    .portfolio-phone {
+      order: 6;
+      margin-block-start: var(--space-12);
+    }
+
+    .portfolio-social-links {
+      order: 7;
+      margin-block-start: var(--space-12);
+    }
+
+    .portfolio-availability::before {
+      display: none;
+    }
+
+    .portfolio-entry {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-12);
+    }
+
+    .portfolio-entry-list {
+      gap: var(--space-32);
+    }
+
+    .portfolio-contact-spacer {
       display: none;
     }
   }
