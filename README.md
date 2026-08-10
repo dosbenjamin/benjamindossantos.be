@@ -6,14 +6,20 @@ The site is built as a static Astro project and deployed to Cloudflare Workers u
 
 ## Tech stack
 
-- [Astro](https://astro.build/) with strict TypeScript
+- [Astro](https://astro.build/) with strict [TypeScript](https://www.typescriptlang.org/)
 - Native CSS with Astro-scoped component styles and CSS custom property tokens
-- [Astro Fonts](https://docs.astro.build/en/guides/fonts/) with the built-in Fontsource provider
-- [Bun](https://bun.sh/) as the package manager
-- [Nix](https://nixos.org/) and [devenv](https://devenv.sh/) for the development environment
-- [Cloudflare Workers](https://workers.cloudflare.com/) and [Wrangler](https://developers.cloudflare.com/workers/wrangler/) for hosting and deployment
-- [pen.dev](https://www.pen.dev/) for the visual design
+- [Astro Fonts](https://docs.astro.build/en/guides/fonts/) with the built-in [Fontsource](https://fontsource.org/) provider
+- [Cloudflare Workers](https://workers.cloudflare.com/) for hosting and serving static assets
+
+## Development tooling
+
+- [Bun](https://bun.sh/) for package management and project scripts
+- [Nix](https://nixos.org/) and [devenv](https://devenv.sh/) for the reproducible development environment
+- [Wrangler](https://developers.cloudflare.com/workers/wrangler/) for local previews and deployment
 - [Ultracite](https://www.ultracite.ai/) with [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) and [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) for code quality
+- [pen.dev](https://www.pen.dev/) for visual design
+- [Codex](https://openai.com/codex/) for AI-assisted development
+- [OpenSpec](https://github.com/Fission-AI/OpenSpec) for specification-driven development
 
 ## Prerequisites
 
