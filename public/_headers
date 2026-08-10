@@ -8,14 +8,8 @@
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
-/apple-touch-icon.png
+/*.png
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
-/favicon-dark.svg
-  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
-
-/favicon-light.svg
-  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
-
-/opengraph.png
+/*.svg
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
