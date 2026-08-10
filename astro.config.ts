@@ -5,6 +5,9 @@ import { seoPaths } from '#shared/seo.ts';
 import { siteUrl } from '#shared/site.ts';
 
 export default defineConfig({
+  build: {
+    inlineStylesheets: 'always',
+  },
   fonts: [
     {
       cssVariable: '--font-schibsted-grotesk-source',
