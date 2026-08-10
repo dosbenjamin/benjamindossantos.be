@@ -1,6 +1,10 @@
-{ ... }:
+{ inputs, pkgs, ... }:
 
 {
+  packages = [
+    inputs.openspec.packages.${pkgs.system}.default
+  ];
+
   languages.javascript = {
     enable = true;
     bun = {
