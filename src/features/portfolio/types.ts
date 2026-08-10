@@ -1,4 +1,4 @@
-export interface PortfolioEntry {
+export type PortfolioEntry = {
   description: string;
   href?: string;
   meta: string;
@@ -8,10 +8,10 @@ export interface PortfolioEntry {
   };
   title: string;
   year?: number;
-}
+};
 
-export interface PortfolioSection {
+export type PortfolioSection = {
   entries: readonly PortfolioEntry[];
   id: string;
   title: string;
-}
+};

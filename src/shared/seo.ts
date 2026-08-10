@@ -2,7 +2,7 @@ import { siteIdentity } from './site';
 
 export type RobotsDirective = 'index,follow' | 'noindex,follow';
 
-export interface PersonStructuredData {
+export type PersonStructuredData = {
   '@context': 'https://schema.org';
   '@type': 'Person';
   address: {
@@ -15,7 +15,7 @@ export interface PersonStructuredData {
   name: string;
   sameAs: readonly string[];
   url: string;
-}
+};
 
 export const siteMetadata = {
   author: siteIdentity.name,

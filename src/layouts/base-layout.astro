@@ -5,7 +5,7 @@ import { seoPaths, siteMetadata } from '#shared/seo.ts';
 import type { PersonStructuredData, RobotsDirective } from '#shared/seo.ts';
 import { plausibleAnalytics } from '#shared/site.ts';
 
-interface Props {
+type Props = {
   canonical?: boolean;
   description: string;
   robots?: RobotsDirective;
