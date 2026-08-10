@@ -35,7 +35,8 @@
     --color-text-strong: var(--color-neutral-100);
     --color-text-muted: var(--color-neutral-500);
     --color-status-available: var(--color-green-400);
-    --color-focus: var(--color-neutral-100);
+    --color-focus-background: var(--color-neutral-100);
+    --color-focus-text: var(--color-neutral-950);
     --color-link-underline: var(--color-neutral-100);
     --color-link-underline-muted: var(--color-neutral-100-alpha-25);
 
@@ -89,9 +90,6 @@
     --size-content: 48rem;
     --size-label-column: 16.5rem;
     --size-column-gap: var(--space-32);
-    --size-focus-offset: var(--space-4);
-    --size-focus-radius: var(--space-2);
-    --size-focus-ring: var(--space-2);
     --size-icon-small: var(--space-12);
     --size-status-dot: var(--space-8);
     --size-text-underline-offset: var(--space-4);
@@ -102,6 +100,7 @@
     --motion-duration-none: 0ms;
     --motion-duration-fast: 150ms;
     --motion-easing-standard: ease-out;
+    --z-index-skip-link: 1;
   }
 }
 
@@ -126,20 +125,53 @@
   }
 
   a {
+    background-color: transparent;
+    box-shadow: 0 0 0 var(--space-4) transparent;
     color: inherit;
     text-decoration-thickness: var(--border-width-thin);
     text-underline-offset: var(--size-text-underline-offset);
+    transition:
+      background-color var(--motion-duration-fast) var(--motion-easing-standard),
+      box-shadow var(--motion-duration-fast) var(--motion-easing-standard),
+      color var(--motion-duration-fast) var(--motion-easing-standard);
   }
 
   a:focus-visible {
-    border-radius: var(--size-focus-radius);
-    outline: var(--size-focus-ring) solid var(--color-focus);
-    outline-offset: var(--size-focus-offset);
+    background: var(--color-focus-background);
+    box-shadow: 0 0 0 var(--space-4) var(--color-focus-background);
+    color: var(--color-focus-text);
+    outline: none;
   }
 
   ::selection {
     background: var(--color-text-strong);
     color: var(--color-background);
+  }
+
+  .skip-link {
+    position: fixed;
+    inset-block-start: var(--space-8);
+    inset-inline-start: var(--space-8);
+    z-index: var(--z-index-skip-link);
+    padding: var(--space-8) var(--space-12);
+    background: var(--color-focus-background);
+    box-shadow: none;
+    color: var(--color-focus-text);
+    opacity: 1;
+    text-decoration: none;
+    transition:
+      background-color var(--motion-duration-fast) var(--motion-easing-standard),
+      color var(--motion-duration-fast) var(--motion-easing-standard),
+      opacity var(--motion-duration-fast) var(--motion-easing-standard);
+  }
+
+  .skip-link:focus-visible {
+    box-shadow: none;
+  }
+
+  .skip-link:not(:focus-visible) {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 

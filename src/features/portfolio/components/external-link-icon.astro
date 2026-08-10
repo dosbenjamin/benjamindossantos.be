@@ -21,11 +21,17 @@
     height: var(--size-icon-small);
     color: var(--color-text-strong);
     opacity: var(--opacity-link-icon-muted);
-    transition: opacity var(--motion-duration-fast) var(--motion-easing-standard);
+    transition:
+      color var(--motion-duration-fast) var(--motion-easing-standard),
+      opacity var(--motion-duration-fast) var(--motion-easing-standard);
   }
 
   :global(a:hover) .external-link-icon,
   :global(a:focus-visible) .external-link-icon {
     opacity: var(--opacity-link-decoration-active);
+  }
+
+  :global(a:focus-visible) .external-link-icon {
+    color: var(--color-focus-text);
   }
 </style>

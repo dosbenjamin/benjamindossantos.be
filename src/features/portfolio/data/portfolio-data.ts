@@ -10,7 +10,7 @@ export const contact = {
   linkedInUrl: siteIdentity.socialProfiles.linkedIn,
   location: 'Belgium / Remote',
   name: siteIdentity.name,
-  phoneDisplay: '+32 478 68 69 02',
+  phoneDisplay: '+32\u00A0478\u00A068\u00A069\u00A002',
   phoneUrl: 'tel:+32478686902',
   role: siteIdentity.role,
 } as const;

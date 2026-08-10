@@ -5,6 +5,7 @@ import { siteUrl } from '#shared/site.ts';
 
 const getRobotsTxt = (sitemapUrl: URL) => `\
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no, use=reference
 Allow: /
 
 Sitemap: ${sitemapUrl.href}

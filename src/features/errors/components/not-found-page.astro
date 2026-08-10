@@ -1,4 +1,4 @@
-<main class="not-found-page">
+<main class="not-found-page" id="main-content">
   <div class="not-found-content">
     <p aria-hidden="true" class="not-found-code">404</p>
 
@@ -75,7 +75,11 @@
     color: var(--color-text-strong);
     font-weight: var(--font-weight-medium);
     text-decoration: none;
-    transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+    transition:
+      background-color var(--motion-duration-fast)
+        var(--motion-easing-standard),
+      box-shadow var(--motion-duration-fast) var(--motion-easing-standard),
+      color var(--motion-duration-fast) var(--motion-easing-standard);
   }
 
   .not-found-message a > span {
@@ -106,12 +110,15 @@
   }
 
   .not-found-message a:focus-visible {
-    outline: none;
+    color: var(--color-focus-text);
   }
 
-  .not-found-message a:hover > span::after,
-  .not-found-message a:focus-visible > span::after {
+  .not-found-message a:hover > span::after {
     background-size: 100% 100%;
+  }
+
+  .not-found-message a:focus-visible > span::after {
+    opacity: 0;
   }
 
   .not-found-message svg {

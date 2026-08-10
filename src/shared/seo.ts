@@ -49,7 +49,7 @@ export const personStructuredData: PersonStructuredData = {
     '@type': 'PostalAddress',
     addressCountry: siteIdentity.country,
   },
-  email: `mailto:${siteIdentity.email}`,
+  email: siteIdentity.email,
   jobTitle: siteIdentity.role,
   knowsAbout: [
     'Software Engineering',

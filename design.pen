@@ -2364,7 +2364,8 @@
                               "content": "hello@benjamindossantos.be",
                               "lineHeight": 1.43,
                               "fontFamily": "Schibsted Grotesk",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -2423,7 +2424,8 @@
                               "content": "+32 478 68 69 02",
                               "lineHeight": 1.43,
                               "fontFamily": "Schibsted Grotesk",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -2483,7 +2485,8 @@
                               "content": "GitHub",
                               "lineHeight": 1.43,
                               "fontFamily": "Schibsted Grotesk",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -2525,7 +2528,8 @@
                               "content": "LinkedIn",
                               "lineHeight": 1.43,
                               "fontFamily": "Schibsted Grotesk",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             },
                             {
                               "type": "text",
@@ -2736,7 +2740,8 @@
                                   "content": "Sanserif",
                                   "lineHeight": 1.43,
                                   "fontFamily": "Schibsted Grotesk",
-                                  "fontSize": 14
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -2771,7 +2776,8 @@
                               "content": "· Freelance · 2021–Now",
                               "lineHeight": 1.43,
                               "fontFamily": "Schibsted Grotesk",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -2844,7 +2850,8 @@
                                   "content": "Certinergie",
                                   "lineHeight": 1.43,
                                   "fontFamily": "Schibsted Grotesk",
-                                  "fontSize": 14
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -2879,7 +2886,8 @@
                               "content": "· Full-time · 2022–2024",
                               "lineHeight": 1.43,
                               "fontFamily": "Schibsted Grotesk",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -2952,7 +2960,8 @@
                                   "content": "McArnolds",
                                   "lineHeight": 1.43,
                                   "fontFamily": "Schibsted Grotesk",
-                                  "fontSize": 14
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
                                 },
                                 {
                                   "type": "text",
@@ -2987,7 +2996,8 @@
                               "content": "· Full-time · 2020–2022",
                               "lineHeight": 1.43,
                               "fontFamily": "Schibsted Grotesk",
-                              "fontSize": 14
+                              "fontSize": 14,
+                              "fontWeight": "normal"
                             }
                           ]
                         }
@@ -3358,6 +3368,241 @@
               "fontFamily": "Schibsted Grotesk",
               "fontSize": 14,
               "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "MYwrP",
+      "x": 621,
+      "y": 1372,
+      "name": "Keyboard focus states - Benjamin Dos Santos",
+      "clip": true,
+      "width": 768,
+      "fill": "#141412",
+      "layout": "vertical",
+      "gap": 24,
+      "padding": 32,
+      "children": [
+        {
+          "type": "text",
+          "id": "v8b8cS",
+          "name": "Keyboard focus states title",
+          "fill": "#F2F0EA",
+          "content": "Keyboard focus states",
+          "lineHeight": 1.4,
+          "fontFamily": "Schibsted Grotesk",
+          "fontSize": 20,
+          "fontWeight": "500"
+        },
+        {
+          "type": "text",
+          "id": "RWRnf",
+          "name": "Keyboard focus states description",
+          "fill": "#D8D5CC",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Standard links invert their colors over 150ms. The padded skip link has no inset or underline and fades in over 150ms; reduced-motion makes every transition immediate.",
+          "lineHeight": 1.43,
+          "fontFamily": "Schibsted Grotesk",
+          "fontSize": 14
+        },
+        {
+          "type": "frame",
+          "id": "DtOBI",
+          "name": "Focus state examples",
+          "width": "fill_container",
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Th7fW",
+              "name": "Standard link focus example",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "jM7nY",
+                  "name": "Standard link focus label",
+                  "fill": "#9F9B91",
+                  "content": "Standard link · 16px",
+                  "lineHeight": 1.43,
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 14
+                },
+                {
+                  "type": "frame",
+                  "id": "EnRtK",
+                  "name": "Standard link inverted focus",
+                  "fill": "#F2F0EA",
+                  "stroke": {
+                    "type": "color",
+                    "color": "#F2F0EA",
+                    "enabled": false
+                  },
+                  "padding": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vdNvq",
+                      "name": "Standard focused link",
+                      "gap": 4,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "s7yOM",
+                          "name": "Standard focused link text",
+                          "fill": "#141412",
+                          "content": "GitHub",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 16
+                        },
+                        {
+                          "type": "text",
+                          "id": "MiLz5",
+                          "name": "Standard focused external arrow",
+                          "fill": "#141412",
+                          "content": "↗",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "c6GCgp",
+              "name": "Compact link focus example",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "cN2Dt",
+                  "name": "Compact link focus label",
+                  "fill": "#9F9B91",
+                  "content": "Compact link · 14px",
+                  "lineHeight": 1.43,
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 14
+                },
+                {
+                  "type": "frame",
+                  "id": "k7DET2",
+                  "name": "Compact link inverted focus",
+                  "fill": "#F2F0EA",
+                  "stroke": {
+                    "type": "color",
+                    "color": "#F2F0EA",
+                    "enabled": false
+                  },
+                  "padding": 4,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "h8feW",
+                      "name": "Compact focused link",
+                      "gap": 4,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lVxMb",
+                          "name": "Compact focused link text",
+                          "fill": "#141412",
+                          "content": "Wealthflow",
+                          "lineHeight": 1.43,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "aLyIO",
+                          "name": "Compact focused external arrow",
+                          "fill": "#141412",
+                          "content": "↗",
+                          "lineHeight": 1.43,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 14,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Z2YMRO",
+              "name": "Skip link focus example",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "C2dql",
+                  "name": "Skip link focus label",
+                  "fill": "#9F9B91",
+                  "content": "First Tab · skip link · 150ms",
+                  "lineHeight": 1.43,
+                  "fontFamily": "Schibsted Grotesk",
+                  "fontSize": 14
+                },
+                {
+                  "type": "frame",
+                  "id": "BxbZp",
+                  "name": "Skip link focus without inset",
+                  "fill": {
+                    "type": "color",
+                    "color": "#F2F0EA",
+                    "enabled": false
+                  },
+                  "stroke": {
+                    "type": "color",
+                    "color": "#F2F0EA",
+                    "enabled": false
+                  },
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nMAI4",
+                      "name": "Visible focused skip link",
+                      "fill": "#F2F0EA",
+                      "padding": [
+                        8,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "k79pGf",
+                          "name": "Skip link text",
+                          "fill": "#141412",
+                          "content": "Skip to main content",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Schibsted Grotesk",
+                          "fontSize": 16
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

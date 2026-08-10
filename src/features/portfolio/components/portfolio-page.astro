@@ -10,17 +10,19 @@ import ExternalLinkIcon from './external-link-icon.astro';
 
 <div class="portfolio-page">
   <header class="portfolio-header">
-    <address class="portfolio-contact">
+    <div class="portfolio-contact">
       <h1 class="portfolio-name">{contact.name}</h1>
       <p class="portfolio-role">{contact.role}</p>
-      <a class="portfolio-email" href={`mailto:${contact.email}`}>
-        <span>{contact.email}</span>
-      </a>
-      <p class="portfolio-location">{contact.location}</p>
-      <a class="portfolio-phone" href={contact.phoneUrl}>
-        <span>{contact.phoneDisplay}</span>
-      </a>
-      <span aria-hidden="true" class="portfolio-contact-spacer"></span>
+      <address class="portfolio-address">
+        <a class="portfolio-email" href={`mailto:${contact.email}`}>
+          <span>{contact.email}</span>
+        </a>
+        <p class="portfolio-location">{contact.location}</p>
+        <a class="portfolio-phone" href={contact.phoneUrl}>
+          <span>{contact.phoneDisplay}</span>
+        </a>
+        <span aria-hidden="true" class="portfolio-contact-spacer"></span>
+      </address>
       <nav aria-label="Social profiles" class="portfolio-social-links">
         <a
           aria-label={`View ${contact.name} on GitHub`}
@@ -44,10 +46,10 @@ import ExternalLinkIcon from './external-link-icon.astro';
         >
       </nav>
       <p class="portfolio-availability">{contact.availability}</p>
-    </address>
+    </div>
   </header>
 
-  <main class="portfolio-main">
+  <main class="portfolio-main" id="main-content">
     <section aria-labelledby="introduction-title" class="portfolio-introduction">
       <h2 id="introduction-title">{introduction.title}</h2>
       <p>{introduction.description}</p>
@@ -138,7 +140,18 @@ import ExternalLinkIcon from './external-link-icon.astro';
     position: relative;
     width: fit-content;
     text-decoration: none;
-    transition: color var(--motion-duration-fast) var(--motion-easing-standard);
+    transition:
+      background-color var(--motion-duration-fast)
+        var(--motion-easing-standard),
+      box-shadow var(--motion-duration-fast) var(--motion-easing-standard),
+      color var(--motion-duration-fast) var(--motion-easing-standard);
+  }
+
+  .portfolio-page a::before {
+    position: absolute;
+    inset-block: calc(-1 * var(--space-2));
+    inset-inline: 0;
+    content: '';
   }
 
   .portfolio-page a > span {
@@ -169,12 +182,15 @@ import ExternalLinkIcon from './external-link-icon.astro';
   }
 
   .portfolio-page a:focus-visible {
-    outline: none;
+    color: var(--color-focus-text);
   }
 
-  .portfolio-page a:hover > span::after,
-  .portfolio-page a:focus-visible > span::after {
+  .portfolio-page a:hover > span::after {
     background-size: 100% 100%;
+  }
+
+  .portfolio-page a:focus-visible > span::after {
+    opacity: 0;
   }
 
   .portfolio-contact {
@@ -184,6 +200,11 @@ import ExternalLinkIcon from './external-link-icon.astro';
     font-size: var(--font-size-body);
     font-style: normal;
     line-height: var(--line-height-body);
+  }
+
+  .portfolio-address {
+    display: contents;
+    font-style: normal;
   }
 
   .portfolio-contact p {
@@ -342,12 +363,11 @@ import ExternalLinkIcon from './external-link-icon.astro';
 
     .portfolio-contact > .portfolio-availability {
       order: 3;
-      margin-block-start: var(--space-24);
+      margin-block: var(--space-24);
     }
 
-    .portfolio-contact > .portfolio-location {
+    .portfolio-location {
       order: 4;
-      margin-block-start: var(--space-24);
     }
 
     .portfolio-email {
