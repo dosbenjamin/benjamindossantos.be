@@ -88,7 +88,7 @@ bun run fix
 bun run check
 ```
 
-Editor settings for the Oxc extension are included in `.vscode/settings.json`. Project-specific coding instructions for Codex are provided in `AGENTS.md`.
+Editor settings for the Oxc extension are included in `.vscode/settings.json`. Project-specific instructions for Codex are routed by `AGENTS.md` to project-local skills.
 
 Modern JavaScript, TypeScript, and Web APIs are preferred when their runtime behavior is [Baseline Widely Available](https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility) across the major browsers. Recent capabilities must be introduced as progressive enhancements with feature detection and a usable fallback. TypeScript support alone is not treated as evidence of browser compatibility.
 

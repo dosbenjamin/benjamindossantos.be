@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Project Architecture'
+  short_description: 'Guide project structure and module boundaries'
+  default_prompt: 'Use $project-architecture to organize this change within the project architecture.'

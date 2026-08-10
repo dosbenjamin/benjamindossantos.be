@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Frontend Design'
+  short_description: 'Build accessible, design-aligned web interfaces'
+  default_prompt: 'Use $frontend-design to implement an accessible interface aligned with the project design system.'

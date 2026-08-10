@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Project Code Standards'
+  short_description: 'Apply project-specific JavaScript and TypeScript rules'
+  default_prompt: 'Use $project-code-standards to write JavaScript or TypeScript that follows project conventions.'
